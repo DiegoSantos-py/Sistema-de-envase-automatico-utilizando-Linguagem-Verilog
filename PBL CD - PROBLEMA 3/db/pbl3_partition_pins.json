@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "cont1",
+					"strict" : false
+				},
+				{
+					"name" : "add_cont12",
+					"strict" : false
+				},
+				{
+					"name" : "cq",
+					"strict" : false
+				},
+				{
+					"name" : "cont12",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at main.v(3): object "disp" differs only in case from object "DISP" in the same scope File: D:/PBL CD - PROBLEMA 3/main.v Line: 3
+Info (10281): Verilog HDL Declaration information at MEF_contador_duzias.v(6): object "cont1" differs only in case from object "CONT1" in the same scope File: D:/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 6

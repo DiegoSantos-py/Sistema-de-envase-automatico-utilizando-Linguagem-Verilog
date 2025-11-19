@@ -1,0 +1,2 @@
+module main(input x, output y);
+endmodule

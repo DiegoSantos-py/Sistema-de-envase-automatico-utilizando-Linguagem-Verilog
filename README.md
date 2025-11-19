@@ -1,1 +1,0 @@
-# Automatiza-o-de-sistema-de-envase-utilizando-Linguagem-Verilog

@@ -1,0 +1,15 @@
+|MEF_contador_duzias
+cq => always1.IN0
+cq => always1.IN0
+cq => always1.IN0
+cont12 => always1.IN1
+cont12 => always1.IN1
+cont12 => Selector2.IN2
+cont12 => always1.IN1
+cont12 => Selector0.IN0
+reset => state~3.DATAIN
+clk => state~1.DATAIN
+cont1 << cont1.DB_MAX_OUTPUT_PORT_TYPE
+add_cont12 << add_cont12.DB_MAX_OUTPUT_PORT_TYPE
+
+

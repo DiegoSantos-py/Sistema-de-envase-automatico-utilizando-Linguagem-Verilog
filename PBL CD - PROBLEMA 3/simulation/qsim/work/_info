@@ -1,0 +1,174 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/PBL CD - PROBLEMA 3/simulation/qsim
+vhard_block
+Z1 !s110 1763582543
+!i10b 1
+!s100 ;DNRR=_O]1Ve@d9o8^lOn3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ij0dOR3:Z_0NmTCmh]l?HH0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1763582541
+Z5 8pbl3.vo
+Z6 Fpbl3.vo
+!i122 42
+L0 405 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1763582543.000000
+Z9 !s107 pbl3.vo|
+Z10 !s90 -work|work|pbl3.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vmain
+!s110 1763582288
+!i10b 1
+!s100 @3^09congFj227_d>W_ZE1
+R2
+IK8^6N1]U>N>P4]Z2iI4mT2
+R3
+R0
+w1763582286
+R5
+R6
+!i122 40
+L0 32 428
+R7
+r1
+!s85 0
+31
+!s108 1763582288.000000
+R9
+R10
+!i113 1
+R11
+R12
+vmain_vlg_vec_tst
+!s110 1763582289
+!i10b 1
+!s100 TOOKP?1n6gaO1B0ni3FY]3
+R2
+Ia;zgcGB>Zc?65hQG0HW4D1
+R3
+R0
+w1763582285
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 41
+Z13 L0 30 60
+R7
+r1
+!s85 0
+31
+!s108 1763582289.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+vMEF_contador_duzias
+R1
+!i10b 1
+!s100 P[InC1AFWR37M]VCB?L5]2
+R2
+Ihon]3JI9heYXNSVXfOV7Q1
+R3
+R0
+R4
+R5
+R6
+!i122 42
+L0 32 372
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@m@e@f_contador_duzias
+vMEF_contador_duzias_vlg_vec_tst
+R1
+!i10b 1
+!s100 C>F<Kjkin68gedI?7OnzN0
+R2
+IhO=AQm<W=z[OcA[_kP3>Q1
+R3
+R0
+w1763582540
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 43
+R13
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+n@m@e@f_contador_duzias_vlg_vec_tst
+vteste
+Z14 !s110 1763581640
+!i10b 1
+!s100 T>Dnb=T:Q<oVG`FWk?kA>1
+R2
+I?@ACcMl=4B`1:Bz0M>TYB2
+R3
+R0
+w1763581638
+R5
+R6
+!i122 38
+L0 32 658
+R7
+r1
+!s85 0
+31
+Z15 !s108 1763581640.000000
+R9
+R10
+!i113 1
+R11
+R12
+vteste_vlg_vec_tst
+R14
+!i10b 1
+!s100 8SSPN4NMWU02D_diBNgZ81
+R2
+IK>eZF3e9@fIg0:cHjO:H01
+R3
+R0
+w1763581637
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 39
+L0 30 44
+R7
+r1
+!s85 0
+31
+R15
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R11
+R12

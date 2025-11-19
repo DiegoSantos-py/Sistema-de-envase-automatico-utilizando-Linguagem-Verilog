@@ -1,0 +1,39 @@
+module MEF_Contador_duzias(cq, cont12, cont1, add_cont12, reset, clk);
+	input cq, cont12, reset, clk;
+	output cont1, add_cont12;
+	
+	reg [1:0] state, nextstate;
+	
+	parameter C1 = 2'b00;
+	parameter CONT1 = 2'b01;
+	parameter CONT12 = 2'b10;
+	
+	always @(posedge clk, posedge reset)
+	  if (reset)
+			state <= E0;
+	  else
+			state <= nextstate;
+	 
+	 always @(*)
+		case (state)
+		
+			C1: if (cont12) nextstate = CONT1;
+				else nextstate = C1;
+			CONT1: if (cont12) nextstate = CONT12;
+				else if (cq) nextstate = CONT1;
+				else nextstate = C1;
+			CONT12: if (cont12 | cq) nextstate = C1;
+					  else nextstate C1;
+			default: nextstate = C1;
+			
+		endcase
+		
+	wire ne1, ne0;
+	
+	not (ne0,state[0]);
+	not (ne1,state[1]);
+	
+	and (cont1, ne1, state[0]);
+	and (add_cont12, state[1], ne0);
+	
+endmodule
