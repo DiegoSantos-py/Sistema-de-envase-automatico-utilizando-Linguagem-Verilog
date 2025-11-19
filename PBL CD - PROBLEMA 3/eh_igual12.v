@@ -1,0 +1,17 @@
+module eh_igual12(in,out);
+	input [7:0]in;
+	output out;
+	
+	wire [7:0]not_in;
+	
+	// Nega todos menos os bits 2 e 3
+	not (not_in[0], in[0]);
+	not (not_in[1], in[1]);
+	not (not_in[4], in[4]);
+	not (not_in[5], in[5]);
+	not (not_in[6], in[6]);
+	not (not_in[7], in[7]);
+	
+	and (out, not_in[0], not_in[1], in[2], in[3], not_in[4], not_in[5], not_in[6], not_in[7]);
+	
+endmodule

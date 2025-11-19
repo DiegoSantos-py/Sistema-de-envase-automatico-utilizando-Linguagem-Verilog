@@ -4,19 +4,15 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "cont1",
+					"name" : "ve",
 					"strict" : false
 				},
 				{
-					"name" : "add_cont12",
+					"name" : "done",
 					"strict" : false
 				},
 				{
-					"name" : "cq",
-					"strict" : false
-				},
-				{
-					"name" : "cont12",
+					"name" : "alarme",
 					"strict" : false
 				},
 				{
@@ -25,6 +21,18 @@
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "rolha",
+					"strict" : false
+				},
+				{
+					"name" : "garrafa",
+					"strict" : false
+				},
+				{
+					"name" : "pos",
 					"strict" : false
 				}
 			]

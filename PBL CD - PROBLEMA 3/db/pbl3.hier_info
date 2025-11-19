@@ -1,15 +1,35 @@
-|MEF_contador_duzias
-cq => always1.IN0
-cq => always1.IN0
-cq => always1.IN0
-cont12 => always1.IN1
-cont12 => always1.IN1
-cont12 => Selector2.IN2
-cont12 => always1.IN1
-cont12 => Selector0.IN0
-reset => state~3.DATAIN
-clk => state~1.DATAIN
-cont1 << cont1.DB_MAX_OUTPUT_PORT_TYPE
-add_cont12 << add_cont12.DB_MAX_OUTPUT_PORT_TYPE
+|MEF_vedacao
+garrafa => always1.IN0
+garrafa => always1.IN0
+garrafa => always1.IN0
+rolha => always1.IN1
+rolha => always1.IN1
+rolha => always1.IN1
+rolha => Mux0.IN0
+rolha => nextstate.OUTPUTSELECT
+rolha => Mux0.IN1
+pos => always1.IN1
+pos => always1.IN1
+pos => always1.IN1
+pos => always1.IN1
+clk => state[0].CLK
+clk => state[1].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+ve <= saida_vedacao:comb_47.ve
+done <= saida_vedacao:comb_47.done
+alarme <= saida_vedacao:comb_47.alarme
+
+
+|MEF_vedacao|saida_vedacao:comb_47
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[1] => comb.IN1
+state[1] => comb.IN1
+state[1] => comb.IN1
+alarme <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ve <= comb.DB_MAX_OUTPUT_PORT_TYPE
+done <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 

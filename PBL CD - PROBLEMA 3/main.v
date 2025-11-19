@@ -59,8 +59,8 @@ module main(switch_add_rolha, rolha5, disp, add_rolha, clk, reset);
 
 		 endcase
 		 
-		 assign disp = (state == DISP);
-		 assign add_rolha = (state == ADD1);
+	 assign disp = (state == DISP);
+	 assign add_rolha = (state == ADD1);
 	
 //	saidas_dispenser logic_out (
 //    .state(state),

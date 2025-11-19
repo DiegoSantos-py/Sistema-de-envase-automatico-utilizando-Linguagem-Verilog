@@ -1,6 +1,6 @@
 
-State Machine - |MEF_contador_duzias|state
-Name state.C1 state.CONT12 state.CONT1 
-state.C1 0 0 0 
-state.CONT1 1 0 1 
-state.CONT12 1 1 0 
+State Machine - |MEF_vedacao|state
+Name state.V0 state.AL state.V1 
+state.V0 0 0 0 
+state.V1 1 0 1 
+state.AL 1 1 0 

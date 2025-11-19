@@ -9,29 +9,167 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/PBL CD - PROBLEMA 3/simulation/qsim
-vhard_block
-Z1 !s110 1763582543
+vdisplay_decimal
+Z1 !s110 1763589394
 !i10b 1
-!s100 ;DNRR=_O]1Ve@d9o8^lOn3
+!s100 EKRn]CjR[Om]V1Wf5@97d0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ij0dOR3:Z_0NmTCmh]l?HH0
+I^WcXJZ8hkIR^f2f=HMNXA0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z4 w1763582541
+Z4 dD:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim
+w1763589391
 Z5 8pbl3.vo
 Z6 Fpbl3.vo
-!i122 42
-L0 405 45
+!i122 78
+L0 32 2124
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1763582543.000000
-Z9 !s107 pbl3.vo|
-Z10 !s90 -work|work|pbl3.vo|
+!s108 1763589393.000000
+Z8 !s107 pbl3.vo|
+Z9 !s90 -work|work|pbl3.vo|
 !i113 1
-Z11 o-work work
-Z12 tCvgOpt 0
+Z10 o-work work
+Z11 tCvgOpt 0
+vdisplay_decimal_vlg_vec_tst
+R1
+!i10b 1
+!s100 ;D;T;;c2EkJWzF>U_ll_32
+R2
+IO]?4?h7F^AmAz3:lEi2eZ3
+R3
+R4
+w1763589390
+8display.vwf.vt
+Fdisplay.vwf.vt
+!i122 79
+L0 30 83
+R7
+r1
+!s85 0
+31
+!s108 1763589394.000000
+!s107 display.vwf.vt|
+!s90 -work|work|display.vwf.vt|
+!i113 1
+R10
+R11
+veh_igual12
+Z12 !s110 1763587536
+!i10b 1
+!s100 z=41]=]AHO;6I1Ha2akcJ3
+R2
+IEQoVXRYdU==nVW=oXQ@EM2
+R3
+R4
+w1763587534
+R5
+R6
+!i122 52
+L0 32 315
+R7
+r1
+!s85 0
+31
+Z13 !s108 1763587536.000000
+R8
+R9
+!i113 1
+R10
+R11
+veh_igual12_vlg_vec_tst
+R12
+!i10b 1
+!s100 eXd_Wi[zYY`_WDSE2cW@R1
+R2
+I8gVQzbh6IG7Fl9=QR0<i93
+R3
+R4
+w1763587532
+8ehigual12.vwf.vt
+Fehigual12.vwf.vt
+!i122 53
+Z14 L0 30 62
+R7
+r1
+!s85 0
+31
+R13
+!s107 ehigual12.vwf.vt|
+!s90 -work|work|ehigual12.vwf.vt|
+!i113 1
+R10
+R11
+veh_igual5
+Z15 !s110 1763587319
+!i10b 1
+!s100 0bk:O0LMN1B2CSY;=zRA10
+R2
+IWO0o2BoHXOHX=B4[TBJde1
+R3
+R4
+w1763587317
+R5
+R6
+!i122 48
+L0 32 297
+R7
+r1
+!s85 0
+31
+Z16 !s108 1763587319.000000
+R8
+R9
+!i113 1
+R10
+R11
+veh_igual5_vlg_vec_tst
+R15
+!i10b 1
+!s100 @g?=B<8;XmVCj0Z8jTgi?2
+R2
+IM]Ld2nRf:Ie[>1@UXQ34d1
+R3
+R4
+w1763587315
+8eh_igual12.vwf.vt
+Feh_igual12.vwf.vt
+!i122 49
+R14
+R7
+r1
+!s85 0
+31
+R16
+!s107 eh_igual12.vwf.vt|
+!s90 -work|work|eh_igual12.vwf.vt|
+!i113 1
+R10
+R11
+vhard_block
+Z17 !s110 1763591814
+!i10b 1
+!s100 2fblIfUH4P96:5l:66@g61
+R2
+I6Zcon`kf:]0m9iGHQUK@J1
+R3
+R4
+Z18 w1763591812
+R5
+R6
+!i122 82
+L0 490 45
+R7
+r1
+!s85 0
+31
+Z19 !s108 1763591814.000000
+R8
+R9
+!i113 1
+R10
+R11
 vmain
 !s110 1763582288
 !i10b 1
@@ -50,11 +188,11 @@ r1
 !s85 0
 31
 !s108 1763582288.000000
+R8
 R9
-R10
 !i113 1
+R10
 R11
-R12
 vmain_vlg_vec_tst
 !s110 1763582289
 !i10b 1
@@ -67,7 +205,7 @@ w1763582285
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 !i122 41
-Z13 L0 30 60
+Z20 L0 30 60
 R7
 r1
 !s85 0
@@ -76,17 +214,17 @@ r1
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
+R10
 R11
-R12
 vMEF_contador_duzias
-R1
+Z21 !s110 1763582543
 !i10b 1
 !s100 P[InC1AFWR37M]VCB?L5]2
 R2
 Ihon]3JI9heYXNSVXfOV7Q1
 R3
 R0
-R4
+w1763582541
 R5
 R6
 !i122 42
@@ -95,15 +233,15 @@ R7
 r1
 !s85 0
 31
+Z22 !s108 1763582543.000000
 R8
 R9
-R10
 !i113 1
+R10
 R11
-R12
 n@m@e@f_contador_duzias
 vMEF_contador_duzias_vlg_vec_tst
-R1
+R21
 !i10b 1
 !s100 C>F<Kjkin68gedI?7OnzN0
 R2
@@ -114,20 +252,68 @@ w1763582540
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
 !i122 43
-R13
+R20
 R7
 r1
 !s85 0
 31
-R8
+R22
 !s107 Waveform1.vwf.vt|
 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
+R10
 R11
-R12
 n@m@e@f_contador_duzias_vlg_vec_tst
+vMEF_vedacao
+R17
+!i10b 1
+!s100 [d@<V>CkJnQXDZHXHj?Bc1
+R2
+I17`;Fz[Ah=U@ln1aCF;K31
+R3
+R4
+R18
+R5
+R6
+!i122 82
+L0 32 457
+R7
+r1
+!s85 0
+31
+R19
+R8
+R9
+!i113 1
+R10
+R11
+n@m@e@f_vedacao
+vMEF_vedacao_vlg_vec_tst
+R17
+!i10b 1
+!s100 0ebcV9:m[_b0QbVYJzk]K2
+R2
+IHzNPJ<jolzaMl^:f_G@e12
+R3
+R4
+w1763591810
+8vedacao.vwf.vt
+Fvedacao.vwf.vt
+!i122 83
+L0 30 73
+R7
+r1
+!s85 0
+31
+R19
+!s107 vedacao.vwf.vt|
+!s90 -work|work|vedacao.vwf.vt|
+!i113 1
+R10
+R11
+n@m@e@f_vedacao_vlg_vec_tst
 vteste
-Z14 !s110 1763581640
+Z23 !s110 1763581640
 !i10b 1
 !s100 T>Dnb=T:Q<oVG`FWk?kA>1
 R2
@@ -143,14 +329,14 @@ R7
 r1
 !s85 0
 31
-Z15 !s108 1763581640.000000
+Z24 !s108 1763581640.000000
+R8
 R9
-R10
 !i113 1
+R10
 R11
-R12
 vteste_vlg_vec_tst
-R14
+R23
 !i10b 1
 !s100 8SSPN4NMWU02D_diBNgZ81
 R2
@@ -166,9 +352,9 @@ R7
 r1
 !s85 0
 31
-R15
+R24
 !s107 Waveform2.vwf.vt|
 !s90 -work|work|Waveform2.vwf.vt|
 !i113 1
+R10
 R11
-R12
