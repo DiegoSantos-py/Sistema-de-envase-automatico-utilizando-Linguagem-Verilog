@@ -1,5 +1,5 @@
 Timing Analyzer report for pbl3
-Wed Nov 19 19:36:35 2025
+Wed Nov 19 20:12:42 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -42,11 +42,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  34. Report RSKM
  35. Unconstrained Paths Summary
  36. Clock Status Summary
- 37. Unconstrained Input Ports
+ 37. Unconstrained Output Ports
  38. Unconstrained Output Ports
- 39. Unconstrained Input Ports
- 40. Unconstrained Output Ports
- 41. Timing Analyzer Messages
+ 39. Timing Analyzer Messages
 
 
 
@@ -92,53 +90,144 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.5%      ;
+;     Processor 2            ;   0.9%      ;
+;     Processors 3-4         ;   0.9%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                               ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
-; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
-; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }      ;
-; state[0]   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { state[0] } ;
-+------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                             ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+; Clock Name                               ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                      ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
+; clk                                      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                      ;
+; d_flipflop:div9|flipflop_inst            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div9|flipflop_inst }            ;
+; d_flipflop:div10|flipflop_inst           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div10|flipflop_inst }           ;
+; d_flipflop:div11|flipflop_inst           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div11|flipflop_inst }           ;
+; d_flipflop:div12|flipflop_inst           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div12|flipflop_inst }           ;
+; d_flipflop:div13|flipflop_inst           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div13|flipflop_inst }           ;
+; d_flipflop:div14|flipflop_inst           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div14|flipflop_inst }           ;
+; d_flipflop:div15|flipflop_inst           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { d_flipflop:div15|flipflop_inst }           ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div1|d_flipflop:b0|flipflop_inst } ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div1|d_flipflop:b1|flipflop_inst } ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div1|d_flipflop:b2|flipflop_inst } ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div2|d_flipflop:b0|flipflop_inst } ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div2|d_flipflop:b1|flipflop_inst } ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div2|d_flipflop:b2|flipflop_inst } ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div3|d_flipflop:b0|flipflop_inst } ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div3|d_flipflop:b1|flipflop_inst } ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div3|d_flipflop:b2|flipflop_inst } ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div4|d_flipflop:b0|flipflop_inst } ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div4|d_flipflop:b1|flipflop_inst } ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div4|d_flipflop:b2|flipflop_inst } ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div5|d_flipflop:b0|flipflop_inst } ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div5|d_flipflop:b1|flipflop_inst } ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div5|d_flipflop:b2|flipflop_inst } ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div6|d_flipflop:b0|flipflop_inst } ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div6|d_flipflop:b1|flipflop_inst } ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div6|d_flipflop:b2|flipflop_inst } ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div7|d_flipflop:b0|flipflop_inst } ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div7|d_flipflop:b1|flipflop_inst } ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div7|d_flipflop:b2|flipflop_inst } ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div8|d_flipflop:b0|flipflop_inst } ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div8|d_flipflop:b1|flipflop_inst } ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { dividir:div8|d_flipflop:b2|flipflop_inst } ;
++------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------------+
 
 
-+--------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary               ;
-+------------+-----------------+------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
-+------------+-----------------+------------+------+
-; 193.12 MHz ; 193.12 MHz      ; state[0]   ;      ;
-+------------+-----------------+------------+------+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                             ;
++------------+-----------------+--------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                           ;
++------------+-----------------+--------------------------------+------------------------------------------------+
+; 1424.5 MHz ; 416.15 MHz      ; d_flipflop:div15|flipflop_inst ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+--------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-------------------------------------+
-; Slow 1200mV 85C Model Setup Summary ;
-+----------+--------+-----------------+
-; Clock    ; Slack  ; End Point TNS   ;
-+----------+--------+-----------------+
-; state[0] ; -2.089 ; -3.765          ;
-; clk      ; 0.215  ; 0.000           ;
-+----------+--------+-----------------+
++-------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                               ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; dividir:div7|d_flipflop:b1|flipflop_inst ; -0.890 ; -0.890        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; -0.773 ; -0.773        ;
+; clk                                      ; -0.711 ; -0.711        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; -0.629 ; -0.629        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; -0.628 ; -0.628        ;
+; d_flipflop:div10|flipflop_inst           ; -0.625 ; -0.625        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; -0.606 ; -0.606        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; -0.606 ; -0.606        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; -0.599 ; -0.599        ;
+; d_flipflop:div12|flipflop_inst           ; -0.580 ; -0.580        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; -0.579 ; -0.579        ;
+; d_flipflop:div14|flipflop_inst           ; -0.551 ; -0.551        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; -0.539 ; -0.539        ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; -0.530 ; -0.530        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; -0.522 ; -0.522        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; -0.522 ; -0.522        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; -0.522 ; -0.522        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; -0.519 ; -0.519        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; -0.510 ; -0.510        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; -0.509 ; -0.509        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; -0.501 ; -0.501        ;
+; d_flipflop:div11|flipflop_inst           ; -0.500 ; -0.500        ;
+; d_flipflop:div13|flipflop_inst           ; -0.497 ; -0.497        ;
+; d_flipflop:div9|flipflop_inst            ; -0.497 ; -0.497        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; -0.478 ; -0.478        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; -0.478 ; -0.478        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; -0.478 ; -0.478        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; -0.445 ; -0.445        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; -0.445 ; -0.445        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; -0.425 ; -0.425        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; -0.385 ; -0.385        ;
+; d_flipflop:div15|flipflop_inst           ; 0.298  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
-+------------------------------------+
-; Slow 1200mV 85C Model Hold Summary ;
-+----------+-------+-----------------+
-; Clock    ; Slack ; End Point TNS   ;
-+----------+-------+-----------------+
-; clk      ; 0.309 ; 0.000           ;
-; state[0] ; 0.936 ; 0.000           ;
-+----------+-------+-----------------+
++------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                               ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; d_flipflop:div15|flipflop_inst           ; 0.393 ; 0.000         ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; 0.468 ; 0.000         ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; 0.479 ; 0.000         ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; 0.480 ; 0.000         ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; 0.489 ; 0.000         ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; 0.489 ; 0.000         ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; 0.520 ; 0.000         ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; 0.548 ; 0.000         ;
+; d_flipflop:div13|flipflop_inst           ; 0.559 ; 0.000         ;
+; d_flipflop:div9|flipflop_inst            ; 0.560 ; 0.000         ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; 0.561 ; 0.000         ;
+; d_flipflop:div11|flipflop_inst           ; 0.563 ; 0.000         ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; 0.567 ; 0.000         ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; 0.568 ; 0.000         ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; 0.577 ; 0.000         ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; 0.580 ; 0.000         ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; 0.580 ; 0.000         ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; 0.580 ; 0.000         ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; 0.582 ; 0.000         ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; 0.584 ; 0.000         ;
+; clk                                      ; 0.596 ; 0.000         ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; 0.602 ; 0.000         ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; 0.603 ; 0.000         ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; 0.613 ; 0.000         ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; 0.631 ; 0.000         ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; 0.633 ; 0.000         ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; 0.759 ; 0.000         ;
+; d_flipflop:div14|flipflop_inst           ; 0.768 ; 0.000         ;
+; d_flipflop:div12|flipflop_inst           ; 0.796 ; 0.000         ;
+; d_flipflop:div10|flipflop_inst           ; 0.846 ; 0.000         ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; 0.850 ; 0.000         ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; 0.902 ; 0.000         ;
++------------------------------------------+-------+---------------+
 
 
 ------------------------------------------
@@ -153,50 +242,141 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
-+----------+--------+-------------------------------+
-; Clock    ; Slack  ; End Point TNS                 ;
-+----------+--------+-------------------------------+
-; clk      ; -3.000 ; -5.806                        ;
-; state[0] ; 0.396  ; 0.000                         ;
-+----------+--------+-------------------------------+
++-------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                 ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clk                                      ; -3.000 ; -4.403        ;
+; d_flipflop:div10|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div11|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div12|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div13|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div14|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div15|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div9|flipflop_inst            ; -1.403 ; -1.403        ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
++------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+-------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary               ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 204.5 MHz ; 204.5 MHz       ; state[0]   ;      ;
-+-----------+-----------------+------------+------+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                               ;
++-------------+-----------------+--------------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                     ; Note                                           ;
++-------------+-----------------+--------------------------------+------------------------------------------------+
+; 1564.95 MHz ; 416.15 MHz      ; d_flipflop:div15|flipflop_inst ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+--------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+------------------------------------+
-; Slow 1200mV 0C Model Setup Summary ;
-+----------+--------+----------------+
-; Clock    ; Slack  ; End Point TNS  ;
-+----------+--------+----------------+
-; state[0] ; -1.945 ; -3.563         ;
-; clk      ; 0.421  ; 0.000          ;
-+----------+--------+----------------+
++-------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; dividir:div7|d_flipflop:b1|flipflop_inst ; -0.808 ; -0.808        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; -0.697 ; -0.697        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; -0.550 ; -0.550        ;
+; d_flipflop:div10|flipflop_inst           ; -0.543 ; -0.543        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; -0.541 ; -0.541        ;
+; clk                                      ; -0.529 ; -0.529        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; -0.529 ; -0.529        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; -0.520 ; -0.520        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; -0.519 ; -0.519        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; -0.513 ; -0.513        ;
+; d_flipflop:div12|flipflop_inst           ; -0.505 ; -0.505        ;
+; d_flipflop:div14|flipflop_inst           ; -0.482 ; -0.482        ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; -0.459 ; -0.459        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; -0.457 ; -0.457        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; -0.447 ; -0.447        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; -0.447 ; -0.447        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; -0.447 ; -0.447        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; -0.445 ; -0.445        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; -0.437 ; -0.437        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; -0.437 ; -0.437        ;
+; d_flipflop:div11|flipflop_inst           ; -0.426 ; -0.426        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; -0.426 ; -0.426        ;
+; d_flipflop:div13|flipflop_inst           ; -0.423 ; -0.423        ;
+; d_flipflop:div9|flipflop_inst            ; -0.423 ; -0.423        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; -0.395 ; -0.395        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; -0.395 ; -0.395        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; -0.383 ; -0.383        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; -0.383 ; -0.383        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; -0.377 ; -0.377        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; -0.365 ; -0.365        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; -0.302 ; -0.302        ;
+; d_flipflop:div15|flipflop_inst           ; 0.361  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
-+-----------------------------------+
-; Slow 1200mV 0C Model Hold Summary ;
-+----------+-------+----------------+
-; Clock    ; Slack ; End Point TNS  ;
-+----------+-------+----------------+
-; clk      ; 0.138 ; 0.000          ;
-; state[0] ; 0.902 ; 0.000          ;
-+----------+-------+----------------+
++------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; d_flipflop:div15|flipflop_inst           ; 0.354 ; 0.000         ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; 0.431 ; 0.000         ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; 0.431 ; 0.000         ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; 0.442 ; 0.000         ;
+; clk                                      ; 0.458 ; 0.000         ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; 0.461 ; 0.000         ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; 0.461 ; 0.000         ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; 0.462 ; 0.000         ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; 0.495 ; 0.000         ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; 0.522 ; 0.000         ;
+; d_flipflop:div9|flipflop_inst            ; 0.523 ; 0.000         ;
+; d_flipflop:div13|flipflop_inst           ; 0.525 ; 0.000         ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; 0.525 ; 0.000         ;
+; d_flipflop:div11|flipflop_inst           ; 0.529 ; 0.000         ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; 0.531 ; 0.000         ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; 0.532 ; 0.000         ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; 0.540 ; 0.000         ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; 0.542 ; 0.000         ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; 0.542 ; 0.000         ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; 0.543 ; 0.000         ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; 0.546 ; 0.000         ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; 0.549 ; 0.000         ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; 0.550 ; 0.000         ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; 0.581 ; 0.000         ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; 0.584 ; 0.000         ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; 0.604 ; 0.000         ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; 0.719 ; 0.000         ;
+; d_flipflop:div14|flipflop_inst           ; 0.728 ; 0.000         ;
+; d_flipflop:div12|flipflop_inst           ; 0.746 ; 0.000         ;
+; d_flipflop:div10|flipflop_inst           ; 0.787 ; 0.000         ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; 0.797 ; 0.000         ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; 0.862 ; 0.000         ;
++------------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -211,40 +391,131 @@ No paths to report.
 No paths to report.
 
 
-+--------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
-+----------+--------+------------------------------+
-; Clock    ; Slack  ; End Point TNS                ;
-+----------+--------+------------------------------+
-; clk      ; -3.000 ; -5.806                       ;
-; state[0] ; 0.371  ; 0.000                        ;
-+----------+--------+------------------------------+
++-------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                  ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clk                                      ; -3.000 ; -4.403        ;
+; d_flipflop:div10|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div11|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div12|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div13|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div14|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div15|flipflop_inst           ; -1.403 ; -1.403        ;
+; d_flipflop:div9|flipflop_inst            ; -1.403 ; -1.403        ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; -1.403 ; -1.403        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; -1.403 ; -1.403        ;
++------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
-+------------------------------------+
-; Fast 1200mV 0C Model Setup Summary ;
-+----------+--------+----------------+
-; Clock    ; Slack  ; End Point TNS  ;
-+----------+--------+----------------+
-; state[0] ; -0.481 ; -0.481         ;
-; clk      ; 0.365  ; 0.000          ;
-+----------+--------+----------------+
+
++-------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clk                                      ; -0.140 ; -0.140        ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; 0.010  ; 0.000         ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; 0.071  ; 0.000         ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; 0.071  ; 0.000         ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; 0.073  ; 0.000         ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; 0.082  ; 0.000         ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; 0.083  ; 0.000         ;
+; d_flipflop:div10|flipflop_inst           ; 0.098  ; 0.000         ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; 0.107  ; 0.000         ;
+; d_flipflop:div12|flipflop_inst           ; 0.116  ; 0.000         ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; 0.118  ; 0.000         ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; 0.125  ; 0.000         ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; 0.130  ; 0.000         ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; 0.133  ; 0.000         ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; 0.134  ; 0.000         ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; 0.134  ; 0.000         ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; 0.134  ; 0.000         ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; 0.134  ; 0.000         ;
+; d_flipflop:div14|flipflop_inst           ; 0.137  ; 0.000         ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; 0.137  ; 0.000         ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; 0.138  ; 0.000         ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; 0.139  ; 0.000         ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; 0.140  ; 0.000         ;
+; d_flipflop:div11|flipflop_inst           ; 0.143  ; 0.000         ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; 0.144  ; 0.000         ;
+; d_flipflop:div13|flipflop_inst           ; 0.147  ; 0.000         ;
+; d_flipflop:div9|flipflop_inst            ; 0.147  ; 0.000         ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; 0.174  ; 0.000         ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; 0.174  ; 0.000         ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; 0.179  ; 0.000         ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; 0.180  ; 0.000         ;
+; d_flipflop:div15|flipflop_inst           ; 0.693  ; 0.000         ;
++------------------------------------------+--------+---------------+
 
 
-+-----------------------------------+
-; Fast 1200mV 0C Model Hold Summary ;
-+----------+-------+----------------+
-; Clock    ; Slack ; End Point TNS  ;
-+----------+-------+----------------+
-; state[0] ; 0.268 ; 0.000          ;
-; clk      ; 0.389 ; 0.000          ;
-+----------+-------+----------------+
++------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                ;
++------------------------------------------+-------+---------------+
+; Clock                                    ; Slack ; End Point TNS ;
++------------------------------------------+-------+---------------+
+; dividir:div6|d_flipflop:b0|flipflop_inst ; 0.130 ; 0.000         ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; 0.136 ; 0.000         ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; 0.136 ; 0.000         ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; 0.164 ; 0.000         ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; 0.165 ; 0.000         ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; 0.167 ; 0.000         ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; 0.168 ; 0.000         ;
+; d_flipflop:div15|flipflop_inst           ; 0.169 ; 0.000         ;
+; d_flipflop:div13|flipflop_inst           ; 0.172 ; 0.000         ;
+; d_flipflop:div9|flipflop_inst            ; 0.172 ; 0.000         ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; 0.174 ; 0.000         ;
+; d_flipflop:div11|flipflop_inst           ; 0.175 ; 0.000         ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; 0.176 ; 0.000         ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; 0.177 ; 0.000         ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; 0.179 ; 0.000         ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; 0.182 ; 0.000         ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; 0.183 ; 0.000         ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; 0.183 ; 0.000         ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; 0.183 ; 0.000         ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; 0.186 ; 0.000         ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; 0.192 ; 0.000         ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; 0.209 ; 0.000         ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; 0.213 ; 0.000         ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; 0.215 ; 0.000         ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; 0.217 ; 0.000         ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; 0.227 ; 0.000         ;
+; d_flipflop:div14|flipflop_inst           ; 0.241 ; 0.000         ;
+; d_flipflop:div12|flipflop_inst           ; 0.253 ; 0.000         ;
+; d_flipflop:div10|flipflop_inst           ; 0.269 ; 0.000         ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; 0.279 ; 0.000         ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; 0.293 ; 0.000         ;
+; clk                                      ; 0.368 ; 0.000         ;
++------------------------------------------+-------+---------------+
 
 
 -----------------------------------------
@@ -259,34 +530,130 @@ No paths to report.
 No paths to report.
 
 
-+--------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
-+----------+--------+------------------------------+
-; Clock    ; Slack  ; End Point TNS                ;
-+----------+--------+------------------------------+
-; clk      ; -3.000 ; -5.154                       ;
-; state[0] ; 0.458  ; 0.000                        ;
-+----------+--------+------------------------------+
++-------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                  ;
++------------------------------------------+--------+---------------+
+; Clock                                    ; Slack  ; End Point TNS ;
++------------------------------------------+--------+---------------+
+; clk                                      ; -3.000 ; -4.063        ;
+; d_flipflop:div10|flipflop_inst           ; -1.000 ; -1.000        ;
+; d_flipflop:div11|flipflop_inst           ; -1.000 ; -1.000        ;
+; d_flipflop:div12|flipflop_inst           ; -1.000 ; -1.000        ;
+; d_flipflop:div13|flipflop_inst           ; -1.000 ; -1.000        ;
+; d_flipflop:div14|flipflop_inst           ; -1.000 ; -1.000        ;
+; d_flipflop:div15|flipflop_inst           ; -1.000 ; -1.000        ;
+; d_flipflop:div9|flipflop_inst            ; -1.000 ; -1.000        ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; -1.000 ; -1.000        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; -1.000 ; -1.000        ;
++------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 1
+Shortest Synchronizer Chain: 2 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 0.830 ns
 
 
-+------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                          ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -2.089 ; 0.138 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; 0.215  ; 0.138 ; N/A      ; N/A     ; -3.000              ;
-;  state[0]        ; -2.089 ; 0.268 ; N/A      ; N/A     ; 0.371               ;
-; Design-wide TNS  ; -3.765 ; 0.0   ; 0.0      ; 0.0     ; -5.806              ;
-;  clk             ; 0.000  ; 0.000 ; N/A      ; N/A     ; -5.806              ;
-;  state[0]        ; -3.765 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-+------------------+--------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                    ;
++-------------------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                                     ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                          ; -0.890  ; 0.130 ; N/A      ; N/A     ; -3.000              ;
+;  clk                                      ; -0.711  ; 0.368 ; N/A      ; N/A     ; -3.000              ;
+;  d_flipflop:div10|flipflop_inst           ; -0.625  ; 0.269 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div11|flipflop_inst           ; -0.500  ; 0.175 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div12|flipflop_inst           ; -0.580  ; 0.253 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div13|flipflop_inst           ; -0.497  ; 0.172 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div14|flipflop_inst           ; -0.551  ; 0.241 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div15|flipflop_inst           ; 0.298   ; 0.169 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div9|flipflop_inst            ; -0.497  ; 0.172 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div1|d_flipflop:b0|flipflop_inst ; -0.530  ; 0.182 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div1|d_flipflop:b1|flipflop_inst ; -0.445  ; 0.136 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div1|d_flipflop:b2|flipflop_inst ; -0.606  ; 0.217 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div2|d_flipflop:b0|flipflop_inst ; -0.599  ; 0.168 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div2|d_flipflop:b1|flipflop_inst ; -0.522  ; 0.183 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div2|d_flipflop:b2|flipflop_inst ; -0.478  ; 0.192 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div3|d_flipflop:b0|flipflop_inst ; -0.519  ; 0.179 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div3|d_flipflop:b1|flipflop_inst ; -0.579  ; 0.164 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div3|d_flipflop:b2|flipflop_inst ; -0.629  ; 0.227 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div4|d_flipflop:b0|flipflop_inst ; -0.445  ; 0.136 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div4|d_flipflop:b1|flipflop_inst ; -0.522  ; 0.183 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div4|d_flipflop:b2|flipflop_inst ; -0.478  ; 0.165 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div5|d_flipflop:b0|flipflop_inst ; -0.509  ; 0.176 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div5|d_flipflop:b1|flipflop_inst ; -0.773  ; 0.209 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div5|d_flipflop:b2|flipflop_inst ; -0.606  ; 0.215 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div6|d_flipflop:b0|flipflop_inst ; -0.425  ; 0.130 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div6|d_flipflop:b1|flipflop_inst ; -0.522  ; 0.183 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div6|d_flipflop:b2|flipflop_inst ; -0.478  ; 0.167 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div7|d_flipflop:b0|flipflop_inst ; -0.510  ; 0.177 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div7|d_flipflop:b1|flipflop_inst ; -0.890  ; 0.279 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div7|d_flipflop:b2|flipflop_inst ; -0.385  ; 0.186 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div8|d_flipflop:b0|flipflop_inst ; -0.628  ; 0.293 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div8|d_flipflop:b1|flipflop_inst ; -0.501  ; 0.174 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div8|d_flipflop:b2|flipflop_inst ; -0.539  ; 0.213 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS                           ; -17.079 ; 0.0   ; 0.0      ; 0.0     ; -47.896             ;
+;  clk                                      ; -0.711  ; 0.000 ; N/A      ; N/A     ; -4.403              ;
+;  d_flipflop:div10|flipflop_inst           ; -0.625  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div11|flipflop_inst           ; -0.500  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div12|flipflop_inst           ; -0.580  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div13|flipflop_inst           ; -0.497  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div14|flipflop_inst           ; -0.551  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div15|flipflop_inst           ; 0.000   ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  d_flipflop:div9|flipflop_inst            ; -0.497  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div1|d_flipflop:b0|flipflop_inst ; -0.530  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div1|d_flipflop:b1|flipflop_inst ; -0.445  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div1|d_flipflop:b2|flipflop_inst ; -0.606  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div2|d_flipflop:b0|flipflop_inst ; -0.599  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div2|d_flipflop:b1|flipflop_inst ; -0.522  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div2|d_flipflop:b2|flipflop_inst ; -0.478  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div3|d_flipflop:b0|flipflop_inst ; -0.519  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div3|d_flipflop:b1|flipflop_inst ; -0.579  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div3|d_flipflop:b2|flipflop_inst ; -0.629  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div4|d_flipflop:b0|flipflop_inst ; -0.445  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div4|d_flipflop:b1|flipflop_inst ; -0.522  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div4|d_flipflop:b2|flipflop_inst ; -0.478  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div5|d_flipflop:b0|flipflop_inst ; -0.509  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div5|d_flipflop:b1|flipflop_inst ; -0.773  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div5|d_flipflop:b2|flipflop_inst ; -0.606  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div6|d_flipflop:b0|flipflop_inst ; -0.425  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div6|d_flipflop:b1|flipflop_inst ; -0.522  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div6|d_flipflop:b2|flipflop_inst ; -0.478  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div7|d_flipflop:b0|flipflop_inst ; -0.510  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div7|d_flipflop:b1|flipflop_inst ; -0.890  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div7|d_flipflop:b2|flipflop_inst ; -0.385  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div8|d_flipflop:b0|flipflop_inst ; -0.628  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div8|d_flipflop:b1|flipflop_inst ; -0.501  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
+;  dividir:div8|d_flipflop:b2|flipflop_inst ; -0.539  ; 0.000 ; N/A      ; N/A     ; -1.403              ;
++-------------------------------------------+---------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -294,9 +661,7 @@ No synchronizer chains to report.
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin          ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; ve           ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; done         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; alarme       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; clk_out      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -307,10 +672,6 @@ No synchronizer chains to report.
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
 ; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; reset               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; rolha               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; garrafa             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; pos                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -326,9 +687,7 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; ve           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; done         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; alarme       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; clk_out      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.39e-08 V                   ; 2.39 V              ; -0.0409 V           ; 0.21 V                               ; 0.121 V                              ; 4.7e-10 s                   ; 5.93e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.39e-08 V                  ; 2.39 V             ; -0.0409 V          ; 0.21 V                              ; 0.121 V                             ; 4.7e-10 s                  ; 5.93e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -338,9 +697,7 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; ve           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; done         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; alarme       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; clk_out      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-06 V                   ; 2.36 V              ; -0.0173 V           ; 0.144 V                              ; 0.094 V                              ; 6.44e-10 s                  ; 7.2e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-06 V                  ; 2.36 V             ; -0.0173 V          ; 0.144 V                             ; 0.094 V                             ; 6.44e-10 s                 ; 7.2e-10 s                  ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -350,34 +707,90 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; ve           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; done         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; alarme       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; clk_out      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------+
-; Setup Transfers                                                   ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; state[0]   ; clk      ; 2        ; 0        ; 0        ; 0        ;
-; clk        ; state[0] ; 1        ; 0        ; 0        ; 0        ;
-; state[0]   ; state[0] ; 1        ; 1        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                 ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; dividir:div1|d_flipflop:b0|flipflop_inst ; clk                                      ; 1        ; 1        ; 0        ; 0        ;
+; d_flipflop:div10|flipflop_inst           ; d_flipflop:div9|flipflop_inst            ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div11|flipflop_inst           ; d_flipflop:div10|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div12|flipflop_inst           ; d_flipflop:div11|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div13|flipflop_inst           ; d_flipflop:div12|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div14|flipflop_inst           ; d_flipflop:div13|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div15|flipflop_inst           ; d_flipflop:div14|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div15|flipflop_inst           ; d_flipflop:div15|flipflop_inst           ; 0        ; 0        ; 0        ; 1        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; dividir:div1|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; dividir:div1|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; dividir:div1|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; dividir:div2|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; dividir:div2|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; dividir:div2|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; dividir:div3|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; dividir:div3|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; dividir:div3|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; dividir:div4|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; dividir:div4|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; dividir:div4|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; dividir:div5|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; dividir:div5|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; dividir:div5|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; dividir:div6|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; dividir:div6|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; dividir:div6|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; dividir:div7|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; dividir:div7|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; dividir:div7|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; dividir:div8|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; dividir:div8|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div9|flipflop_inst            ; dividir:div8|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------+
-; Hold Transfers                                                    ;
-+------------+----------+----------+----------+----------+----------+
-; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+------------+----------+----------+----------+----------+----------+
-; state[0]   ; clk      ; 2        ; 0        ; 0        ; 0        ;
-; clk        ; state[0] ; 1        ; 0        ; 0        ; 0        ;
-; state[0]   ; state[0] ; 1        ; 1        ; 0        ; 0        ;
-+------------+----------+----------+----------+----------+----------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                  ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; From Clock                               ; To Clock                                 ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
+; dividir:div1|d_flipflop:b0|flipflop_inst ; clk                                      ; 1        ; 1        ; 0        ; 0        ;
+; d_flipflop:div10|flipflop_inst           ; d_flipflop:div9|flipflop_inst            ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div11|flipflop_inst           ; d_flipflop:div10|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div12|flipflop_inst           ; d_flipflop:div11|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div13|flipflop_inst           ; d_flipflop:div12|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div14|flipflop_inst           ; d_flipflop:div13|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div15|flipflop_inst           ; d_flipflop:div14|flipflop_inst           ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div15|flipflop_inst           ; d_flipflop:div15|flipflop_inst           ; 0        ; 0        ; 0        ; 1        ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; dividir:div1|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; dividir:div1|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; dividir:div1|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; dividir:div2|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; dividir:div2|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; dividir:div2|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; dividir:div3|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; dividir:div3|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; dividir:div3|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; dividir:div4|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; dividir:div4|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; dividir:div4|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; dividir:div5|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; dividir:div5|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; dividir:div5|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; dividir:div6|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; dividir:div6|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; dividir:div6|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; dividir:div7|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; dividir:div7|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; dividir:div7|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; dividir:div8|d_flipflop:b0|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; dividir:div8|d_flipflop:b1|flipflop_inst ; 0        ; 0        ; 1        ; 1        ;
+; d_flipflop:div9|flipflop_inst            ; dividir:div8|d_flipflop:b2|flipflop_inst ; 1        ; 1        ; 0        ; 0        ;
++------------------------------------------+------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -400,56 +813,51 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 8     ; 8    ;
-; Unconstrained Output Ports      ; 3     ; 3    ;
-; Unconstrained Output Port Paths ; 6     ; 6    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
 
 
-+------------------------------------------+
-; Clock Status Summary                     ;
-+----------+----------+------+-------------+
-; Target   ; Clock    ; Type ; Status      ;
-+----------+----------+------+-------------+
-; clk      ; clk      ; Base ; Constrained ;
-; state[0] ; state[0] ; Base ; Constrained ;
-+----------+----------+------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; garrafa    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; pos        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rolha      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; alarme      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; done        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ve          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; garrafa    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; pos        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rolha      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                     ;
++------------------------------------------+------------------------------------------+------+-------------+
+; Target                                   ; Clock                                    ; Type ; Status      ;
++------------------------------------------+------------------------------------------+------+-------------+
+; clk                                      ; clk                                      ; Base ; Constrained ;
+; d_flipflop:div9|flipflop_inst            ; d_flipflop:div9|flipflop_inst            ; Base ; Constrained ;
+; d_flipflop:div10|flipflop_inst           ; d_flipflop:div10|flipflop_inst           ; Base ; Constrained ;
+; d_flipflop:div11|flipflop_inst           ; d_flipflop:div11|flipflop_inst           ; Base ; Constrained ;
+; d_flipflop:div12|flipflop_inst           ; d_flipflop:div12|flipflop_inst           ; Base ; Constrained ;
+; d_flipflop:div13|flipflop_inst           ; d_flipflop:div13|flipflop_inst           ; Base ; Constrained ;
+; d_flipflop:div14|flipflop_inst           ; d_flipflop:div14|flipflop_inst           ; Base ; Constrained ;
+; d_flipflop:div15|flipflop_inst           ; d_flipflop:div15|flipflop_inst           ; Base ; Constrained ;
+; dividir:div1|d_flipflop:b0|flipflop_inst ; dividir:div1|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div1|d_flipflop:b1|flipflop_inst ; dividir:div1|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div1|d_flipflop:b2|flipflop_inst ; dividir:div1|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div2|d_flipflop:b0|flipflop_inst ; dividir:div2|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div2|d_flipflop:b1|flipflop_inst ; dividir:div2|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div2|d_flipflop:b2|flipflop_inst ; dividir:div2|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div3|d_flipflop:b0|flipflop_inst ; dividir:div3|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div3|d_flipflop:b1|flipflop_inst ; dividir:div3|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div3|d_flipflop:b2|flipflop_inst ; dividir:div3|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div4|d_flipflop:b0|flipflop_inst ; dividir:div4|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div4|d_flipflop:b1|flipflop_inst ; dividir:div4|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div4|d_flipflop:b2|flipflop_inst ; dividir:div4|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div5|d_flipflop:b0|flipflop_inst ; dividir:div5|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div5|d_flipflop:b1|flipflop_inst ; dividir:div5|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div5|d_flipflop:b2|flipflop_inst ; dividir:div5|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div6|d_flipflop:b0|flipflop_inst ; dividir:div6|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div6|d_flipflop:b1|flipflop_inst ; dividir:div6|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div6|d_flipflop:b2|flipflop_inst ; dividir:div6|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div7|d_flipflop:b0|flipflop_inst ; dividir:div7|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div7|d_flipflop:b1|flipflop_inst ; dividir:div7|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div7|d_flipflop:b2|flipflop_inst ; dividir:div7|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
+; dividir:div8|d_flipflop:b0|flipflop_inst ; dividir:div8|d_flipflop:b0|flipflop_inst ; Base ; Constrained ;
+; dividir:div8|d_flipflop:b1|flipflop_inst ; dividir:div8|d_flipflop:b1|flipflop_inst ; Base ; Constrained ;
+; dividir:div8|d_flipflop:b2|flipflop_inst ; dividir:div8|d_flipflop:b2|flipflop_inst ; Base ; Constrained ;
++------------------------------------------+------------------------------------------+------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -457,9 +865,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; alarme      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; done        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ve          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clk_out     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; clk_out     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -469,90 +884,400 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 19 19:36:32 2025
+    Info: Processing started: Wed Nov 19 20:12:38 2025
 Info: Command: quartus_sta pbl3 -c pbl3
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 2 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'pbl3.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div15|flipflop_inst d_flipflop:div15|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div14|flipflop_inst d_flipflop:div14|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div13|flipflop_inst d_flipflop:div13|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div12|flipflop_inst d_flipflop:div12|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div11|flipflop_inst d_flipflop:div11|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div10|flipflop_inst d_flipflop:div10|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name d_flipflop:div9|flipflop_inst d_flipflop:div9|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div8|d_flipflop:b2|flipflop_inst dividir:div8|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div8|d_flipflop:b1|flipflop_inst dividir:div8|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div8|d_flipflop:b0|flipflop_inst dividir:div8|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div7|d_flipflop:b2|flipflop_inst dividir:div7|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div7|d_flipflop:b1|flipflop_inst dividir:div7|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div7|d_flipflop:b0|flipflop_inst dividir:div7|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div6|d_flipflop:b2|flipflop_inst dividir:div6|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div6|d_flipflop:b1|flipflop_inst dividir:div6|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div6|d_flipflop:b0|flipflop_inst dividir:div6|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div5|d_flipflop:b2|flipflop_inst dividir:div5|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div5|d_flipflop:b1|flipflop_inst dividir:div5|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div5|d_flipflop:b0|flipflop_inst dividir:div5|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div4|d_flipflop:b2|flipflop_inst dividir:div4|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div4|d_flipflop:b1|flipflop_inst dividir:div4|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div4|d_flipflop:b0|flipflop_inst dividir:div4|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div3|d_flipflop:b2|flipflop_inst dividir:div3|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div3|d_flipflop:b1|flipflop_inst dividir:div3|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div3|d_flipflop:b0|flipflop_inst dividir:div3|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div2|d_flipflop:b2|flipflop_inst dividir:div2|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div2|d_flipflop:b1|flipflop_inst dividir:div2|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div2|d_flipflop:b0|flipflop_inst dividir:div2|d_flipflop:b0|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div1|d_flipflop:b2|flipflop_inst dividir:div1|d_flipflop:b2|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div1|d_flipflop:b1|flipflop_inst dividir:div1|d_flipflop:b1|flipflop_inst
+    Info (332105): create_clock -period 1.000 -name dividir:div1|d_flipflop:b0|flipflop_inst dividir:div1|d_flipflop:b0|flipflop_inst
     Info (332105): create_clock -period 1.000 -name clk clk
-    Info (332105): create_clock -period 1.000 -name state[0] state[0]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.089
+Info (332146): Worst-case setup slack is -0.890
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.089              -3.765 state[0] 
-    Info (332119):     0.215               0.000 clk 
-Info (332146): Worst-case hold slack is 0.309
+    Info (332119):    -0.890              -0.890 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.773              -0.773 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.711              -0.711 clk 
+    Info (332119):    -0.629              -0.629 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.628              -0.628 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.625              -0.625 d_flipflop:div10|flipflop_inst 
+    Info (332119):    -0.606              -0.606 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.606              -0.606 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.599              -0.599 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.580              -0.580 d_flipflop:div12|flipflop_inst 
+    Info (332119):    -0.579              -0.579 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.551              -0.551 d_flipflop:div14|flipflop_inst 
+    Info (332119):    -0.539              -0.539 dividir:div8|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.530              -0.530 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.522              -0.522 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.522              -0.522 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.522              -0.522 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.519              -0.519 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.510              -0.510 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.509              -0.509 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.501              -0.501 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.500              -0.500 d_flipflop:div11|flipflop_inst 
+    Info (332119):    -0.497              -0.497 d_flipflop:div13|flipflop_inst 
+    Info (332119):    -0.497              -0.497 d_flipflop:div9|flipflop_inst 
+    Info (332119):    -0.478              -0.478 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.478              -0.478 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.478              -0.478 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.445              -0.445 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.445              -0.445 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.425              -0.425 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.385              -0.385 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.298               0.000 d_flipflop:div15|flipflop_inst 
+Info (332146): Worst-case hold slack is 0.393
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.309               0.000 clk 
-    Info (332119):     0.936               0.000 state[0] 
+    Info (332119):     0.393               0.000 d_flipflop:div15|flipflop_inst 
+    Info (332119):     0.468               0.000 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.479               0.000 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.480               0.000 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.489               0.000 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.489               0.000 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.520               0.000 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.548               0.000 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.559               0.000 d_flipflop:div13|flipflop_inst 
+    Info (332119):     0.560               0.000 d_flipflop:div9|flipflop_inst 
+    Info (332119):     0.561               0.000 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.563               0.000 d_flipflop:div11|flipflop_inst 
+    Info (332119):     0.567               0.000 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.568               0.000 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.577               0.000 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.580               0.000 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.580               0.000 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.580               0.000 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.582               0.000 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.584               0.000 dividir:div8|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.596               0.000 clk 
+    Info (332119):     0.602               0.000 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.603               0.000 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.613               0.000 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.631               0.000 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.633               0.000 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.759               0.000 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.768               0.000 d_flipflop:div14|flipflop_inst 
+    Info (332119):     0.796               0.000 d_flipflop:div12|flipflop_inst 
+    Info (332119):     0.846               0.000 d_flipflop:div10|flipflop_inst 
+    Info (332119):     0.850               0.000 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.902               0.000 dividir:div7|d_flipflop:b1|flipflop_inst 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -5.806 clk 
-    Info (332119):     0.396               0.000 state[0] 
+    Info (332119):    -3.000              -4.403 clk 
+    Info (332119):    -1.403              -1.403 d_flipflop:div10|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div11|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div12|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div13|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div14|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div15|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div9|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div8|d_flipflop:b2|flipflop_inst 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.945
+Info (332146): Worst-case setup slack is -0.808
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.945              -3.563 state[0] 
-    Info (332119):     0.421               0.000 clk 
-Info (332146): Worst-case hold slack is 0.138
+    Info (332119):    -0.808              -0.808 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.697              -0.697 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.550              -0.550 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.543              -0.543 d_flipflop:div10|flipflop_inst 
+    Info (332119):    -0.541              -0.541 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.529              -0.529 clk 
+    Info (332119):    -0.529              -0.529 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.520              -0.520 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.519              -0.519 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.513              -0.513 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.505              -0.505 d_flipflop:div12|flipflop_inst 
+    Info (332119):    -0.482              -0.482 d_flipflop:div14|flipflop_inst 
+    Info (332119):    -0.459              -0.459 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.457              -0.457 dividir:div8|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.447              -0.447 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.447              -0.447 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.447              -0.447 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.445              -0.445 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.437              -0.437 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.437              -0.437 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.426              -0.426 d_flipflop:div11|flipflop_inst 
+    Info (332119):    -0.426              -0.426 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.423              -0.423 d_flipflop:div13|flipflop_inst 
+    Info (332119):    -0.423              -0.423 d_flipflop:div9|flipflop_inst 
+    Info (332119):    -0.395              -0.395 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.395              -0.395 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.383              -0.383 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -0.383              -0.383 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.377              -0.377 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -0.365              -0.365 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -0.302              -0.302 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.361               0.000 d_flipflop:div15|flipflop_inst 
+Info (332146): Worst-case hold slack is 0.354
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.138               0.000 clk 
-    Info (332119):     0.902               0.000 state[0] 
+    Info (332119):     0.354               0.000 d_flipflop:div15|flipflop_inst 
+    Info (332119):     0.431               0.000 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.431               0.000 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.442               0.000 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.458               0.000 clk 
+    Info (332119):     0.461               0.000 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.461               0.000 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.462               0.000 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.495               0.000 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.522               0.000 dividir:div8|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.523               0.000 d_flipflop:div9|flipflop_inst 
+    Info (332119):     0.525               0.000 d_flipflop:div13|flipflop_inst 
+    Info (332119):     0.525               0.000 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.529               0.000 d_flipflop:div11|flipflop_inst 
+    Info (332119):     0.531               0.000 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.532               0.000 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.540               0.000 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.542               0.000 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.542               0.000 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.543               0.000 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.546               0.000 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.549               0.000 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.550               0.000 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.581               0.000 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.584               0.000 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.604               0.000 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.719               0.000 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.728               0.000 d_flipflop:div14|flipflop_inst 
+    Info (332119):     0.746               0.000 d_flipflop:div12|flipflop_inst 
+    Info (332119):     0.787               0.000 d_flipflop:div10|flipflop_inst 
+    Info (332119):     0.797               0.000 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.862               0.000 dividir:div7|d_flipflop:b1|flipflop_inst 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -5.806 clk 
-    Info (332119):     0.371               0.000 state[0] 
+    Info (332119):    -3.000              -4.403 clk 
+    Info (332119):    -1.403              -1.403 d_flipflop:div10|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div11|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div12|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div13|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div14|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div15|flipflop_inst 
+    Info (332119):    -1.403              -1.403 d_flipflop:div9|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.403              -1.403 dividir:div8|d_flipflop:b2|flipflop_inst 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.481
+Info (332146): Worst-case setup slack is -0.140
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.481              -0.481 state[0] 
-    Info (332119):     0.365               0.000 clk 
-Info (332146): Worst-case hold slack is 0.268
+    Info (332119):    -0.140              -0.140 clk 
+    Info (332119):     0.010               0.000 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.071               0.000 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.071               0.000 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.073               0.000 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.082               0.000 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.083               0.000 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.098               0.000 d_flipflop:div10|flipflop_inst 
+    Info (332119):     0.107               0.000 dividir:div8|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.116               0.000 d_flipflop:div12|flipflop_inst 
+    Info (332119):     0.118               0.000 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.125               0.000 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.130               0.000 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.133               0.000 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.134               0.000 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.134               0.000 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.134               0.000 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.134               0.000 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.137               0.000 d_flipflop:div14|flipflop_inst 
+    Info (332119):     0.137               0.000 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.138               0.000 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.139               0.000 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.140               0.000 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.143               0.000 d_flipflop:div11|flipflop_inst 
+    Info (332119):     0.144               0.000 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.147               0.000 d_flipflop:div13|flipflop_inst 
+    Info (332119):     0.147               0.000 d_flipflop:div9|flipflop_inst 
+    Info (332119):     0.174               0.000 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.174               0.000 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.179               0.000 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.180               0.000 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.693               0.000 d_flipflop:div15|flipflop_inst 
+Info (332146): Worst-case hold slack is 0.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.268               0.000 state[0] 
-    Info (332119):     0.389               0.000 clk 
+    Info (332119):     0.130               0.000 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.136               0.000 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.136               0.000 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.164               0.000 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.165               0.000 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.167               0.000 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.168               0.000 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.169               0.000 d_flipflop:div15|flipflop_inst 
+    Info (332119):     0.172               0.000 d_flipflop:div13|flipflop_inst 
+    Info (332119):     0.172               0.000 d_flipflop:div9|flipflop_inst 
+    Info (332119):     0.174               0.000 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.175               0.000 d_flipflop:div11|flipflop_inst 
+    Info (332119):     0.176               0.000 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.177               0.000 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.179               0.000 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.182               0.000 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.183               0.000 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.183               0.000 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.183               0.000 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.186               0.000 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.192               0.000 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.209               0.000 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.213               0.000 dividir:div8|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.215               0.000 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.217               0.000 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.227               0.000 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):     0.241               0.000 d_flipflop:div14|flipflop_inst 
+    Info (332119):     0.253               0.000 d_flipflop:div12|flipflop_inst 
+    Info (332119):     0.269               0.000 d_flipflop:div10|flipflop_inst 
+    Info (332119):     0.279               0.000 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):     0.293               0.000 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):     0.368               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -5.154 clk 
-    Info (332119):     0.458               0.000 state[0] 
+    Info (332119):    -3.000              -4.063 clk 
+    Info (332119):    -1.000              -1.000 d_flipflop:div10|flipflop_inst 
+    Info (332119):    -1.000              -1.000 d_flipflop:div11|flipflop_inst 
+    Info (332119):    -1.000              -1.000 d_flipflop:div12|flipflop_inst 
+    Info (332119):    -1.000              -1.000 d_flipflop:div13|flipflop_inst 
+    Info (332119):    -1.000              -1.000 d_flipflop:div14|flipflop_inst 
+    Info (332119):    -1.000              -1.000 d_flipflop:div15|flipflop_inst 
+    Info (332119):    -1.000              -1.000 d_flipflop:div9|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div1|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div1|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div1|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div2|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div2|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div2|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div3|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div3|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div3|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div4|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div4|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div4|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div5|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div5|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div5|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div6|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div6|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div6|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div7|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div7|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div7|d_flipflop:b2|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div8|d_flipflop:b0|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div8|d_flipflop:b1|flipflop_inst 
+    Info (332119):    -1.000              -1.000 dividir:div8|d_flipflop:b2|flipflop_inst 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 0.830 ns
+    Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4818 megabytes
-    Info: Processing ended: Wed Nov 19 19:36:35 2025
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Wed Nov 19 20:12:42 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

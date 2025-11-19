@@ -1,35 +1,269 @@
-|MEF_vedacao
-garrafa => always1.IN0
-garrafa => always1.IN0
-garrafa => always1.IN0
-rolha => always1.IN1
-rolha => always1.IN1
-rolha => always1.IN1
-rolha => Mux0.IN0
-rolha => nextstate.OUTPUTSELECT
-rolha => Mux0.IN1
-pos => always1.IN1
-pos => always1.IN1
-pos => always1.IN1
-pos => always1.IN1
-clk => state[0].CLK
-clk => state[1].CLK
-reset => state[0].ACLR
-reset => state[1].ACLR
-ve <= saida_vedacao:comb_47.ve
-done <= saida_vedacao:comb_47.done
-alarme <= saida_vedacao:comb_47.alarme
+|divisor_frequencia
+clk => clk.IN1
+clk_out <= d_flipflop:divfinal.q
 
 
-|MEF_vedacao|saida_vedacao:comb_47
-state[0] => comb.IN0
-state[0] => comb.IN0
-state[0] => comb.IN0
-state[1] => comb.IN1
-state[1] => comb.IN1
-state[1] => comb.IN1
-alarme <= comb.DB_MAX_OUTPUT_PORT_TYPE
-ve <= comb.DB_MAX_OUTPUT_PORT_TYPE
-done <= comb.DB_MAX_OUTPUT_PORT_TYPE
+|divisor_frequencia|dividir:div1
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div1|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div1|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div1|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div2
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div2|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div2|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div2|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div3
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div3|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div3|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div3|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div4
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div4|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div4|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div4|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div5
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div5|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div5|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div5|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div6
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div6|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div6|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div6|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div7
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div7|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div7|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div7|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div8
+clk => clk.IN1
+clk_out <= d_flipflop:b2.q
+
+
+|divisor_frequencia|dividir:div8|d_flipflop:b0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div8|d_flipflop:b1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|dividir:div8|d_flipflop:b2
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div9
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div10
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div11
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div12
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div13
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div14
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:div15
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divisor_frequencia|d_flipflop:divfinal
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 

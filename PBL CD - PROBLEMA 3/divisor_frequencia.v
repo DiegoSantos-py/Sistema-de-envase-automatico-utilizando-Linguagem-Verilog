@@ -1,0 +1,67 @@
+module dividir(clk, clk_out);
+    input clk;
+    output clk_out;
+    wire reset;
+    wire [2:0] q;
+    wire nq0, nq1, nq2;
+
+    // Inversores
+    not Not0(nq0, q[0]);
+    not Not1(nq1, q[1]);
+     not Not2(nq2, q[2]);
+     
+    d_flipflop b0(.q(q[0]), .d(nq0), .clk(clk));
+    d_flipflop b1(.q(q[1]), .d(nq1), .clk(nq0));
+    d_flipflop b2(.q(q[2]), .d(nq2), .clk(nq1));
+
+    and And0(reset, q[0], q[2]);
+    and And1(clk_out, q[2], 1'b1);
+
+
+endmodule
+
+
+module divisor_frequencia(
+    input clk,
+    output clk_out
+);
+    wire [8:0] out;
+    wire [6:0] q;
+
+
+
+
+    wire nq0, nq1, nq2, nq3, nq4, nq5, nq6, n_clk_out;
+    not N0(nq0, q[0]);
+    not N1(nq1, q[1]);
+    not N2(nq2, q[2]);
+    not N3(nq3, q[3]);
+	 not N4(nq4, q[4]);
+	 not N5(nq5, q[5]);
+	 not N6(nq6, q[6]);
+
+	 not N7(n_clk_out, clk_out);
+
+    // 8 divisores por 5 em cascata
+    dividir div1 (.clk(clk),     .clk_out(out[1]));
+    dividir div2 (.clk(out[1]),  .clk_out(out[2]));
+    dividir div3 (.clk(out[2]),  .clk_out(out[3]));
+    dividir div4 (.clk(out[3]),  .clk_out(out[4]));
+    dividir div5 (.clk(out[4]),  .clk_out(out[5]));
+    dividir div6 (.clk(out[5]),  .clk_out(out[6]));
+    dividir div7 (.clk(out[6]),  .clk_out(out[7]));
+	 dividir div8 (.clk(out[7]),  .clk_out(out[8]));
+     
+     
+    // Flip-flops finais para gerar clock principal
+    d_flipflop div9 (.q(q[0]), .d(nq0), .clk(out[8]));
+    d_flipflop div10 (.q(q[1]), .d(nq1),.clk(nq0));
+    d_flipflop div11 (.q(q[2]), .d(nq2), .clk(nq1));
+    d_flipflop div12(.q(q[3]), .d(nq3), .clk(nq2));
+	 d_flipflop div13(.q(q[4]), .d(nq4), .clk(nq3));
+	 d_flipflop div14(.q(q[5]), .d(nq5), .clk(nq4));
+	 d_flipflop div15(.q(q[6]), .d(nq6), .clk(nq5));
+	 
+	 d_flipflop divfinal(.q(clk_out), .d(n_clk_out), .clk(nq6));
+
+endmodule
