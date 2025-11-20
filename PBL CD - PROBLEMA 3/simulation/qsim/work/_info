@@ -90,7 +90,7 @@ w1763587532
 8ehigual12.vwf.vt
 Fehigual12.vwf.vt
 !i122 53
-Z14 L0 30 62
+L0 30 62
 R7
 r1
 !s85 0
@@ -102,122 +102,122 @@ R13
 R10
 R11
 veh_igual5
-Z15 !s110 1763587319
+!s110 1763646422
 !i10b 1
-!s100 0bk:O0LMN1B2CSY;=zRA10
+!s100 jM1_RK5Gde23kg`dQ`BmO1
 R2
-IWO0o2BoHXOHX=B4[TBJde1
+IimMGG^9_SC2c@GY[i?H`=2
 R3
 R4
-w1763587317
+w1763646419
 R5
 R6
-!i122 48
-L0 32 297
+!i122 84
+L0 32 283
 R7
 r1
 !s85 0
 31
-Z16 !s108 1763587319.000000
+!s108 1763646422.000000
 R8
 R9
 !i113 1
 R10
 R11
 veh_igual5_vlg_vec_tst
-R15
+!s110 1763646423
 !i10b 1
-!s100 @g?=B<8;XmVCj0Z8jTgi?2
+!s100 PSQ01lJ9OR9AnC8VRNKl_3
 R2
-IM]Ld2nRf:Ie[>1@UXQ34d1
+I?k=:>H_e``JPUY4887EYU3
 R3
 R4
-w1763587315
-8eh_igual12.vwf.vt
-Feh_igual12.vwf.vt
-!i122 49
-R14
+w1763646417
+8ehigual5.vwf.vt
+Fehigual5.vwf.vt
+!i122 85
+L0 30 69
 R7
 r1
 !s85 0
 31
-R16
-!s107 eh_igual12.vwf.vt|
-!s90 -work|work|eh_igual12.vwf.vt|
+!s108 1763646423.000000
+!s107 ehigual5.vwf.vt|
+!s90 -work|work|ehigual5.vwf.vt|
 !i113 1
 R10
 R11
 vhard_block
-Z17 !s110 1763591814
+Z14 !s110 1763662822
 !i10b 1
-!s100 2fblIfUH4P96:5l:66@g61
+!s100 iORoZO@HWM2B9M>THMR2F3
 R2
-I6Zcon`kf:]0m9iGHQUK@J1
+I>09bz@jZY4OMzZmdc[:nd2
 R3
 R4
-Z18 w1763591812
+Z15 w1763662820
 R5
 R6
-!i122 82
-L0 490 45
+!i122 124
+L0 1721 45
 R7
 r1
 !s85 0
 31
-Z19 !s108 1763591814.000000
+Z16 !s108 1763662822.000000
 R8
 R9
 !i113 1
 R10
 R11
 vmain
-!s110 1763582288
+Z17 !s110 1763649033
 !i10b 1
-!s100 @3^09congFj227_d>W_ZE1
+!s100 >nKX8S7cJfKfN?d_MYIjj2
 R2
-IK8^6N1]U>N>P4]Z2iI4mT2
+I:LaW0Gi>VS1k3Y1GQ<6CV1
 R3
-R0
-w1763582286
+R4
+w1763649031
 R5
 R6
-!i122 40
+!i122 92
 L0 32 428
 R7
 r1
 !s85 0
 31
-!s108 1763582288.000000
+Z18 !s108 1763649033.000000
 R8
 R9
 !i113 1
 R10
 R11
 vmain_vlg_vec_tst
-!s110 1763582289
+R17
 !i10b 1
 !s100 TOOKP?1n6gaO1B0ni3FY]3
 R2
 Ia;zgcGB>Zc?65hQG0HW4D1
 R3
-R0
-w1763582285
+R4
+w1763649030
 8Waveform.vwf.vt
 FWaveform.vwf.vt
-!i122 41
-Z20 L0 30 60
+!i122 93
+Z19 L0 30 60
 R7
 r1
 !s85 0
 31
-!s108 1763582289.000000
+R18
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
 R10
 R11
 vMEF_contador_duzias
-Z21 !s110 1763582543
+Z20 !s110 1763582543
 !i10b 1
 !s100 P[InC1AFWR37M]VCB?L5]2
 R2
@@ -233,7 +233,7 @@ R7
 r1
 !s85 0
 31
-Z22 !s108 1763582543.000000
+Z21 !s108 1763582543.000000
 R8
 R9
 !i113 1
@@ -241,7 +241,7 @@ R10
 R11
 n@m@e@f_contador_duzias
 vMEF_contador_duzias_vlg_vec_tst
-R21
+R20
 !i10b 1
 !s100 C>F<Kjkin68gedI?7OnzN0
 R2
@@ -252,12 +252,12 @@ w1763582540
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
 !i122 43
-R20
+R19
 R7
 r1
 !s85 0
 31
-R22
+R21
 !s107 Waveform1.vwf.vt|
 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
@@ -265,23 +265,23 @@ R10
 R11
 n@m@e@f_contador_duzias_vlg_vec_tst
 vMEF_vedacao
-R17
+!s110 1763646698
 !i10b 1
 !s100 [d@<V>CkJnQXDZHXHj?Bc1
 R2
 I17`;Fz[Ah=U@ln1aCF;K31
 R3
 R4
-R18
+w1763646695
 R5
 R6
-!i122 82
+!i122 86
 L0 32 457
 R7
 r1
 !s85 0
 31
-R19
+Z22 !s108 1763646698.000000
 R8
 R9
 !i113 1
@@ -289,23 +289,23 @@ R10
 R11
 n@m@e@f_vedacao
 vMEF_vedacao_vlg_vec_tst
-R17
+!s110 1763646699
 !i10b 1
-!s100 0ebcV9:m[_b0QbVYJzk]K2
+!s100 SX;4@1k71]dBhIEo8Qa:`1
 R2
-IHzNPJ<jolzaMl^:f_G@e12
+I1oA:DLa[oj305k39[PVTX1
 R3
 R4
-w1763591810
+w1763646694
 8vedacao.vwf.vt
 Fvedacao.vwf.vt
-!i122 83
-L0 30 73
+!i122 87
+L0 30 66
 R7
 r1
 !s85 0
 31
-R19
+R22
 !s107 vedacao.vwf.vt|
 !s90 -work|work|vedacao.vwf.vt|
 !i113 1
@@ -313,48 +313,48 @@ R10
 R11
 n@m@e@f_vedacao_vlg_vec_tst
 vteste
-Z23 !s110 1763581640
+R14
 !i10b 1
-!s100 T>Dnb=T:Q<oVG`FWk?kA>1
+!s100 DG0`TXRfX=JZQK4_3=lXA0
 R2
-I?@ACcMl=4B`1:Bz0M>TYB2
+IbJM<0TBD;Sj28AXFec>X20
 R3
-R0
-w1763581638
+R4
+R15
 R5
 R6
-!i122 38
-L0 32 658
+!i122 124
+L0 32 1688
 R7
 r1
 !s85 0
 31
-Z24 !s108 1763581640.000000
+R16
 R8
 R9
 !i113 1
 R10
 R11
 vteste_vlg_vec_tst
-R23
+R14
 !i10b 1
-!s100 8SSPN4NMWU02D_diBNgZ81
+!s100 LbV6X^2zJhDC^Zn1g5hjh3
 R2
-IK>eZF3e9@fIg0:cHjO:H01
+IdH8heTE_[>mK]X=OL4RLD3
 R3
-R0
-w1763581637
-8Waveform2.vwf.vt
-FWaveform2.vwf.vt
-!i122 39
-L0 30 44
+R4
+w1763662818
+8teste_dispenservedacao.vwf.vt
+Fteste_dispenservedacao.vwf.vt
+!i122 125
+L0 30 121
 R7
 r1
 !s85 0
 31
-R24
-!s107 Waveform2.vwf.vt|
-!s90 -work|work|Waveform2.vwf.vt|
+R16
+!s107 teste_dispenservedacao.vwf.vt|
+!s90 -work|work|teste_dispenservedacao.vwf.vt|
 !i113 1
 R10
 R11

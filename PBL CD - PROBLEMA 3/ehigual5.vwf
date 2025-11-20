@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -80,20 +82,10 @@ SIGNAL("in")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
-	WIDTH = 8;
+	WIDTH = 7;
 	LSB_INDEX = 0;
 	DIRECTION = INPUT;
 	PARENT = "";
-}
-
-SIGNAL("in[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "in";
 }
 
 SIGNAL("in[6]")
@@ -176,34 +168,12 @@ SIGNAL("out")
 	PARENT = "";
 }
 
-TRANSITION_LIST("in[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 2;
-			LEVEL 0 FOR 175.0;
-			LEVEL 1 FOR 175.0;
-		}
-		LEVEL 0 FOR 175.0;
-		LEVEL 1 FOR 125.0;
-	}
-}
-
 TRANSITION_LIST("in[6]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 150.0;
-			LEVEL 1 FOR 150.0;
-		}
-		LEVEL 0 FOR 100.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -214,14 +184,30 @@ TRANSITION_LIST("in[5]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 4;
-			LEVEL 0 FOR 125.0;
-			LEVEL 1 FOR 125.0;
+			REPEAT = 1;
+			LEVEL 0 FOR 400.0;
+			LEVEL 1 FOR 400.0;
 		}
+		LEVEL 0 FOR 200.0;
 	}
 }
 
 TRANSITION_LIST("in[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 0 FOR 200.0;
+			LEVEL 1 FOR 200.0;
+		}
+		LEVEL 0 FOR 200.0;
+	}
+}
+
+TRANSITION_LIST("in[3]")
 {
 	NODE
 	{
@@ -235,28 +221,17 @@ TRANSITION_LIST("in[4]")
 	}
 }
 
-TRANSITION_LIST("in[3]")
+TRANSITION_LIST("in[2]")
 {
 	NODE
 	{
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 6;
-			LEVEL 0 FOR 75.0;
-			LEVEL 1 FOR 75.0;
+			REPEAT = 10;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 50.0;
 		}
-		LEVEL 0 FOR 75.0;
-		LEVEL 1 FOR 25.0;
-	}
-}
-
-TRANSITION_LIST("in[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -281,9 +256,9 @@ TRANSITION_LIST("in[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 10;
-			LEVEL 0 FOR 50.0;
-			LEVEL 1 FOR 50.0;
+			REPEAT = 40;
+			LEVEL 0 FOR 12.5;
+			LEVEL 1 FOR 12.5;
 		}
 	}
 }
@@ -300,16 +275,16 @@ TRANSITION_LIST("out")
 DISPLAY_LINE
 {
 	CHANNEL = "in";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Unsigned;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
-	CHILDREN = 1, 2, 3, 4, 5, 6, 7, 8;
+	CHILDREN = 1, 2, 3, 4, 5, 6, 7;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[7]";
+	CHANNEL = "in[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 1;
@@ -319,7 +294,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[6]";
+	CHANNEL = "in[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 2;
@@ -329,7 +304,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[5]";
+	CHANNEL = "in[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 3;
@@ -339,7 +314,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[4]";
+	CHANNEL = "in[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 4;
@@ -349,7 +324,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[3]";
+	CHANNEL = "in[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 5;
@@ -359,7 +334,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[2]";
+	CHANNEL = "in[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 6;
@@ -369,7 +344,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[1]";
+	CHANNEL = "in[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Unsigned;
 	TREE_INDEX = 7;
@@ -379,20 +354,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "in[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
-	TREE_INDEX = 8;
-	TREE_LEVEL = 1;
-	PARENT = 0;
-}
-
-DISPLAY_LINE
-{
 	CHANNEL = "out";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 9;
+	TREE_INDEX = 8;
 	TREE_LEVEL = 0;
 }
 

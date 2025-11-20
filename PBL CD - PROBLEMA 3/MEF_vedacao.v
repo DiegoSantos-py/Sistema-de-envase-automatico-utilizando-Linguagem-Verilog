@@ -1,6 +1,12 @@
-module MEF_vedacao(garrafa, rolha, pos, clk, reset, ve, done, alarme);
-	input garrafa, rolha, pos, clk, reset;
-	output ve, done, alarme;
+module MEF_vedacao(
+	input garrafa, 
+	input rolha, 
+	input pos, 
+	input clk, 
+	input reset, 
+	output ve, 
+	output done, 
+	output alarme);
 	
 	reg [1:0]state, nextstate;
 	
@@ -37,15 +43,15 @@ module MEF_vedacao(garrafa, rolha, pos, clk, reset, ve, done, alarme);
 					nextstate = AL;
 		endcase
 	
-	saida_vedacao(
-	.state(state), 
-	.alarme(alarme), 
-	.ve(ve), 
-	.done(done));
+	//saida_vedacao(
+	//.state(state), 
+	//.alarme(alarme), 
+	//.ve(ve), 
+	//.done(done));
 	
-	//assign ve = (state == V1);
-	//assign done = (state == V1);
-	//assign alarme = (state == AL);
+	assign ve = (state == V1);
+	assign done = (state == V1);
+	assign alarme = (state == AL);
 	
 endmodule
 

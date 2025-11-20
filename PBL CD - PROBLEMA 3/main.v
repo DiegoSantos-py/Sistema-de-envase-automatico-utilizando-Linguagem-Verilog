@@ -1,7 +1,11 @@
-module main(switch_add_rolha, rolha5, disp, add_rolha, clk, reset);
-	input switch_add_rolha, rolha5, clk, reset;
-	output disp;
-   output add_rolha;
+module MEF_dispenser(
+	input switch_add_rolha, 
+	input rolha5, 
+	input clk,
+	input reset,
+	output disp, 
+	output add_rolha
+);
 
 	reg[1:0]state, nextstate;
    parameter E0   = 2'b00;
@@ -21,13 +25,13 @@ module main(switch_add_rolha, rolha5, disp, add_rolha, clk, reset);
 
 			  // ESTADO E0  (00)
 			  E0:
-					if (rolha5 == 0)
-						 if (switch_add_rolha == 1)
-							  nextstate = ADD1;
-						 else
-							  nextstate = E0;
+					if (rolha5 == 1 && switch_add_rolha == 0)
+						nextstate = DISP;
+					else if (switch_add_rolha == 1)
+						nextstate = ADD1;
 					else
-						 nextstate = DISP;
+						nextstate = E0;
+
 
 			  // ESTADO DISP (01)
 			  DISP:

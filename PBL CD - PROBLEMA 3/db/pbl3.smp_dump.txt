@@ -1,5 +1,12 @@
 
-State Machine - |MEF_vedacao|state
+State Machine - |teste|MEF_dispenser:comb_8|state
+Name state.ADD2 state.ADD1 state.DISP state.E0 
+state.E0 0 0 0 0 
+state.DISP 0 0 1 1 
+state.ADD1 0 1 0 1 
+state.ADD2 1 0 0 1 
+
+State Machine - |teste|MEF_vedacao:comb_7|state
 Name state.V0 state.AL state.V1 
 state.V0 0 0 0 
 state.V1 1 0 1 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pbl3
-Wed Nov 19 20:12:19 2025
+Thu Nov 20 12:13:14 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,22 +13,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "d_flipflop:divfinal"
- 10. Port Connectivity Checks: "d_flipflop:div15"
- 11. Port Connectivity Checks: "d_flipflop:div14"
- 12. Port Connectivity Checks: "d_flipflop:div13"
- 13. Port Connectivity Checks: "d_flipflop:div12"
- 14. Port Connectivity Checks: "d_flipflop:div11"
- 15. Port Connectivity Checks: "d_flipflop:div10"
- 16. Port Connectivity Checks: "d_flipflop:div9"
- 17. Port Connectivity Checks: "dividir:div1|d_flipflop:b2"
- 18. Port Connectivity Checks: "dividir:div1|d_flipflop:b1"
- 19. Port Connectivity Checks: "dividir:div1|d_flipflop:b0"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |teste|MEF_dispenser:comb_8|state
+  9. State Machine - |teste|MEF_vedacao:comb_7|state
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: MEF_vedacao:comb_7
+ 13. Parameter Settings for User Entity Instance: MEF_dispenser:comb_8
+ 14. Port Connectivity Checks: "sum8bit:comb_4|sum:somador1"
+ 15. Port Connectivity Checks: "sum8bit:comb_4"
+ 16. Port Connectivity Checks: "muxdisp:comb_3"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 19 20:12:19 2025       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 20 12:13:14 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pbl3                                        ;
-; Top-level Entity Name              ; divisor_frequencia                          ;
+; Top-level Entity Name              ; teste                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 32                                          ;
-;     Total combinational functions  ; 32                                          ;
-;     Dedicated logic registers      ; 32                                          ;
-; Total registers                    ; 32                                          ;
-; Total pins                         ; 2                                           ;
+; Total logic elements               ; 35                                          ;
+;     Total combinational functions  ; 27                                          ;
+;     Dedicated logic registers      ; 22                                          ;
+; Total registers                    ; 22                                          ;
+; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -80,7 +77,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; divisor_frequencia ; pbl3               ;
+; Top-level entity name                                            ; teste              ; pbl3               ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -173,101 +170,132 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
-; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v         ;         ;
-; divisor_frequencia.v             ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v        ;         ;
+; MEF_vedacao.v                    ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v ;         ;
+; teste.v                          ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v       ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v  ;         ;
+; eh_igual5.v                      ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_igual5.v   ;         ;
+; sum4bit.v                        ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v     ;         ;
+; register.v                       ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v    ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                     ;
-+---------------------------------------------+-----------------------------------+
-; Resource                                    ; Usage                             ;
-+---------------------------------------------+-----------------------------------+
-; Estimated Total logic elements              ; 32                                ;
-;                                             ;                                   ;
-; Total combinational functions               ; 32                                ;
-; Logic element usage by number of LUT inputs ;                                   ;
-;     -- 4 input functions                    ; 0                                 ;
-;     -- 3 input functions                    ; 0                                 ;
-;     -- <=2 input functions                  ; 32                                ;
-;                                             ;                                   ;
-; Logic elements by mode                      ;                                   ;
-;     -- normal mode                          ; 32                                ;
-;     -- arithmetic mode                      ; 0                                 ;
-;                                             ;                                   ;
-; Total registers                             ; 32                                ;
-;     -- Dedicated logic registers            ; 32                                ;
-;     -- I/O registers                        ; 0                                 ;
-;                                             ;                                   ;
-; I/O pins                                    ; 2                                 ;
-;                                             ;                                   ;
-; Embedded Multiplier 9-bit elements          ; 0                                 ;
-;                                             ;                                   ;
-; Maximum fan-out node                        ; d_flipflop:divfinal|flipflop_inst ;
-; Maximum fan-out                             ; 2                                 ;
-; Total fan-out                               ; 99                                ;
-; Average fan-out                             ; 1.46                              ;
-+---------------------------------------------+-----------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 35        ;
+;                                             ;           ;
+; Total combinational functions               ; 27        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 18        ;
+;     -- 3 input functions                    ; 5         ;
+;     -- <=2 input functions                  ; 4         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 27        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 22        ;
+;     -- Dedicated logic registers            ; 22        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 35        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 22        ;
+; Total fan-out                               ; 218       ;
+; Average fan-out                             ; 1.83      ;
++---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name        ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+--------------------+--------------+
-; |divisor_frequencia        ; 32 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 2    ; 0            ; 0          ; |divisor_frequencia                            ; divisor_frequencia ; work         ;
-;    |d_flipflop:div10|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div10           ; d_flipflop         ; work         ;
-;    |d_flipflop:div11|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div11           ; d_flipflop         ; work         ;
-;    |d_flipflop:div12|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div12           ; d_flipflop         ; work         ;
-;    |d_flipflop:div13|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div13           ; d_flipflop         ; work         ;
-;    |d_flipflop:div14|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div14           ; d_flipflop         ; work         ;
-;    |d_flipflop:div15|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div15           ; d_flipflop         ; work         ;
-;    |d_flipflop:div9|       ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:div9            ; d_flipflop         ; work         ;
-;    |d_flipflop:divfinal|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|d_flipflop:divfinal        ; d_flipflop         ; work         ;
-;    |dividir:div1|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div1               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div1|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div1|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div1|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div2|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div2               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div2|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div2|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div2|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div3|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div3               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div3|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div3|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div3|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div4|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div4               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div4|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div4|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div4|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div5|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div5               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div5|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div5|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div5|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div6|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div6               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div6|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div6|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div6|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div7|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div7               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div7|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div7|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div7|d_flipflop:b2 ; d_flipflop         ; work         ;
-;    |dividir:div8|          ; 3 (0)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div8               ; dividir            ; work         ;
-;       |d_flipflop:b0|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div8|d_flipflop:b0 ; d_flipflop         ; work         ;
-;       |d_flipflop:b1|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div8|d_flipflop:b1 ; d_flipflop         ; work         ;
-;       |d_flipflop:b2|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |divisor_frequencia|dividir:div8|d_flipflop:b2 ; d_flipflop         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+--------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
+; |teste                     ; 27 (2)              ; 22 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 35   ; 0            ; 0          ; |teste                                     ; teste         ; work         ;
+;    |MEF_dispenser:comb_8|  ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|MEF_dispenser:comb_8                ; MEF_dispenser ; work         ;
+;    |MEF_vedacao:comb_7|    ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|MEF_vedacao:comb_7                  ; MEF_vedacao   ; work         ;
+;    |eh_igual5:comb_5|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|eh_igual5:comb_5                    ; eh_igual5     ; work         ;
+;    |muxdisp:comb_3|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|muxdisp:comb_3                      ; muxdisp       ; work         ;
+;    |register_8bit:dispo|   ; 1 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo                 ; register_8bit ; work         ;
+;       |d_flipflop:dff0|    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff0 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff1|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff1 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff2|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff2 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff3|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff3 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff4|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff4 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff5|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff5 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff6|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff6 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff7|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff7 ; d_flipflop    ; work         ;
+;    |register_8bit:estoq|   ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq                 ; register_8bit ; work         ;
+;       |d_flipflop:dff0|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff0 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff1|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff1 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff2|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff2 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff3|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff3 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff4|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff4 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff5|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff5 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff6|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff6 ; d_flipflop    ; work         ;
+;       |d_flipflop:dff7|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff7 ; d_flipflop    ; work         ;
+;    |sum8bit:comb_4|        ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4                      ; sum8bit       ; work         ;
+;       |sum:somador2|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador2         ; sum           ; work         ;
+;       |sum:somador3|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador3         ; sum           ; work         ;
+;       |sum:somador4|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador4         ; sum           ; work         ;
+;       |sum:somador5|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador5         ; sum           ; work         ;
+;       |sum:somador6|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador6         ; sum           ; work         ;
+;       |sum:somador7|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador7         ; sum           ; work         ;
+;       |sum:somador8|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador8         ; sum           ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------+
+; State Machine - |teste|MEF_dispenser:comb_8|state            ;
++------------+------------+------------+------------+----------+
+; Name       ; state.ADD2 ; state.ADD1 ; state.DISP ; state.E0 ;
++------------+------------+------------+------------+----------+
+; state.E0   ; 0          ; 0          ; 0          ; 0        ;
+; state.DISP ; 0          ; 0          ; 1          ; 1        ;
+; state.ADD1 ; 0          ; 1          ; 0          ; 1        ;
+; state.ADD2 ; 1          ; 0          ; 0          ; 1        ;
++------------+------------+------------+------------+----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------+
+; State Machine - |teste|MEF_vedacao:comb_7|state ;
++----------+----------+----------+----------------+
+; Name     ; state.V0 ; state.AL ; state.V1       ;
++----------+----------+----------+----------------+
+; state.V0 ; 0        ; 0        ; 0              ;
+; state.V1 ; 1        ; 0        ; 1              ;
+; state.AL ; 1        ; 1        ; 0              ;
++----------+----------+----------+----------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; MEF_dispenser:comb_8|state~4          ; Lost fanout        ;
+; MEF_dispenser:comb_8|state~5          ; Lost fanout        ;
+; MEF_vedacao:comb_7|state.V0           ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -275,113 +303,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 32    ;
+; Total registers                              ; 22    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 22    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:divfinal"                                                                                                                         ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF_vedacao:comb_7 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; V0             ; 00    ; Unsigned Binary                        ;
+; V1             ; 01    ; Unsigned Binary                        ;
+; AL             ; 10    ; Unsigned Binary                        ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div15"                                                                                                                            ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF_dispenser:comb_8 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; E0             ; 00    ; Unsigned Binary                          ;
+; DISP           ; 01    ; Unsigned Binary                          ;
+; ADD1           ; 10    ; Unsigned Binary                          ;
+; ADD2           ; 11    ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div14"                                                                                                                            ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "sum8bit:comb_4|sum:somador1" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; C    ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div13"                                                                                                                            ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sum8bit:comb_4"                                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div12"                                                                                                                            ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div11"                                                                                                                            ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div10"                                                                                                                            ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "d_flipflop:div9"                                                                                                                             ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dividir:div1|d_flipflop:b2"                                                                                                                  ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dividir:div1|d_flipflop:b1"                                                                                                                  ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "dividir:div1|d_flipflop:b0"                                                                                                                  ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------+
+; Port Connectivity Checks: "muxdisp:comb_3" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; A    ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
 
 
 +-----------------------------------------------------+
@@ -389,15 +370,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 2                           ;
-; cycloneiii_ff         ; 32                          ;
-;     plain             ; 32                          ;
-; cycloneiii_lcell_comb ; 32                          ;
-;     normal            ; 32                          ;
-;         1 data inputs ; 32                          ;
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 22                          ;
+;     CLR               ; 22                          ;
+; cycloneiii_lcell_comb ; 27                          ;
+;     normal            ; 27                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.98                        ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -416,22 +399,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 19 20:12:05 2025
+    Info: Processing started: Thu Nov 20 12:12:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pbl3 -c pbl3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file main.v
-    Info (12023): Found entity 1: main File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 1
-    Info (12023): Found entity 2: saidas_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 75
+    Info (12023): Found entity 1: MEF_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 1
+    Info (12023): Found entity 2: saidas_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 79
 Info (12021): Found 2 design units, including 2 entities, in source file mef_contador_duzias.v
     Info (12023): Found entity 1: MEF_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 1
     Info (12023): Found entity 2: saida_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 61
 Info (12021): Found 2 design units, including 2 entities, in source file mef_vedacao.v
     Info (12023): Found entity 1: MEF_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 1
-    Info (12023): Found entity 2: saida_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 52
-Info (12021): Found 2 design units, including 2 entities, in source file teste.v
-    Info (12023): Found entity 1: teste File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 1
-    Info (12023): Found entity 2: register_8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 22
+    Info (12023): Found entity 2: saida_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 58
+Info (12021): Found 3 design units, including 3 entities, in source file teste.v
+    Info (12023): Found entity 1: teste File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 3
+    Info (12023): Found entity 2: sum8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 51
+    Info (12023): Found entity 3: muxdisp File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 71
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
     Info (12023): Found entity 1: d_flipflop File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file eh_igual5.v
@@ -453,9 +437,15 @@ Info (12021): Found 2 design units, including 2 entities, in source file sum4bit
 Info (12021): Found 2 design units, including 2 entities, in source file divisor_frequencia.v
     Info (12023): Found entity 1: dividir File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 1
     Info (12023): Found entity 2: divisor_frequencia File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at main.v(84): created implicit net for "b0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 84
-Warning (10236): Verilog HDL Implicit Net warning at main.v(87): created implicit net for "b1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 87
-Critical Warning (10846): Verilog HDL Instantiation warning at MEF_vedacao.v(44): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file register.v
+    Info (12023): Found entity 1: register_8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(88): created implicit net for "b0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 88
+Warning (10236): Verilog HDL Implicit Net warning at main.v(91): created implicit net for "b1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 91
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(17): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(18): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(22): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(36): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(45): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 45
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(19): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 19
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(21): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 21
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(23): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 23
@@ -464,23 +454,34 @@ Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(2
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(26): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 26
 Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(34): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 34
 Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(35): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 35
-Info (12127): Elaborating entity "divisor_frequencia" for the top level hierarchy
-Info (12128): Elaborating entity "dividir" for hierarchy "dividir:div1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 46
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "dividir:div1|d_flipflop:b0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 13
-Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12127): Elaborating entity "teste" for the top level hierarchy
+Info (12128): Elaborating entity "register_8bit" for hierarchy "register_8bit:estoq" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 14
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "register_8bit:estoq|d_flipflop:dff0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v Line: 8
+Info (12128): Elaborating entity "muxdisp" for hierarchy "muxdisp:comb_3" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 17
+Info (12128): Elaborating entity "sum8bit" for hierarchy "sum8bit:comb_4" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 18
+Info (12128): Elaborating entity "sum" for hierarchy "sum8bit:comb_4|sum:somador1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 60
+Info (12128): Elaborating entity "eh_igual5" for hierarchy "eh_igual5:comb_5" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 22
+Info (12128): Elaborating entity "MEF_vedacao" for hierarchy "MEF_vedacao:comb_7" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 36
+Info (12128): Elaborating entity "MEF_dispenser" for hierarchy "MEF_dispenser:comb_8" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 45
+Warning (10240): Verilog HDL Always Construct warning at main.v(24): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
+Info (10041): Inferred latch for "nextstate.ADD2" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
+Info (10041): Inferred latch for "nextstate.ADD1" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
+Info (10041): Inferred latch for "nextstate.DISP" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
+Info (10041): Inferred latch for "nextstate.E0" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/RepPBLCD3/PBL CD - PROBLEMA 3/output_files/pbl3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 34 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4779 megabytes
-    Info: Processing ended: Wed Nov 19 20:12:19 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 35 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Thu Nov 20 12:13:14 2025
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:36
 
 
 +------------------------------------------+

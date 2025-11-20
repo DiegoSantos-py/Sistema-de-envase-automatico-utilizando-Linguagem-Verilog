@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/19/2025 19:36:50"
+// Generated on "11/20/2025 10:51:34"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          MEF_vedacao
 // 
@@ -84,14 +84,7 @@ end
 // rolha
 initial
 begin
-	repeat(6)
-	begin
-		rolha = 1'b0;
-		rolha = #75000 1'b1;
-		# 75000;
-	end
 	rolha = 1'b0;
-	rolha = #75000 1'b1;
 end 
 
 // reset

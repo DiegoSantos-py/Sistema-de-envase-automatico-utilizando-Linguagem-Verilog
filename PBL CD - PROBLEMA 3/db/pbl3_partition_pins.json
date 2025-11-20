@@ -4,11 +4,143 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "clk_out",
+					"name" : "disp",
+					"strict" : false
+				},
+				{
+					"name" : "add_rolha",
+					"strict" : false
+				},
+				{
+					"name" : "ve",
+					"strict" : false
+				},
+				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
+					"name" : "alarme",
+					"strict" : false
+				},
+				{
+					"name" : "rolha5",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rolha_disponivel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[0]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[1]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[2]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[3]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[4]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[5]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[6]",
+					"strict" : false
+				},
+				{
+					"name" : "estoque[7]",
+					"strict" : false
+				},
+				{
+					"name" : "switch_add_rolha",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "gar",
+					"strict" : false
+				},
+				{
+					"name" : "pos",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[5]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[6]",
+					"strict" : false
+				},
+				{
+					"name" : "qntsrolhas[7]",
 					"strict" : false
 				}
 			]
