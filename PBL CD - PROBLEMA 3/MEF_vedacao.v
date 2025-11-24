@@ -41,6 +41,8 @@ module MEF_vedacao(
 					nextstate = V1;
 				else
 					nextstate = AL;
+			default:
+				nextstate = V0;
 		endcase
 	
 	//saida_vedacao(

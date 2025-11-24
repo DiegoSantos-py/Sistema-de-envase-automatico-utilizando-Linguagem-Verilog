@@ -1,4 +1,5 @@
-Info (10281): Verilog HDL Declaration information at main.v(6): object "disp" differs only in case from object "DISP" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 6
+Info (10281): Verilog HDL Declaration information at main.v(9): object "descarte" differs only in case from object "Descarte" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 9
+Info (10281): Verilog HDL Declaration information at main.v(14): object "Display_duzias" differs only in case from object "display_duzias" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 14
 Info (10281): Verilog HDL Declaration information at MEF_contador_duzias.v(6): object "cont1" differs only in case from object "CONT1" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 6
 Info (10281): Verilog HDL Declaration information at MEF_contador_duzias.v(3): object "cont12" differs only in case from object "CONT12" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 3
 Info (10281): Verilog HDL Declaration information at decoder_decimal.v(2): object "A" differs only in case from object "a" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/decoder_decimal.v Line: 2
@@ -6,3 +7,4 @@ Info (10281): Verilog HDL Declaration information at decoder_decimal.v(2): objec
 Info (10281): Verilog HDL Declaration information at decoder_decimal.v(2): object "C" differs only in case from object "c" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/decoder_decimal.v Line: 2
 Info (10281): Verilog HDL Declaration information at decoder_decimal.v(2): object "D" differs only in case from object "d" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/decoder_decimal.v Line: 2
 Info (10281): Verilog HDL Declaration information at sum8bit.v(5): object "S" differs only in case from object "s" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum8bit.v Line: 5
+Info (10281): Verilog HDL Declaration information at MEF_dispenser.v(6): object "disp" differs only in case from object "DISP" in the same scope File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 6

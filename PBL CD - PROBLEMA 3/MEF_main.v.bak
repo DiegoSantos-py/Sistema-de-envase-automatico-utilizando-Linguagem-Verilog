@@ -1,0 +1,79 @@
+module MEF_main(
+		input start, 
+		input garrafa, 
+		input sensor_de_nivel,
+		input sensor_cq,
+		input descarte,
+		input ve_done,
+		input cont_done,
+		input clk,
+		input reset,
+		output motor, 
+		output EV,
+		output pos_ve, // garrafa em posição de vedação
+		output count, // sinal para ativar mef do contador
+		output resetar
+		);
+		
+		reg[2:0]state, nextstate;
+		
+		parameter SR = 3'b000; // Start/reset
+		parameter Mo = 3'b001; // Motor
+		parameter En = 3'b010; // Enchimento
+		parameter Vd = 3'b011; // Vedação
+		parameter Cq = 3'b100; // Controle de qualidade
+		parameter Co = 3'b101; // Contador
+		parameter De = 3'b110; // Descarte
+		
+		always @ ( posedge clk , posedge
+		reset )
+			if ( reset ) state <= SR ;
+			else state <= nextstate ;
+			
+		always @(*)
+			case(state)
+			
+				SR:
+					if (start == 1)
+						nextstate = SR;
+					else 
+						nextstate = Mo;
+				Mo:
+					if (garrafa == 1)
+						nextstate = En;
+					else
+						nextstate = Mo;
+				En:
+					if (sensor_de_nivel == 1) 
+						nextstate = Vd;
+					else
+						nextstate = En;
+				Vd:
+					if (ve_done == 1)
+						nextstate = Cq;
+					else
+						nextstate = Vd;
+				Cq:
+					if (sensor_cq == 1)
+						nextstate = Co;
+					else if (descarte == 1)
+						nextstate = De;
+					else
+						nextstate = Cq;
+				Co:
+					if (cont_done == 1)
+						nextstate = Mo;
+					else
+						nextstate = Co;
+				De:
+					nextstate = Mo;
+			endcase
+		
+		// Motor deve ficar ligado quando tiver garrafa e mef está em Mo
+		assign resetar = (state == SR);
+		assign motor = (state == Mo);
+		assign EV = (state == En);
+		assign pos_ve = (state == Vd);
+		assign count = (state == Co);
+
+endmodule

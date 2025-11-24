@@ -4,119 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "disp",
+					"name" : "Ev",
 					"strict" : false
 				},
 				{
-					"name" : "add_rolha",
+					"name" : "Motor",
 					"strict" : false
 				},
 				{
-					"name" : "ve",
+					"name" : "Alarme",
 					"strict" : false
 				},
 				{
-					"name" : "done",
+					"name" : "Disp",
 					"strict" : false
 				},
 				{
-					"name" : "alarme",
+					"name" : "garrafa",
 					"strict" : false
 				},
 				{
-					"name" : "rolha5",
+					"name" : "sensor_de_nivel",
 					"strict" : false
 				},
 				{
-					"name" : "rolha_disponivel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[2]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[3]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[4]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[5]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[6]",
-					"strict" : false
-				},
-				{
-					"name" : "rolha_disponivel[7]",
-					"strict" : false
-				},
-				{
-					"name" : "pode_repor",
-					"strict" : false
-				},
-				{
-					"name" : "whatever_is_available[0]",
-					"strict" : false
-				},
-				{
-					"name" : "whatever_is_available[1]",
-					"strict" : false
-				},
-				{
-					"name" : "whatever_is_available[2]",
-					"strict" : false
-				},
-				{
-					"name" : "whatever_is_available[3]",
-					"strict" : false
-				},
-				{
-					"name" : "tem_15",
-					"strict" : false
-				},
-				{
-					"name" : "dispenser",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[0]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[1]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[2]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[3]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[4]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[5]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[6]",
-					"strict" : false
-				},
-				{
-					"name" : "qntsrolhas[7]",
+					"name" : "start",
 					"strict" : false
 				},
 				{
@@ -125,18 +37,6 @@
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "gar",
-					"strict" : false
-				},
-				{
-					"name" : "pos",
 					"strict" : false
 				}
 			]

@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/PBL CD - PROBLEMA 3/Waveform1.vwf" --testbench_file="D:/PBL CD - PROBLEMA 3/simulation/qsim/Waveform1.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/PBL CD - PROBLEMA 3/Waveform1.vwf" --testbench_file="D:/PBL CD - PROBLEMA 3/simulation/qsim/Waveform1.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform1.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/Waveform1.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform1.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/Waveform1.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work pbl3.vo
@@ -20,7 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,7 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -154,9 +152,9 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 20;
+			LEVEL 0 FOR 25.0;
+			LEVEL 1 FOR 25.0;
 		}
 	}
 }
@@ -177,11 +175,12 @@ TRANSITION_LIST("cont12")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 2;
-			LEVEL 0 FOR 200.0;
-			LEVEL 1 FOR 200.0;
+			REPEAT = 6;
+			LEVEL 0 FOR 75.0;
+			LEVEL 1 FOR 75.0;
 		}
-		LEVEL 0 FOR 200.0;
+		LEVEL 0 FOR 75.0;
+		LEVEL 1 FOR 25.0;
 	}
 }
 
@@ -190,12 +189,7 @@ TRANSITION_LIST("cq")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 5;
-			LEVEL 0 FOR 100.0;
-			LEVEL 1 FOR 100.0;
-		}
+		LEVEL 1 FOR 1000.0;
 	}
 }
 

@@ -4,19 +4,21 @@ module MEF_contador_duzias(
     input  reset,
     input  clk,
     output cont1,
-    output add_cont12
+    output add_cont12,
+	 output cont_done
 );
 
     reg [1:0] state, nextstate;
 
     parameter C1     = 2'b00;
     parameter CONT1  = 2'b01;
-    parameter CONT12 = 2'b10;
+	 parameter WAIT   = 2'b10;
+    parameter CONT12 = 2'b11;
 
 	 always @ ( posedge clk , posedge
 	 reset )
-	 if ( reset ) state <= C1 ;
-	 else state <= nextstate ;
+		if ( reset ) state <= C1 ;
+		else state <= nextstate ;
 
     always @(*) 
         case (state)
@@ -29,15 +31,16 @@ module MEF_contador_duzias(
                     nextstate = C1;
 
             CONT1:
+						nextstate = WAIT;
+				WAIT:	
 					   if (cont12 == 1 && cq == 0)
 							nextstate = CONT12;
 						else if (cont12 == 1 && cq == 1)
 							nextstate = CONT12;
-					   else if (cont12 == 0 && cq == 1)
-							nextstate = CONT1;
-					   else
+						else if (cont12 == 0 && cq == 1)
+							nextstate = WAIT;
+						else
 							nextstate = C1;
-
             CONT12:
 						if (cont12)
 							nextstate = CONT12;
@@ -56,13 +59,15 @@ module MEF_contador_duzias(
 	 
 	 assign cont1 = (state == CONT1);
 	 assign add_cont12 = (state == CONT12);
+	 assign cont_done = (state == WAIT);
 
 endmodule
 
 module saida_contador_duzias(    
 	 input  [1:0]state,      // bits do estado
     output cont1,
-    output add_cont12
+    output add_cont12,
+	 output done
 	 );
 	 
 	 wire ne0;
@@ -71,7 +76,8 @@ module saida_contador_duzias(
 	 not (ne0,state[0]);
 	 not (ne1,state[1]);
     and (cont1, ne1, state[0]);
-    and (add_cont12, state[1], ne0);
+	 and (done, state[1], ne0);
+    and (add_cont12, state[1], state[0]);
 
 endmodule
 	 

@@ -1,6 +1,6 @@
 module display_decimal(A, out);
 	input [12:0]A;
-	output [27:0] out;
+	output [13:0] out;
 	
 	wire [3:0] db1, db2, db3, db4, db5, db6, db7, db8, db9, db10, db11, db12;
 	
