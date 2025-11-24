@@ -53,6 +53,7 @@ module MEF_contador_duzias(
 	 //.cont1(cont1),
 	 //.add_cont12(add_cont12)
 	 //);
+	 
 	 assign cont1 = (state == CONT1);
 	 assign add_cont12 = (state == CONT12);
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pbl3
-Thu Nov 20 12:13:14 2025
+Mon Nov 24 15:29:50 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,19 +13,20 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |teste|MEF_dispenser:comb_8|state
-  9. State Machine - |teste|MEF_vedacao:comb_7|state
+  8. State Machine - |teste|MEF_dispenser:comb_14|state
+  9. State Machine - |teste|MEF_vedacao:comb_13|state
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: MEF_vedacao:comb_7
- 13. Parameter Settings for User Entity Instance: MEF_dispenser:comb_8
- 14. Port Connectivity Checks: "sum8bit:comb_4|sum:somador1"
- 15. Port Connectivity Checks: "sum8bit:comb_4"
- 16. Port Connectivity Checks: "muxdisp:comb_3"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
- 20. Analysis & Synthesis Suppressed Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: MEF_vedacao:comb_13
+ 14. Parameter Settings for User Entity Instance: MEF_dispenser:comb_14
+ 15. Port Connectivity Checks: "sum8bit:comb_7|sum:somador1"
+ 16. Port Connectivity Checks: "sum8bit:comb_7"
+ 17. Port Connectivity Checks: "muxdisp:comb_5"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,16 +53,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 20 12:13:14 2025       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 24 15:29:50 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pbl3                                        ;
 ; Top-level Entity Name              ; teste                                       ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 35                                          ;
-;     Total combinational functions  ; 27                                          ;
-;     Dedicated logic registers      ; 22                                          ;
-; Total registers                    ; 22                                          ;
-; Total pins                         ; 35                                          ;
+; Total logic elements               ; 48                                          ;
+;     Total combinational functions  ; 48                                          ;
+;     Dedicated logic registers      ; 14                                          ;
+; Total registers                    ; 14                                          ;
+; Total pins                         ; 46                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -170,7 +171,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -182,88 +184,66 @@ https://fpgasoftware.intel.com/eula.
 ; main.v                           ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v        ;         ;
 ; MEF_vedacao.v                    ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v ;         ;
 ; teste.v                          ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v       ;         ;
-; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v  ;         ;
 ; eh_igual5.v                      ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_igual5.v   ;         ;
+; mux2x1.v                         ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v      ;         ;
 ; sum4bit.v                        ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v     ;         ;
-; register.v                       ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v    ;         ;
+; sum8bit.v                        ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum8bit.v     ;         ;
+; contador.v                       ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v    ;         ;
+; eh_maior15.v                     ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_maior15.v  ;         ;
 +----------------------------------+-----------------+------------------------+------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 35        ;
-;                                             ;           ;
-; Total combinational functions               ; 27        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 18        ;
-;     -- 3 input functions                    ; 5         ;
-;     -- <=2 input functions                  ; 4         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 27        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 22        ;
-;     -- Dedicated logic registers            ; 22        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 35        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 22        ;
-; Total fan-out                               ; 218       ;
-; Average fan-out                             ; 1.83      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 48          ;
+;                                             ;             ;
+; Total combinational functions               ; 48          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 11          ;
+;     -- 3 input functions                    ; 21          ;
+;     -- <=2 input functions                  ; 16          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 34          ;
+;     -- arithmetic mode                      ; 14          ;
+;                                             ;             ;
+; Total registers                             ; 14          ;
+;     -- Dedicated logic registers            ; 14          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 46          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 14          ;
+; Total fan-out                               ; 262         ;
+; Average fan-out                             ; 1.70        ;
++---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                        ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
-; |teste                     ; 27 (2)              ; 22 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 35   ; 0            ; 0          ; |teste                                     ; teste         ; work         ;
-;    |MEF_dispenser:comb_8|  ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|MEF_dispenser:comb_8                ; MEF_dispenser ; work         ;
-;    |MEF_vedacao:comb_7|    ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|MEF_vedacao:comb_7                  ; MEF_vedacao   ; work         ;
-;    |eh_igual5:comb_5|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|eh_igual5:comb_5                    ; eh_igual5     ; work         ;
-;    |muxdisp:comb_3|        ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|muxdisp:comb_3                      ; muxdisp       ; work         ;
-;    |register_8bit:dispo|   ; 1 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo                 ; register_8bit ; work         ;
-;       |d_flipflop:dff0|    ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff0 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff1|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff1 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff2|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff2 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff3|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff3 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff4|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff4 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff5|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff5 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff6|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff6 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff7|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:dispo|d_flipflop:dff7 ; d_flipflop    ; work         ;
-;    |register_8bit:estoq|   ; 0 (0)               ; 8 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq                 ; register_8bit ; work         ;
-;       |d_flipflop:dff0|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff0 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff1|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff1 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff2|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff2 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff3|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff3 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff4|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff4 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff5|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff5 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff6|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff6 ; d_flipflop    ; work         ;
-;       |d_flipflop:dff7|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|register_8bit:estoq|d_flipflop:dff7 ; d_flipflop    ; work         ;
-;    |sum8bit:comb_4|        ; 13 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4                      ; sum8bit       ; work         ;
-;       |sum:somador2|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador2         ; sum           ; work         ;
-;       |sum:somador3|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador3         ; sum           ; work         ;
-;       |sum:somador4|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador4         ; sum           ; work         ;
-;       |sum:somador5|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador5         ; sum           ; work         ;
-;       |sum:somador6|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador6         ; sum           ; work         ;
-;       |sum:somador7|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador7         ; sum           ; work         ;
-;       |sum:somador8|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|sum8bit:comb_4|sum:somador8         ; sum           ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------+---------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                               ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+---------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name            ; Entity Name   ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+---------------+--------------+
+; |teste                       ; 48 (4)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 46   ; 0            ; 0          ; |teste                         ; teste         ; work         ;
+;    |MEF_dispenser:comb_14|   ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|MEF_dispenser:comb_14   ; MEF_dispenser ; work         ;
+;    |MEF_vedacao:comb_13|     ; 2 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|MEF_vedacao:comb_13     ; MEF_vedacao   ; work         ;
+;    |contador_disp:reposicao| ; 28 (28)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|contador_disp:reposicao ; contador_disp ; work         ;
+;    |eh_igual5:comb_11|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|eh_igual5:comb_11       ; eh_igual5     ; work         ;
+;    |ehmaior_15:comb_4|       ; 3 (3)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|ehmaior_15:comb_4       ; ehmaior_15    ; work         ;
+;    |muxdisp:comb_5|          ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |teste|muxdisp:comb_5          ; muxdisp       ; work         ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------+
-; State Machine - |teste|MEF_dispenser:comb_8|state            ;
+; State Machine - |teste|MEF_dispenser:comb_14|state           ;
 +------------+------------+------------+------------+----------+
 ; Name       ; state.ADD2 ; state.ADD1 ; state.DISP ; state.E0 ;
 +------------+------------+------------+------------+----------+
@@ -275,15 +255,15 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------+
-; State Machine - |teste|MEF_vedacao:comb_7|state ;
-+----------+----------+----------+----------------+
-; Name     ; state.V0 ; state.AL ; state.V1       ;
-+----------+----------+----------+----------------+
-; state.V0 ; 0        ; 0        ; 0              ;
-; state.V1 ; 1        ; 0        ; 1              ;
-; state.AL ; 1        ; 1        ; 0              ;
-+----------+----------+----------+----------------+
++--------------------------------------------------+
+; State Machine - |teste|MEF_vedacao:comb_13|state ;
++----------+----------+----------+-----------------+
+; Name     ; state.V0 ; state.AL ; state.V1        ;
++----------+----------+----------+-----------------+
+; state.V0 ; 0        ; 0        ; 0               ;
+; state.V1 ; 1        ; 0        ; 1               ;
+; state.AL ; 1        ; 1        ; 0               ;
++----------+----------+----------+-----------------+
 
 
 +------------------------------------------------------------+
@@ -291,9 +271,9 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; MEF_dispenser:comb_8|state~4          ; Lost fanout        ;
-; MEF_dispenser:comb_8|state~5          ; Lost fanout        ;
-; MEF_vedacao:comb_7|state.V0           ; Lost fanout        ;
+; MEF_dispenser:comb_14|state~4         ; Lost fanout        ;
+; MEF_dispenser:comb_14|state~5         ; Lost fanout        ;
+; MEF_vedacao:comb_13|state.V0          ; Lost fanout        ;
 ; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
@@ -303,43 +283,52 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 22    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 22    ;
+; Total registers                              ; 14    ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 6     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MEF_vedacao:comb_7 ;
-+----------------+-------+----------------------------------------+
-; Parameter Name ; Value ; Type                                   ;
-+----------------+-------+----------------------------------------+
-; V0             ; 00    ; Unsigned Binary                        ;
-; V1             ; 01    ; Unsigned Binary                        ;
-; AL             ; 10    ; Unsigned Binary                        ;
-+----------------+-------+----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |teste|contador_disp:reposicao|count[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF_vedacao:comb_13 ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; V0             ; 00    ; Unsigned Binary                         ;
+; V1             ; 01    ; Unsigned Binary                         ;
+; AL             ; 10    ; Unsigned Binary                         ;
++----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MEF_dispenser:comb_8 ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; E0             ; 00    ; Unsigned Binary                          ;
-; DISP           ; 01    ; Unsigned Binary                          ;
-; ADD1           ; 10    ; Unsigned Binary                          ;
-; ADD2           ; 11    ; Unsigned Binary                          ;
-+----------------+-------+------------------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF_dispenser:comb_14 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; E0             ; 00    ; Unsigned Binary                           ;
+; DISP           ; 01    ; Unsigned Binary                           ;
+; ADD1           ; 10    ; Unsigned Binary                           ;
+; ADD2           ; 11    ; Unsigned Binary                           ;
++----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------+
-; Port Connectivity Checks: "sum8bit:comb_4|sum:somador1" ;
+; Port Connectivity Checks: "sum8bit:comb_7|sum:somador1" ;
 +------+-------+----------+-------------------------------+
 ; Port ; Type  ; Severity ; Details                       ;
 +------+-------+----------+-------------------------------+
@@ -348,21 +337,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sum8bit:comb_4"                                                                     ;
+; Port Connectivity Checks: "sum8bit:comb_7"                                                                     ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; S    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------+
-; Port Connectivity Checks: "muxdisp:comb_3" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; A    ; Input ; Info     ; Stuck at GND     ;
-+------+-------+----------+------------------+
+; Port Connectivity Checks: "muxdisp:comb_5" ;
++---------+-------+----------+---------------+
+; Port    ; Type  ; Severity ; Details       ;
++---------+-------+----------+---------------+
+; B[3..0] ; Input ; Info     ; Stuck at VCC  ;
+; B[7..4] ; Input ; Info     ; Stuck at GND  ;
++---------+-------+----------+---------------+
 
 
 +-----------------------------------------------------+
@@ -370,17 +361,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 35                          ;
-; cycloneiii_ff         ; 22                          ;
-;     CLR               ; 22                          ;
-; cycloneiii_lcell_comb ; 27                          ;
-;     normal            ; 27                          ;
+; boundary_port         ; 46                          ;
+; cycloneiii_ff         ; 14                          ;
+;     CLR               ; 6                           ;
+;     SCLR SLD          ; 8                           ;
+; cycloneiii_lcell_comb ; 49                          ;
+;     arith             ; 14                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 4                           ;
+;     normal            ; 35                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 4                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 18                          ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 3.58                        ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 2.73                        ;
 +-----------------------+-----------------------------+
 
 
@@ -399,23 +396,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 20 12:12:58 2025
+    Info: Processing started: Mon Nov 24 15:29:34 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pbl3 -c pbl3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file main.v
     Info (12023): Found entity 1: MEF_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 1
-    Info (12023): Found entity 2: saidas_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 79
+    Info (12023): Found entity 2: saidas_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 74
 Info (12021): Found 2 design units, including 2 entities, in source file mef_contador_duzias.v
     Info (12023): Found entity 1: MEF_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 1
-    Info (12023): Found entity 2: saida_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 61
+    Info (12023): Found entity 2: saida_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 62
 Info (12021): Found 2 design units, including 2 entities, in source file mef_vedacao.v
     Info (12023): Found entity 1: MEF_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 1
     Info (12023): Found entity 2: saida_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 58
-Info (12021): Found 3 design units, including 3 entities, in source file teste.v
-    Info (12023): Found entity 1: teste File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 3
-    Info (12023): Found entity 2: sum8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 51
-    Info (12023): Found entity 3: muxdisp File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 71
+Info (12021): Found 1 design units, including 1 entities, in source file teste.v
+    Info (12023): Found entity 1: teste File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
     Info (12023): Found entity 1: d_flipflop File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file eh_igual5.v
@@ -429,8 +424,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder_decimal File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/decoder_decimal.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file display_decimal.v
     Info (12023): Found entity 1: display_decimal File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mux2x1.v
+Info (12021): Found 3 design units, including 3 entities, in source file mux2x1.v
     Info (12023): Found entity 1: mux2x1 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 1
+    Info (12023): Found entity 2: muxdisp File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 14
+    Info (12023): Found entity 3: mux_8 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 52
 Info (12021): Found 2 design units, including 2 entities, in source file sum4bit.v
     Info (12023): Found entity 1: sum4bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v Line: 1
     Info (12023): Found entity 2: sum File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v Line: 15
@@ -439,13 +436,30 @@ Info (12021): Found 2 design units, including 2 entities, in source file divisor
     Info (12023): Found entity 2: divisor_frequencia File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
     Info (12023): Found entity 1: register_8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at main.v(88): created implicit net for "b0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 88
-Warning (10236): Verilog HDL Implicit Net warning at main.v(91): created implicit net for "b1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 91
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(17): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 17
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(18): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 18
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(22): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 22
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(36): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 36
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(45): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 45
+Info (12021): Found 2 design units, including 2 entities, in source file sub8bit.v
+    Info (12023): Found entity 1: sub8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sub8bit.v Line: 1
+    Info (12023): Found entity 2: sub File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sub8bit.v Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file sum8bit.v
+    Info (12023): Found entity 1: sum8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum8bit.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file contador.v
+    Info (12023): Found entity 1: contador File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 1
+    Info (12023): Found entity 2: contador_disp File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file comparador_8bit.v
+    Info (12023): Found entity 1: comparador_8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/comparador_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file eh_maior15.v
+    Info (12023): Found entity 1: ehmaior_15 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_maior15.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file level_to_pulse.v
+    Info (12023): Found entity 1: level_to_pulse File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/level_to_pulse.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at main.v(83): created implicit net for "b0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at main.v(86): created implicit net for "b1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 86
+Warning (10236): Verilog HDL Implicit Net warning at mux2x1.v(58): created implicit net for "en" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 58
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(20): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(21): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(24): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(25): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(41): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 41
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(58): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 58
+Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(68): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 68
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(19): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 19
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(21): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 21
 Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(23): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 23
@@ -455,33 +469,50 @@ Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(2
 Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(34): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 34
 Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(35): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 35
 Info (12127): Elaborating entity "teste" for the top level hierarchy
-Info (12128): Elaborating entity "register_8bit" for hierarchy "register_8bit:estoq" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 14
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "register_8bit:estoq|d_flipflop:dff0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v Line: 8
-Info (12128): Elaborating entity "muxdisp" for hierarchy "muxdisp:comb_3" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 17
-Info (12128): Elaborating entity "sum8bit" for hierarchy "sum8bit:comb_4" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 18
-Info (12128): Elaborating entity "sum" for hierarchy "sum8bit:comb_4|sum:somador1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 60
-Info (12128): Elaborating entity "eh_igual5" for hierarchy "eh_igual5:comb_5" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 22
-Info (12128): Elaborating entity "MEF_vedacao" for hierarchy "MEF_vedacao:comb_7" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 36
-Info (12128): Elaborating entity "MEF_dispenser" for hierarchy "MEF_dispenser:comb_8" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 45
+Warning (10034): Output port "estoque" at teste.v(9) has no driver File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+Info (12128): Elaborating entity "ehmaior_15" for hierarchy "ehmaior_15:comb_4" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 20
+Info (12128): Elaborating entity "muxdisp" for hierarchy "muxdisp:comb_5" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 21
+Info (12128): Elaborating entity "mux2x1" for hierarchy "mux2x1:comb_6" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 24
+Info (12128): Elaborating entity "sum8bit" for hierarchy "sum8bit:comb_7" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 25
+Info (12128): Elaborating entity "sum" for hierarchy "sum8bit:comb_7|sum:somador1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum8bit.v Line: 10
+Info (12128): Elaborating entity "contador_disp" for hierarchy "contador_disp:reposicao" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 31
+Warning (10230): Verilog HDL assignment warning at contador.v(28): truncated value with size 32 to match size of target (8) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 28
+Warning (10230): Verilog HDL assignment warning at contador.v(31): truncated value with size 32 to match size of target (8) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 31
+Info (12128): Elaborating entity "eh_igual5" for hierarchy "eh_igual5:comb_11" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 41
+Info (12128): Elaborating entity "MEF_vedacao" for hierarchy "MEF_vedacao:comb_13" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 58
+Info (12128): Elaborating entity "MEF_dispenser" for hierarchy "MEF_dispenser:comb_14" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 68
 Warning (10240): Verilog HDL Always Construct warning at main.v(24): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
 Info (10041): Inferred latch for "nextstate.ADD2" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
 Info (10041): Inferred latch for "nextstate.ADD1" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
 Info (10041): Inferred latch for "nextstate.DISP" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
 Info (10041): Inferred latch for "nextstate.E0" at main.v(24) File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 24
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "estoque[0]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[1]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[2]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[3]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[4]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[5]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[6]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "estoque[7]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "whatever_is_available[4]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "whatever_is_available[5]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "whatever_is_available[6]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
+    Warning (13410): Pin "whatever_is_available[7]" is stuck at GND File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 9
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/RepPBLCD3/PBL CD - PROBLEMA 3/output_files/pbl3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 94 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 35 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Thu Nov 20 12:13:14 2025
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 48 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Mon Nov 24 15:29:50 2025
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Total CPU time (on all processors): 00:00:34
 
 
 +------------------------------------------+

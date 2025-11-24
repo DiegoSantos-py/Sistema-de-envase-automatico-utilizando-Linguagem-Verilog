@@ -11,7 +11,7 @@ module MEF_vedacao(
 	reg [1:0]state, nextstate;
 	
 	parameter V0 = 2'b00;
-	parameter V1 = 2'b01;
+	parameter V1 = 2'b01; //vedou
 	parameter AL = 2'b10; //alarme
 	
 	always @(posedge clk, posedge reset)
@@ -65,7 +65,7 @@ module saida_vedacao(state, alarme, ve, done);
 	 not (ne0,state[0]);
 	 not (ne1,state[1]);
 	 
-	 and (ve, ne1, state[0]);
+	 and (ve, ne1, state[0]); //01
 	 and (done, ne1, state[0]);
 	 and (alarme, state[1], ne0);
 	 

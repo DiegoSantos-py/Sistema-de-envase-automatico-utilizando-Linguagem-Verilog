@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/20/2025 15:20:18"
+// Generated on "11/24/2025 15:30:25"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          teste
 // 
@@ -40,11 +40,15 @@ reg switch_add_rolha;
 wire add_rolha;
 wire alarme;
 wire disp;
+wire dispenser;
 wire done;
 wire [7:0] estoque;
+wire pode_repor;
 wire rolha5;
 wire [7:0] rolha_disponivel;
+wire tem_15;
 wire ve;
+wire [7:0] whatever_is_available;
 
 // assign statements (if any)                          
 teste i1 (
@@ -53,16 +57,20 @@ teste i1 (
 	.alarme(alarme),
 	.clk(clk),
 	.disp(disp),
+	.dispenser(dispenser),
 	.done(done),
 	.estoque(estoque),
 	.gar(gar),
+	.pode_repor(pode_repor),
 	.pos(pos),
 	.qntsrolhas(qntsrolhas),
 	.reset(reset),
 	.rolha5(rolha5),
 	.rolha_disponivel(rolha_disponivel),
 	.switch_add_rolha(switch_add_rolha),
-	.ve(ve)
+	.tem_15(tem_15),
+	.ve(ve),
+	.whatever_is_available(whatever_is_available)
 );
 initial 
 begin 
@@ -121,7 +129,14 @@ end
 // qntsrolhas[ 1 ]
 initial
 begin
+	repeat(6)
+	begin
+		qntsrolhas[1] = 1'b0;
+		qntsrolhas[1] = #75000 1'b1;
+		# 75000;
+	end
 	qntsrolhas[1] = 1'b0;
+	qntsrolhas[1] = #75000 1'b1;
 end 
 // qntsrolhas[ 0 ]
 initial

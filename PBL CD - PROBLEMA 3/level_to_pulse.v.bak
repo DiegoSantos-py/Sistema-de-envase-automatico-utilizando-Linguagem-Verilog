@@ -1,0 +1,16 @@
+module level_to_pulse(L,clk, P);
+    input L, clk;
+    output P;
+    
+    wire Qi1, Qi0;
+    wire a1;
+    
+    and D1_and(a1, L, Qi0);
+    d_flipflop D1(.d(a1), .clk(clk),.q(Qi1), .reset(1’b0));
+    d_flipflopD0(.d(L), .clk(clk), .q(Qi0), .reset(1’b0));
+    
+    wire notq;
+    not(notq1, Qi1);
+    and(P, notq1, Qi0);
+    
+endmodule

@@ -1,22 +1,22 @@
 |teste
-clk => clk.IN4
-reset => reset.IN4
+clk => clk.IN2
+reset => reset.IN3
 switch_add_rolha => switch_add_rolha.IN1
-qntsrolhas[0] => qntsrolhas[0].IN1
-qntsrolhas[1] => qntsrolhas[1].IN1
-qntsrolhas[2] => qntsrolhas[2].IN1
-qntsrolhas[3] => qntsrolhas[3].IN1
-qntsrolhas[4] => qntsrolhas[4].IN1
-qntsrolhas[5] => qntsrolhas[5].IN1
-qntsrolhas[6] => qntsrolhas[6].IN1
-qntsrolhas[7] => qntsrolhas[7].IN1
+qntsrolhas[0] => qntsrolhas[0].IN2
+qntsrolhas[1] => qntsrolhas[1].IN2
+qntsrolhas[2] => qntsrolhas[2].IN2
+qntsrolhas[3] => qntsrolhas[3].IN2
+qntsrolhas[4] => qntsrolhas[4].IN2
+qntsrolhas[5] => qntsrolhas[5].IN2
+qntsrolhas[6] => qntsrolhas[6].IN2
+qntsrolhas[7] => qntsrolhas[7].IN2
 gar => gar.IN1
 pos => pos.IN1
 disp <= disp.DB_MAX_OUTPUT_PORT_TYPE
-add_rolha <= MEF_dispenser:comb_8.add_rolha
-ve <= MEF_vedacao:comb_7.ve
-done <= MEF_vedacao:comb_7.done
-alarme <= MEF_vedacao:comb_7.alarme
+add_rolha <= MEF_dispenser:comb_14.add_rolha
+ve <= MEF_vedacao:comb_13.ve
+done <= done.DB_MAX_OUTPUT_PORT_TYPE
+alarme <= MEF_vedacao:comb_13.alarme
 rolha5 <= rolha5.DB_MAX_OUTPUT_PORT_TYPE
 rolha_disponivel[0] <= rolha_disponivel[0].DB_MAX_OUTPUT_PORT_TYPE
 rolha_disponivel[1] <= rolha_disponivel[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -26,94 +26,40 @@ rolha_disponivel[4] <= rolha_disponivel[4].DB_MAX_OUTPUT_PORT_TYPE
 rolha_disponivel[5] <= rolha_disponivel[5].DB_MAX_OUTPUT_PORT_TYPE
 rolha_disponivel[6] <= rolha_disponivel[6].DB_MAX_OUTPUT_PORT_TYPE
 rolha_disponivel[7] <= rolha_disponivel[7].DB_MAX_OUTPUT_PORT_TYPE
-estoque[0] <= estoque[0].DB_MAX_OUTPUT_PORT_TYPE
-estoque[1] <= estoque[1].DB_MAX_OUTPUT_PORT_TYPE
-estoque[2] <= estoque[2].DB_MAX_OUTPUT_PORT_TYPE
-estoque[3] <= estoque[3].DB_MAX_OUTPUT_PORT_TYPE
-estoque[4] <= estoque[4].DB_MAX_OUTPUT_PORT_TYPE
-estoque[5] <= estoque[5].DB_MAX_OUTPUT_PORT_TYPE
-estoque[6] <= estoque[6].DB_MAX_OUTPUT_PORT_TYPE
-estoque[7] <= estoque[7].DB_MAX_OUTPUT_PORT_TYPE
+estoque[0] <= <GND>
+estoque[1] <= <GND>
+estoque[2] <= <GND>
+estoque[3] <= <GND>
+estoque[4] <= <GND>
+estoque[5] <= <GND>
+estoque[6] <= <GND>
+estoque[7] <= <GND>
+pode_repor <= pode_repor.DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[0] <= whatever_is_available[0].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[1] <= whatever_is_available[1].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[2] <= whatever_is_available[2].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[3] <= whatever_is_available[3].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[4] <= whatever_is_available[4].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[5] <= whatever_is_available[5].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[6] <= whatever_is_available[6].DB_MAX_OUTPUT_PORT_TYPE
+whatever_is_available[7] <= whatever_is_available[7].DB_MAX_OUTPUT_PORT_TYPE
+tem_15 <= tem_15.DB_MAX_OUTPUT_PORT_TYPE
+dispenser <= dispenser.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|register_8bit:estoq
-in[0] => in[0].IN1
-in[1] => in[1].IN1
-in[2] => in[2].IN1
-in[3] => in[3].IN1
-in[4] => in[4].IN1
-in[5] => in[5].IN1
-in[6] => in[6].IN1
-in[7] => in[7].IN1
-en => en.IN8
-out[0] <= d_flipflop:dff0.q
-out[1] <= d_flipflop:dff1.q
-out[2] <= d_flipflop:dff2.q
-out[3] <= d_flipflop:dff3.q
-out[4] <= d_flipflop:dff4.q
-out[5] <= d_flipflop:dff5.q
-out[6] <= d_flipflop:dff6.q
-out[7] <= d_flipflop:dff7.q
-reset => reset.IN8
+|teste|ehmaior_15:comb_4
+in[0] => WideAnd0.IN0
+in[1] => WideAnd0.IN1
+in[2] => WideAnd0.IN2
+in[3] => WideAnd0.IN3
+in[4] => WideOr0.IN1
+in[5] => WideOr0.IN2
+in[6] => WideOr0.IN3
+in[7] => WideOr0.IN4
+out <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|register_8bit:estoq|d_flipflop:dff0
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff1
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff2
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff3
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff4
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff5
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff6
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:estoq|d_flipflop:dff7
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|muxdisp:comb_3
+|teste|muxdisp:comb_5
 A[0] => outw1[0].IN0
 A[1] => outw1[1].IN0
 A[2] => outw1[2].IN0
@@ -156,7 +102,15 @@ out[6] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|sum8bit:comb_4
+|teste|mux2x1:comb_6
+out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+in0 => w1.IN0
+in1 => w2.IN0
+sel => w2.IN1
+sel => w1.IN1
+
+
+|teste|sum8bit:comb_7
 Cout <= sum:somador8.port0
 S[0] <= sum:somador1.port1
 S[1] <= sum:somador2.port1
@@ -184,7 +138,7 @@ B[6] => B[6].IN1
 B[7] => B[7].IN1
 
 
-|teste|sum8bit:comb_4|sum:somador1
+|teste|sum8bit:comb_7|sum:somador1
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -195,7 +149,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador2
+|teste|sum8bit:comb_7|sum:somador2
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -206,7 +160,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador3
+|teste|sum8bit:comb_7|sum:somador3
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -217,7 +171,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador4
+|teste|sum8bit:comb_7|sum:somador4
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -228,7 +182,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador5
+|teste|sum8bit:comb_7|sum:somador5
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -239,7 +193,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador6
+|teste|sum8bit:comb_7|sum:somador6
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -250,7 +204,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador7
+|teste|sum8bit:comb_7|sum:somador7
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -261,7 +215,7 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|sum8bit:comb_4|sum:somador8
+|teste|sum8bit:comb_7|sum:somador8
 Cout <= comb.DB_MAX_OUTPUT_PORT_TYPE
 S <= comb.DB_MAX_OUTPUT_PORT_TYPE
 A => f1.IN0
@@ -272,84 +226,58 @@ C => comb.IN1
 C => f3.IN1
 
 
-|teste|register_8bit:dispo
-in[0] => in[0].IN1
-in[1] => in[1].IN1
-in[2] => in[2].IN1
-in[3] => in[3].IN1
-in[4] => in[4].IN1
-in[5] => in[5].IN1
-in[6] => in[6].IN1
-in[7] => in[7].IN1
-en => en.IN8
-out[0] <= d_flipflop:dff0.q
-out[1] <= d_flipflop:dff1.q
-out[2] <= d_flipflop:dff2.q
-out[3] <= d_flipflop:dff3.q
-out[4] <= d_flipflop:dff4.q
-out[5] <= d_flipflop:dff5.q
-out[6] <= d_flipflop:dff6.q
-out[7] <= d_flipflop:dff7.q
-reset => reset.IN8
+|teste|contador_disp:reposicao
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+clk => count[4]~reg0.CLK
+clk => count[5]~reg0.CLK
+clk => count[6]~reg0.CLK
+clk => count[7]~reg0.CLK
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+up_down => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+load => count.OUTPUTSELECT
+data[0] => Add0.IN8
+data[1] => Add0.IN7
+data[2] => Add0.IN6
+data[3] => Add0.IN5
+data[4] => Add0.IN4
+data[5] => Add0.IN3
+data[6] => Add0.IN2
+data[7] => Add0.IN1
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|register_8bit:dispo|d_flipflop:dff0
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff1
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff2
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff3
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff4
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff5
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff6
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|register_8bit:dispo|d_flipflop:dff7
-d => flipflop_inst.DATAIN
-clk => flipflop_inst.CLK
-reset => flipflop_inst.ACLR
-q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|teste|eh_igual5:comb_5
+|teste|eh_igual5:comb_11
 in[0] => ~NO_FANOUT~
 in[1] => w1.IN0
 in[2] => w1.IN1
@@ -361,7 +289,7 @@ in[7] => ~NO_FANOUT~
 out <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|MEF_vedacao:comb_7
+|teste|MEF_vedacao:comb_13
 garrafa => always1.IN0
 garrafa => always1.IN0
 garrafa => always1.IN0
@@ -383,7 +311,7 @@ done <= done.DB_MAX_OUTPUT_PORT_TYPE
 alarme <= alarme.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|teste|MEF_dispenser:comb_8
+|teste|MEF_dispenser:comb_14
 switch_add_rolha => nextstate.DATAA
 switch_add_rolha => always1.IN0
 switch_add_rolha => always1.IN0

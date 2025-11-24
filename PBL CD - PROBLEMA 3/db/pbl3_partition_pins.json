@@ -60,55 +60,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "estoque[0]",
+					"name" : "pode_repor",
 					"strict" : false
 				},
 				{
-					"name" : "estoque[1]",
+					"name" : "whatever_is_available[0]",
 					"strict" : false
 				},
 				{
-					"name" : "estoque[2]",
+					"name" : "whatever_is_available[1]",
 					"strict" : false
 				},
 				{
-					"name" : "estoque[3]",
+					"name" : "whatever_is_available[2]",
 					"strict" : false
 				},
 				{
-					"name" : "estoque[4]",
+					"name" : "whatever_is_available[3]",
 					"strict" : false
 				},
 				{
-					"name" : "estoque[5]",
+					"name" : "tem_15",
 					"strict" : false
 				},
 				{
-					"name" : "estoque[6]",
-					"strict" : false
-				},
-				{
-					"name" : "estoque[7]",
-					"strict" : false
-				},
-				{
-					"name" : "switch_add_rolha",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "gar",
-					"strict" : false
-				},
-				{
-					"name" : "pos",
+					"name" : "dispenser",
 					"strict" : false
 				},
 				{
@@ -141,6 +117,26 @@
 				},
 				{
 					"name" : "qntsrolhas[7]",
+					"strict" : false
+				},
+				{
+					"name" : "switch_add_rolha",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "gar",
+					"strict" : false
+				},
+				{
+					"name" : "pos",
 					"strict" : false
 				}
 			]
