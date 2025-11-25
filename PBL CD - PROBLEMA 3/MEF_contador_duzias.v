@@ -37,8 +37,6 @@ module MEF_contador_duzias(
 							nextstate = CONT12;
 						else if (cont12 == 1 && cq == 1)
 							nextstate = CONT12;
-						else if (cont12 == 0 && cq == 1)
-							nextstate = WAIT;
 						else
 							nextstate = C1;
             CONT12:

@@ -32,3 +32,27 @@ module contador_disp(clk,reset,up_down,load,data,count);
       else
         count <= 0;
 endmodule 
+
+module contador2 (
+    input clk,
+    input reset_trigger,   // Reset assíncrono
+    input signal,          // Direção
+
+    input [7:0] value,
+    output reg [7:0] count
+);
+
+always @(posedge clk or posedge reset_trigger) begin
+    if (reset_trigger) begin
+        count <= 8'd0;
+    end else begin
+        if (signal)
+
+            count <= count + value;
+        else
+
+            count <= count - value;
+    end
+end
+
+endmodule

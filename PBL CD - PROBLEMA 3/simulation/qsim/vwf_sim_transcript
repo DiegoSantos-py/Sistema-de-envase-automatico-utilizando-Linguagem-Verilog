@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform1.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/Waveform1.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste_mefcontador.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/teste_mefcontador.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 24 19:30:13 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform1.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/Waveform1.vwf.vt"
+    Info: Processing started: Mon Nov 24 21:44:04 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste_mefcontador.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/teste_mefcontador.vwf.vt"
+Info (119006): Selected device 10M50DAF484C7G for design "pbl3"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -55,15 +56,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 24 19:30:15 2025
+    Info: Processing started: Mon Nov 24 21:44:06 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3
+Info (119006): Selected device 10M50DAF484C7G for design "pbl3"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file pbl3.vo in folder "D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Mon Nov 24 19:30:16 2025
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Mon Nov 24 21:44:07 2025
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 Completed successfully. 
 
@@ -79,74 +81,62 @@ D:/ModelSim/modelsim_ase/win32aloem/vsim -c -do pbl3.do
 
 Reading pref.tcl
 
-
 # 2020.1
+
 
 # do pbl3.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:18 on Nov 24,2025
+# Start time: 21:44:09 on Nov 24,2025
 # vlog -work work pbl3.vo 
 
-# -- Compiling module MEF_contador_duzias
-# -- Compiling module hard_block
+# -- Compiling module teste
 # 
 # Top level modules:
-# 	MEF_contador_duzias
-# End time: 19:30:18 on Nov 24,2025, Elapsed time: 0:00:00
+# 	teste
+# End time: 21:44:10 on Nov 24,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 19:30:19 on Nov 24,2025
-# vlog -work work Waveform1.vwf.vt 
+# Start time: 21:44:10 on Nov 24,2025
+# vlog -work work teste_mefcontador.vwf.vt 
 
-# -- Compiling module MEF_contador_duzias_vlg_vec_tst
+# -- Compiling module teste_vlg_vec_tst
 # 
 # Top level modules:
-# 	MEF_contador_duzias_vlg_vec_tst
-# End time: 19:30:19 on Nov 24,2025, Elapsed time: 0:00:00
+# 	teste_vlg_vec_tst
+# End time: 21:44:10 on Nov 24,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEF_contador_duzias_vlg_vec_tst 
-# Start time: 19:30:19 on Nov 24,2025
-# Loading work.MEF_contador_duzias_vlg_vec_tst
-# Loading work.MEF_contador_duzias
-# Loading work.hard_block
-# Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.teste_vlg_vec_tst 
+# Start time: 21:44:10 on Nov 24,2025
+# Loading work.teste_vlg_vec_tst
+# Loading work.teste
 # Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
 # Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf
-# Loading fiftyfivenm_ver.fiftyfivenm_clkctrl
-# Loading fiftyfivenm_ver.fiftyfivenm_mux41
-# Loading fiftyfivenm_ver.fiftyfivenm_ena_reg
+# Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
 # Loading altera_ver.dffeas
-# Loading fiftyfivenm_ver.fiftyfivenm_unvm
-# Loading fiftyfivenm_ver.fiftyfivenm_adcblock
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MEF_contador_duzias_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: pbl3.vo Line: 410
-# ** Warning: (vsim-3722) pbl3.vo(410): [TFMPC] - Missing connection for port 'clk_dft'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /MEF_contador_duzias_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: pbl3.vo Line: 433
-# ** Warning: (vsim-3722) pbl3.vo(433): [TFMPC] - Missing connection for port 'clk_dft'.
-# after#26
-# ** Note: $finish    : Waveform1.vwf.vt(53)
-#    Time: 1 us  Iteration: 0  Instance: /MEF_contador_duzias_vlg_vec_tst
-# End time: 19:30:20 on Nov 24,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 4
+# after#25
+# ** Note: $finish    : teste_mefcontador.vwf.vt(55)
+#    Time: 1 us  Iteration: 0  Instance: /teste_vlg_vec_tst
+
+# End time: 21:44:11 on Nov 24,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform1.vwf...
+Reading D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste_mefcontador.vwf...
 
 Reading D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/pbl3.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/pbl3_20251124193020.sim.vwf
+Writing the resulting VWF to D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/pbl3_20251124214411.sim.vwf
 
 Finished VCD to VWF conversion.
 

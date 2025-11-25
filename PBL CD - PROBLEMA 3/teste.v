@@ -1,4 +1,4 @@
-module teste(clk, reset, switch_add_rolha, qntsrolhas, gar, pos, disp, add_rolha, ve, done, alarme, rolha5, rolha_disponivel, estoque, pode_repor, whatever_is_available, tem_15, dispenser);
+module teste1(clk, reset, switch_add_rolha, qntsrolhas, gar, pos, disp, add_rolha, ve, done, alarme, rolha5, rolha_disponivel, estoque, pode_repor, whatever_is_available, tem_15, dispenser);
 	input clk, reset;
 	input switch_add_rolha; // entrada da mef do dispenser
 	input [7:0]qntsrolhas; // indica quantas rolhas vao estar no estoque
@@ -72,7 +72,36 @@ endmodule
 
 	
 	
+module teste(start_count, resetar, clk, cont_done, wire_cont1, wire_cont12, tem_12);
+	input start_count, resetar, clk;
+	output cont_done, tem_12;
+	output [7:0] wire_cont1, wire_cont12;
 
+	wire tem_12;
+	eh_igual12(wire_cont1, tem_12); // wire_cont1 é a saída do contador normal e tem_12 indica se ja formou uma duzia
+	
+	wire add_cont1, add_cont12; // add_cont1 = adicionar ao contador normal, add_cont12 = adicionar ao contador de duzias
+	
+	MEF_contador_duzias(
+   .cq(start_count),
+   .cont12(tem_12),
+   .reset(resetar),
+   .clk(clk),
+   .cont1(add_cont1),
+   .add_cont12(add_cont12),
+	.cont_done(cont_done)
+	);
+	
+	contador2 (add_cont1, add_cont12, 1'b1, 1'b1, wire_cont1);
+	contador2 (add_cont12, reset_cont12, 1'b1, 1'b1, wire_cont12);
+	
+	wire ncont0, ncont2, reset_cont12;
+	not (ncont0, wire_cont12[0]);
+	not (ncont2, wire_cont12[2]);
+	
+	and (reset_cont12, wire_cont12[1], ncont0, clk);
+endmodule
+	
 	
 	
 	

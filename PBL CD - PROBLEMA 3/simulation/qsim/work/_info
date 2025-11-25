@@ -194,23 +194,23 @@ r1
 R9
 R10
 vhard_block
-Z14 !s110 1764023418
+!s110 1764031357
 !i10b 1
-!s100 gIDWJz1_BC_]FdlHI@<<12
+!s100 @FOGJiA<G88aSANmWS>:L2
 R0
-IBn_D=_[4f@8R4GN8h]QZ32
+IoN0B:kCSU2<]o4Rodc6ek3
 R1
 R2
-Z15 w1764023416
+w1764031355
 R3
 R4
-!i122 238
-L0 461 45
+!i122 254
+L0 1421 45
 R5
 r1
 !s85 0
 31
-Z16 !s108 1764023418.000000
+!s108 1764031357.000000
 R7
 R8
 !i113 1
@@ -233,7 +233,7 @@ R5
 r1
 !s85 0
 31
-Z17 !s108 1764020700.000000
+Z14 !s108 1764020700.000000
 R7
 R8
 !i113 1
@@ -248,29 +248,29 @@ IFn]>YQDi>7d@PdT3G8Rf40
 R1
 R2
 w1764020696
-Z18 8Waveform3.vwf.vt
-Z19 FWaveform3.vwf.vt
+Z15 8Waveform3.vwf.vt
+Z16 FWaveform3.vwf.vt
 !i122 233
 L0 30 98
 R5
 r1
 !s85 0
 31
-R17
-Z20 !s107 Waveform3.vwf.vt|
-Z21 !s90 -work|work|Waveform3.vwf.vt|
+R14
+Z17 !s107 Waveform3.vwf.vt|
+Z18 !s90 -work|work|Waveform3.vwf.vt|
 !i113 1
 R9
 R10
 vMEF_contador_duzias
-R14
+!s110 1764023418
 !i10b 1
 !s100 ZEJXiJ1F^0LY:8RI[djcH2
 R0
 I;:Fih9VeV@UmSohUW1G5b2
 R1
 R2
-R15
+w1764023416
 R3
 R4
 !i122 238
@@ -279,7 +279,7 @@ R5
 r1
 !s85 0
 31
-R16
+!s108 1764023418.000000
 R7
 R8
 !i113 1
@@ -327,7 +327,7 @@ R5
 r1
 !s85 0
 31
-Z22 !s108 1763646698.000000
+Z19 !s108 1763646698.000000
 R7
 R8
 !i113 1
@@ -351,7 +351,7 @@ R5
 r1
 !s85 0
 31
-R22
+R19
 !s107 vedacao.vwf.vt|
 !s90 -work|work|vedacao.vwf.vt|
 !i113 1
@@ -359,48 +359,48 @@ R9
 R10
 n@m@e@f_vedacao_vlg_vec_tst
 vteste
-!s110 1764009028
+Z20 !s110 1764031450
 !i10b 1
-!s100 GKS7cM<MVkW>e@aI[eX7I3
+!s100 AF:A]N2c_:j@BGc5z:^j;2
 R0
-IE<9kEcg_3@Z@l3oBM:ZG03
+Ie5hccnb?562MJ01:W=_]Q2
 R1
 R2
-w1764009026
+w1764031447
 R3
 R4
-!i122 224
-L0 32 2149
+!i122 256
+L0 32 1151
 R5
 r1
 !s85 0
 31
-Z23 !s108 1764009028.000000
+!s108 1764031449.000000
 R7
 R8
 !i113 1
 R9
 R10
 vteste_vlg_vec_tst
-!s110 1764009029
+R20
 !i10b 1
-!s100 iV=9FS;7g128<?OF`Hbf42
+!s100 gijE_3kN^d6@GP9O=ZU@L2
 R0
-IGNc3h86WPOQdTKTh:ZHIV1
+ID15`1hXL?<_69oze9`@2W2
 R1
 R2
-w1764009025
-8teste_dispenservedacao.vwf.vt
-Fteste_dispenservedacao.vwf.vt
-!i122 225
-L0 30 136
+w1764031446
+8teste_mefcontador.vwf.vt
+Fteste_mefcontador.vwf.vt
+!i122 257
+L0 30 55
 R5
 r1
 !s85 0
 31
-R23
-!s107 teste_dispenservedacao.vwf.vt|
-!s90 -work|work|teste_dispenservedacao.vwf.vt|
+!s108 1764031450.000000
+!s107 teste_mefcontador.vwf.vt|
+!s90 -work|work|teste_mefcontador.vwf.vt|
 !i113 1
 R9
 R10
@@ -421,7 +421,7 @@ R5
 r1
 !s85 0
 31
-Z24 !s108 1763924478.000000
+Z21 !s108 1763924478.000000
 R7
 R8
 !i113 1
@@ -436,17 +436,17 @@ IWQ5GI;`fK=OfWIVj`LcO61
 R1
 R2
 w1763924475
-R18
-R19
+R15
+R16
 !i122 157
 L0 30 94
 R5
 r1
 !s85 0
 31
-R24
-R20
 R21
+R17
+R18
 !i113 1
 R9
 R10
