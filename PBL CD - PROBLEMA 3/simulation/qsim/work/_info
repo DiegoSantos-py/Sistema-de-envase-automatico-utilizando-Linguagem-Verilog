@@ -136,7 +136,7 @@ w1763587532
 8ehigual12.vwf.vt
 Fehigual12.vwf.vt
 !i122 53
-L0 30 62
+Z14 L0 30 62
 R5
 r1
 !s85 0
@@ -194,23 +194,23 @@ r1
 R9
 R10
 vhard_block
-!s110 1764031357
+Z15 !s110 1764036388
 !i10b 1
-!s100 @FOGJiA<G88aSANmWS>:L2
+!s100 >j=9:JN1H<OK1i4N^<Mm82
 R0
-IoN0B:kCSU2<]o4Rodc6ek3
+IfLWAg@0>TKX<fUJf4>:Rl3
 R1
 R2
-w1764031355
+Z16 w1764036386
 R3
 R4
-!i122 254
-L0 1421 45
+!i122 296
+L0 2084 45
 R5
 r1
 !s85 0
 31
-!s108 1764031357.000000
+Z17 !s108 1764036388.000000
 R7
 R8
 !i113 1
@@ -233,7 +233,7 @@ R5
 r1
 !s85 0
 31
-Z14 !s108 1764020700.000000
+Z18 !s108 1764020700.000000
 R7
 R8
 !i113 1
@@ -248,17 +248,17 @@ IFn]>YQDi>7d@PdT3G8Rf40
 R1
 R2
 w1764020696
-Z15 8Waveform3.vwf.vt
-Z16 FWaveform3.vwf.vt
+Z19 8Waveform3.vwf.vt
+Z20 FWaveform3.vwf.vt
 !i122 233
 L0 30 98
 R5
 r1
 !s85 0
 31
-R14
-Z17 !s107 Waveform3.vwf.vt|
-Z18 !s90 -work|work|Waveform3.vwf.vt|
+R18
+Z21 !s107 Waveform3.vwf.vt|
+Z22 !s90 -work|work|Waveform3.vwf.vt|
 !i113 1
 R9
 R10
@@ -311,23 +311,23 @@ R9
 R10
 n@m@e@f_contador_duzias_vlg_vec_tst
 vMEF_vedacao
-!s110 1763646698
+!s110 1764034788
 !i10b 1
-!s100 [d@<V>CkJnQXDZHXHj?Bc1
+!s100 ^;Gjcc@dDC10JAzjl=1Db3
 R0
-I17`;Fz[Ah=U@ln1aCF;K31
+INWf98cKEDkzGYDAB]9n>80
 R1
 R2
-w1763646695
+w1764034786
 R3
 R4
-!i122 86
-L0 32 457
+!i122 280
+L0 32 369
 R5
 r1
 !s85 0
 31
-Z19 !s108 1763646698.000000
+Z23 !s108 1764034788.000000
 R7
 R8
 !i113 1
@@ -335,23 +335,23 @@ R9
 R10
 n@m@e@f_vedacao
 vMEF_vedacao_vlg_vec_tst
-!s110 1763646699
+!s110 1764034789
 !i10b 1
-!s100 SX;4@1k71]dBhIEo8Qa:`1
+!s100 7RQTcRK2n:l7ndNdBz14o1
 R0
-I1oA:DLa[oj305k39[PVTX1
+IGEdSCZCQCD0J5Bi0`Azk30
 R1
 R2
-w1763646694
+w1764034784
 8vedacao.vwf.vt
 Fvedacao.vwf.vt
-!i122 87
-L0 30 66
+!i122 281
+R14
 R5
 r1
 !s85 0
 31
-R19
+R23
 !s107 vedacao.vwf.vt|
 !s90 -work|work|vedacao.vwf.vt|
 !i113 1
@@ -359,46 +359,46 @@ R9
 R10
 n@m@e@f_vedacao_vlg_vec_tst
 vteste
-Z20 !s110 1764031450
+R15
 !i10b 1
-!s100 AF:A]N2c_:j@BGc5z:^j;2
+!s100 on7BUhVQDQdKKh?]40O5J0
 R0
-Ie5hccnb?562MJ01:W=_]Q2
+I:XhPX;Ko8e_nVWdeFj@ZQ2
 R1
 R2
-w1764031447
+R16
 R3
 R4
-!i122 256
-L0 32 1151
+!i122 296
+L0 32 2051
 R5
 r1
 !s85 0
 31
-!s108 1764031449.000000
+R17
 R7
 R8
 !i113 1
 R9
 R10
 vteste_vlg_vec_tst
-R20
+!s110 1764036389
 !i10b 1
-!s100 gijE_3kN^d6@GP9O=ZU@L2
+!s100 <^:QNf=DcnjHn`M7WL2[R3
 R0
-ID15`1hXL?<_69oze9`@2W2
+Ij3A_?H5A;nbkFcil0cS=e3
 R1
 R2
-w1764031446
+w1764036385
 8teste_mefcontador.vwf.vt
 Fteste_mefcontador.vwf.vt
-!i122 257
-L0 30 55
+!i122 297
+L0 30 102
 R5
 r1
 !s85 0
 31
-!s108 1764031450.000000
+R17
 !s107 teste_mefcontador.vwf.vt|
 !s90 -work|work|teste_mefcontador.vwf.vt|
 !i113 1
@@ -421,7 +421,7 @@ R5
 r1
 !s85 0
 31
-Z21 !s108 1763924478.000000
+Z24 !s108 1763924478.000000
 R7
 R8
 !i113 1
@@ -436,17 +436,17 @@ IWQ5GI;`fK=OfWIVj`LcO61
 R1
 R2
 w1763924475
-R15
-R16
+R19
+R20
 !i122 157
 L0 30 94
 R5
 r1
 !s85 0
 31
+R24
 R21
-R17
-R18
+R22
 !i113 1
 R9
 R10

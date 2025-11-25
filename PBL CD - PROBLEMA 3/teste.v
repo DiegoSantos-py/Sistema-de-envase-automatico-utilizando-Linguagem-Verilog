@@ -72,10 +72,12 @@ endmodule
 
 	
 	
-module teste(start_count, resetar, clk, cont_done, wire_cont1, wire_cont12, tem_12);
-	input start_count, resetar, clk;
-	output cont_done, tem_12;
+module teste(start, garrafa, sensor_de_nivel, sensor_cq, ve_done,  resetar, clk, cont_done, wire_cont1, wire_cont12, tem_12, Motor, start_cont, Ev, garrafa_ve, alarme, r, ve, done);
+	input resetar, clk, r;
+	input start, garrafa, sensor_de_nivel, sensor_cq, ve_done;
+	output cont_done, tem_12, start_cont, Motor;
 	output [7:0] wire_cont1, wire_cont12;
+	output Ev, garrafa_ve, alarme, ve, done;
 
 	wire tem_12;
 	eh_igual12(wire_cont1, tem_12); // wire_cont1 é a saída do contador normal e tem_12 indica se ja formou uma duzia
@@ -83,7 +85,7 @@ module teste(start_count, resetar, clk, cont_done, wire_cont1, wire_cont12, tem_
 	wire add_cont1, add_cont12; // add_cont1 = adicionar ao contador normal, add_cont12 = adicionar ao contador de duzias
 	
 	MEF_contador_duzias(
-   .cq(start_count),
+   .cq(start_cont),
    .cont12(tem_12),
    .reset(resetar),
    .clk(clk),
@@ -93,13 +95,45 @@ module teste(start_count, resetar, clk, cont_done, wire_cont1, wire_cont12, tem_
 	);
 	
 	contador2 (add_cont1, add_cont12, 1'b1, 1'b1, wire_cont1);
-	contador2 (add_cont12, reset_cont12, 1'b1, 1'b1, wire_cont12);
+	contador2 (add_cont12, reset_atrasado, 1'b1, 1'b1, wire_cont12);
 	
 	wire ncont0, ncont2, reset_cont12;
 	not (ncont0, wire_cont12[0]);
 	not (ncont2, wire_cont12[2]);
 	
-	and (reset_cont12, wire_cont12[1], ncont0, clk);
+	
+	wire reset_atrasado;
+	d_flipflop dff0 (.q(reset_atrasado), .d(reset_cont12), .reset(reset), .clk(clk));
+	and (reset_cont12,wire_cont12[3], ncont2, wire_cont12[1], ncont0);
+	
+	MEF_main(
+		.start(start), 
+		.garrafa(garrafa), 
+		.sensor_de_nivel(sensor_de_nivel),
+		.sensor_cq(sensor_cq),
+		.descarte(descarte),
+		.ve_done(ve_done),
+		.cont_done(cont_done),
+		.clk(clk),
+		.reset(1'b0), // tlvz so negar o start ja solucione o reset
+		.motor(Motor), 
+		.EV(Ev),
+		.pos_ve(garrafa_ve), 
+		.count(start_cont), 
+		.resetar(reset),
+		.Desc_signal(Descarte)
+		);
+		
+		
+	MEF_vedacao(
+		.garrafa(garrafa), 
+		.rolha(r), 
+		.pos(garrafa_ve), 
+		.clk(clk), 
+		.reset(1'b0), 
+		.ve(ve), 
+		.done(done), 
+		.alarme(alarme));
 endmodule
 	
 	

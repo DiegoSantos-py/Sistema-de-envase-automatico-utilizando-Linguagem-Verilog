@@ -4,87 +4,39 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "cont_done",
+					"name" : "Ev",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[0]",
+					"name" : "Motor",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[1]",
+					"name" : "Alarme",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[2]",
+					"name" : "Disp",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[3]",
+					"name" : "start",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[4]",
+					"name" : "garrafa",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[5]",
+					"name" : "sensor_de_nivel",
 					"strict" : false
 				},
 				{
-					"name" : "wire_cont1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont1[7]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[0]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[1]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[2]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[3]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[4]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[5]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[6]",
-					"strict" : false
-				},
-				{
-					"name" : "wire_cont12[7]",
-					"strict" : false
-				},
-				{
-					"name" : "tem_12",
+					"name" : "switch_add_rolha",
 					"strict" : false
 				},
 				{
 					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "resetar",
-					"strict" : false
-				},
-				{
-					"name" : "start_count",
 					"strict" : false
 				}
 			]

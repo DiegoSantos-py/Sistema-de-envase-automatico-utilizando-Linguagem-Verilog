@@ -33,36 +33,42 @@ module MEF_main(
 			
 		always @(*)
 			case(state)
-			
 				SR:
-					if (start == 1)
-						nextstate = SR;
-					else 
-						nextstate = Mo;
+					nextstate = Mo;
 				Mo:
-					if (garrafa == 1)
+					if (start == 0)
+						nextstate = SR;
+					else if (garrafa == 1)
 						nextstate = En;
 					else
 						nextstate = Mo;
 				En:
-					if (sensor_de_nivel == 1) 
+					if (start == 0)
+						nextstate = SR;
+					else if (sensor_de_nivel == 1) 
 						nextstate = Vd;
 					else
 						nextstate = En;
 				Vd:
-					if (ve_done == 1)
+					if (start == 0)
+						nextstate = SR;
+					else if (ve_done == 1)
 						nextstate = Cq;
 					else
 						nextstate = Vd;
 				Cq:
-					if (sensor_cq == 1)
+					if (start == 0)
+						nextstate = SR;
+					else if (sensor_cq == 1)
 						nextstate = Co;
 					else if (descarte == 1)
 						nextstate = De;
 					else
 						nextstate = Cq;
 				Co:
-					if (cont_done == 1)
+					if (start == 0)
+						nextstate = SR;
+					else if (cont_done == 1)
 						nextstate = Mo;
 					else
 						nextstate = Co;

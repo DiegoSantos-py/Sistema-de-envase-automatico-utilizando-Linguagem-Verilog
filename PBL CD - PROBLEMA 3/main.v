@@ -81,7 +81,8 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, descarte,
 	//========================== MEF-Contador de Duzias ===============================
 	//=================================================================================	
 	
-	wire wire_cont1, wire_cont12, tem_12, cont_done;
+	wire tem_12, cont_done;
+	wire [7:0] wire_cont1, wire_cont12;
 	eh_igual12(wire_cont1, tem_12); // wire_cont1 é a saída do contador normal e tem_12 indica se ja formou uma duzia
 	
 	wire add_cont1, add_cont12; // add_cont1 = adicionar ao contador normal, add_cont12 = adicionar ao contador de duzias
@@ -95,6 +96,17 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, descarte,
    .add_cont12(add_cont12),
 	.cont_done(cont_done)
 	);
+	
+	contador2 (add_cont1, add_cont12, 1'b1, 1'b1, wire_cont1);
+	contador2 (add_cont12, reset_atrasado, 1'b1, 1'b1, wire_cont12);
+	
+	wire ncont0, ncont2, reset_cont12;
+	not (ncont0, wire_cont12[0]);
+	not (ncont2, wire_cont12[2]);
+	
+	wire reset_atrasado;
+	d_flipflop dff0 (.q(reset_atrasado), .d(reset_cont12), .reset(reset), .clk(clk_system));
+	and (reset_cont12,wire_cont12[3], ncont2, wire_cont12[1], ncont0); //reseta quando chega em 10 (1010)
 	
 	
 	//=================================================================================
