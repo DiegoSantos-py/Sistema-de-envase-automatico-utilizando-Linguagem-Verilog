@@ -72,7 +72,7 @@ endmodule
 
 	
 	
-module teste(start, garrafa, sensor_de_nivel, sensor_cq, ve_done,  resetar, clk, cont_done, wire_cont1, wire_cont12, tem_12, Motor, start_cont, Ev, garrafa_ve, alarme, r, ve, done);
+module teste2(start, garrafa, sensor_de_nivel, sensor_cq, ve_done,  resetar, clk, cont_done, wire_cont1, wire_cont12, tem_12, Motor, start_cont, Ev, garrafa_ve, alarme, r, ve, done);
 	input resetar, clk, r;
 	input start, garrafa, sensor_de_nivel, sensor_cq, ve_done;
 	output cont_done, tem_12, start_cont, Motor;
@@ -138,6 +138,17 @@ endmodule
 	
 	
 	
+module teste(Alarme, motor_signal, clk, cq_signal, Motor);
+	input motor_signal, clk, cq_signal, Alarme;
+	output Motor;
+		
+	wire not_alarme, w_and1, w_and2, only_and2;
+	not (not_alarme, Alarme);
+	and (w_and1, not_alarme, motor_signal);
+	and (w_and2, not_alarme, cq_signal);
+	level_to_pulse (w_and2, clk, only_and2);
+	or  (Motor, w_and1, only_and2);
+endmodule
 	
 	
 	

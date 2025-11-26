@@ -1,4 +1,4 @@
-module main(start, garrafa, sensor_de_nivel, sensor_cq, descarte,
+module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 	switch_add_rolha, 
 	clk,
 	Ev, Ve, Motor, Alarme, Disp, Descarte,
@@ -6,7 +6,7 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, descarte,
 	);
 	
 	input clk;
-	input start, garrafa, sensor_de_nivel, sensor_cq, descarte; // Entradas da MEF_main
+	input start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte; // Entradas da MEF_main
 	input switch_add_rolha; // Entradas da MEF_dispense
 	output Ev, Motor, Descarte; //Saídas da MEF_main
 	output Ve, Alarme; // Saídas da MEF_vedacao
@@ -26,24 +26,35 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, descarte,
 	//============================== MEF-Principal ====================================
 	//=================================================================================
 	
+	wire motor_signal, cq_signal;
 	wire resetar, garrafa_ve, start_cont; // resetar, acionar vedação e acionar contador
 	MEF_main(
 		.start(start), 
 		.garrafa(garrafa), 
 		.sensor_de_nivel(sensor_de_nivel),
 		.sensor_cq(sensor_cq),
-		.descarte(descarte),
+		.descarte(switch_descarte),
 		.ve_done(ve_done),
 		.cont_done(cont_done),
 		.clk(clk_system),
 		.reset(1'b0), // tlvz so negar o start ja solucione o reset
-		.motor(Motor), 
+		.motor(motor_signal), 
 		.EV(Ev),
-		.pos_ve(garrafa_ve), 
+		.pos_ve(garrafa_ve),
+		.controle_qualidade(cq_signal),
 		.count(start_cont), 
 		.resetar(resetar),
 		.Desc_signal(Descarte)
 		);
+		
+		
+		// Lógica de saída do sinal do motor
+		wire not_alarme, w_and1, w_and2, only_and2;
+		not (not_alarme, Alarme);
+		and (w_and1, not_alarme, motor_signal);
+		and (w_and2, not_alarme, cq_signal);
+		level_to_pulse (w_and2, clk_system, only_and2);
+		or  (Motor, w_and1, only_and2);
 
 	//=================================================================================
 	//============================== MEF-Vedacao ======================================
@@ -97,17 +108,23 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, descarte,
 	.cont_done(cont_done)
 	);
 	
-	contador2 (add_cont1, add_cont12, 1'b1, 1'b1, wire_cont1);
+	contador2 (add_cont1, reset_contador_unidades, 1'b1, 1'b1, wire_cont1);
 	contador2 (add_cont12, reset_atrasado, 1'b1, 1'b1, wire_cont12);
 	
 	wire ncont0, ncont2, reset_cont12;
 	not (ncont0, wire_cont12[0]);
 	not (ncont2, wire_cont12[2]);
 	
-	wire reset_atrasado;
-	d_flipflop dff0 (.q(reset_atrasado), .d(reset_cont12), .reset(reset), .clk(clk_system));
+	wire reset_atrasado, reset_contador_duzias, reset_contador_unidades;
 	and (reset_cont12,wire_cont12[3], ncont2, wire_cont12[1], ncont0); //reseta quando chega em 10 (1010)
+	d_flipflop dff0 (.q(reset_contador_duzias), .d(reset_cont12), .reset(reset), .clk(clk_system));
 	
+	// Lógica de reset dos contadores
+	
+	// Reseta quando chega em 10 dúzias ou quando a mef main envia o sinal para resetar
+	or (reset_atrasado, reset_contador_duzias, resetar); 
+	// Reseta quando doze garrafas passaram no cq ou quando a mef main envia o sinal para resetar
+	or (reset_contador_unidades, add_cont12, resetar);
 	
 	//=================================================================================
 	//================================= DISPLAYS ======================================

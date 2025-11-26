@@ -13,7 +13,8 @@ module MEF_main(
 		output pos_ve, // garrafa em posição de vedação
 		output count, // sinal para ativar mef do contador
 		output resetar,
-		output Desc_signal
+		output Desc_signal,
+		output controle_qualidade
 		);
 		
 		reg[2:0]state, nextstate;
@@ -83,6 +84,7 @@ module MEF_main(
 		assign motor = (state == Mo);
 		assign EV = (state == En);
 		assign pos_ve = (state == Vd);
+		assign controle_qualidade = (state == Cq);
 		assign count = (state == Co);
 		assign Desc_signal = (state == De);
 

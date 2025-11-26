@@ -3,14 +3,14 @@ start => start.IN1
 garrafa => garrafa.IN2
 sensor_de_nivel => sensor_de_nivel.IN1
 sensor_cq => sensor_cq.IN1
-descarte => descarte.IN1
+switch_descarte => switch_descarte.IN1
 switch_add_rolha => switch_add_rolha.IN1
 clk => clk.IN1
 Ev <= MEF_main:comb_4.EV
-Ve <= MEF_vedacao:comb_5.ve
-Motor <= MEF_main:comb_4.motor
-Alarme <= MEF_vedacao:comb_5.alarme
-Disp <= MEF_dispenser:comb_7.disp
+Ve <= MEF_vedacao:comb_10.ve
+Motor <= comb.DB_MAX_OUTPUT_PORT_TYPE
+Alarme <= MEF_vedacao:comb_10.alarme
+Disp <= MEF_dispenser:comb_12.disp
 Descarte <= MEF_main:comb_4.Desc_signal
 Displayr_disp[0] <= display_decimal:display_rolhas_disponiveis.port1
 Displayr_disp[1] <= display_decimal:display_rolhas_disponiveis.port1
@@ -359,9 +359,30 @@ pos_ve <= pos_ve.DB_MAX_OUTPUT_PORT_TYPE
 count <= count.DB_MAX_OUTPUT_PORT_TYPE
 resetar <= resetar.DB_MAX_OUTPUT_PORT_TYPE
 Desc_signal <= Desc_signal.DB_MAX_OUTPUT_PORT_TYPE
+controle_qualidade <= controle_qualidade.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_vedacao:comb_5
+|main|level_to_pulse:comb_8
+L => L.IN1
+clk => clk.IN2
+P <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|level_to_pulse:comb_8|d_flipflop:D1
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|level_to_pulse:comb_8|d_flipflop:D0
+d => flipflop_inst.DATAIN
+clk => flipflop_inst.CLK
+reset => flipflop_inst.ACLR
+q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|MEF_vedacao:comb_10
 garrafa => always1.IN0
 garrafa => always1.IN0
 garrafa => always1.IN0
@@ -383,7 +404,7 @@ done <= done.DB_MAX_OUTPUT_PORT_TYPE
 alarme <= alarme.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|eh_igual5:comb_6
+|main|eh_igual5:comb_11
 in[0] => ~NO_FANOUT~
 in[1] => w1.IN0
 in[2] => w1.IN1
@@ -395,7 +416,7 @@ in[7] => ~NO_FANOUT~
 out <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_dispenser:comb_7
+|main|MEF_dispenser:comb_12
 switch_add_rolha => nextstate.DATAA
 switch_add_rolha => always1.IN0
 switch_add_rolha => always1.IN0
@@ -410,7 +431,7 @@ disp <= disp.DB_MAX_OUTPUT_PORT_TYPE
 add_rolha <= add_rolha.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|eh_igual12:comb_8
+|main|eh_igual12:comb_13
 in[0] => WideAnd0.IN0
 in[1] => WideAnd0.IN1
 in[2] => WideAnd0.IN2
@@ -422,7 +443,7 @@ in[7] => WideAnd0.IN7
 out <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_contador_duzias:comb_9
+|main|MEF_contador_duzias:comb_14
 cq => always1.IN0
 cq => always1.IN0
 cq => always1.IN0
@@ -438,7 +459,7 @@ add_cont12 <= add_cont12.DB_MAX_OUTPUT_PORT_TYPE
 cont_done <= cont_done.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|contador2:comb_10
+|main|contador2:comb_15
 clk => count[0]~reg0.CLK
 clk => count[1]~reg0.CLK
 clk => count[2]~reg0.CLK
@@ -489,7 +510,7 @@ count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|contador2:comb_11
+|main|contador2:comb_16
 clk => count[0]~reg0.CLK
 clk => count[1]~reg0.CLK
 clk => count[2]~reg0.CLK
