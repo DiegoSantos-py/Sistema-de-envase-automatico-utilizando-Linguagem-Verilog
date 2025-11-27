@@ -10,9 +10,9 @@ module dividir(clk, clk_out);
     not Not1(nq1, q[1]);
      not Not2(nq2, q[2]);
      
-    d_flipflop b0(.q(q[0]), .d(nq0), .clk(clk));
-    d_flipflop b1(.q(q[1]), .d(nq1), .clk(nq0));
-    d_flipflop b2(.q(q[2]), .d(nq2), .clk(nq1));
+    d_flipflop b0(.q(q[0]), .d(nq0), .reset(reset), .clk(clk));
+    d_flipflop b1(.q(q[1]), .d(nq1), .reset(reset), .clk(nq0));
+    d_flipflop b2(.q(q[2]), .d(nq2), .reset(reset), .clk(nq1));
 
     and And0(reset, q[0], q[2]);
     and And1(clk_out, q[2], 1'b1);
@@ -62,6 +62,6 @@ module divisor_frequencia(
 	 d_flipflop div14(.q(q[5]), .d(nq5), .clk(nq4));
 	 d_flipflop div15(.q(q[6]), .d(nq6), .clk(nq5));
 	 
-	 d_flipflop divfinal(.q(clk_out), .d(n_clk_out), .clk(nq6));
+	 d_flipflop divfinal(.q(clk_out), .d(n_clk_out), .clk(nq5));
 
 endmodule

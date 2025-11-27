@@ -1,0 +1,79 @@
+module estoque (
+	input clk,
+	input reset,
+
+	input done,             
+
+	input add_rolha,        
+
+	output reg [7:0] CONTAGEM_ROLHAS_ESTOQUE, 
+
+	output reg [7:0] CONTAGEM_ROLHAS_LINHA,   
+
+	output reg ACIONAR_DISPENSER,          
+
+
+	output reg [7:0] VALOR_SAIDA_ESTOQUE, 
+	
+	output reg ALERTA_ESTOQUE_BAIXO          
+);
+
+parameter [7:0] NUM_ROLHAS_PADRAO = 8'd15;
+
+always @(*) begin
+
+    ACIONAR_DISPENSER = 1'b0;
+    VALOR_SAIDA_ESTOQUE = 8'd0;
+    ALERTA_ESTOQUE_BAIXO = 1'b0;
+    
+	 
+    if (CONTAGEM_ROLHAS_LINHA <= 8'd5) begin
+        ACIONAR_DISPENSER = 1'b1; 
+        
+      
+        if (CONTAGEM_ROLHAS_ESTOQUE < NUM_ROLHAS_PADRAO) begin
+
+            VALOR_SAIDA_ESTOQUE = CONTAGEM_ROLHAS_ESTOQUE;
+            ALERTA_ESTOQUE_BAIXO = 1'b1;                  
+        end else begin
+            VALOR_SAIDA_ESTOQUE = NUM_ROLHAS_PADRAO;      
+        end
+    end
+    
+    else if (CONTAGEM_ROLHAS_ESTOQUE == 8'd0) begin
+        ALERTA_ESTOQUE_BAIXO = 1'b1;
+    end
+end
+
+
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        CONTAGEM_ROLHAS_ESTOQUE <= 8'd99; 
+        CONTAGEM_ROLHAS_LINHA <= 8'd0;   
+    end
+    else begin
+        
+        if (ACIONAR_DISPENSER) begin
+            CONTAGEM_ROLHAS_LINHA <= CONTAGEM_ROLHAS_LINHA + VALOR_SAIDA_ESTOQUE;
+        end
+       
+        else if (done) begin
+            if (CONTAGEM_ROLHAS_LINHA > 8'd0) begin
+                CONTAGEM_ROLHAS_LINHA <= CONTAGEM_ROLHAS_LINHA - 8'd1;
+            end
+        end
+        
+        if (ACIONAR_DISPENSER) begin
+            CONTAGEM_ROLHAS_ESTOQUE <= CONTAGEM_ROLHAS_ESTOQUE - VALOR_SAIDA_ESTOQUE;
+        end
+       
+        else if (add_rolha) begin 
+            if (CONTAGEM_ROLHAS_ESTOQUE < 8'hFF) begin 
+                CONTAGEM_ROLHAS_ESTOQUE <= CONTAGEM_ROLHAS_ESTOQUE + 8'd1;
+            end
+        end
+        
+      
+    end
+end
+endmodule

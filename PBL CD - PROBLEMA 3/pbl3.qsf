@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY main
+set_global_assignment -name TOP_LEVEL_ENTITY MEF_dispenser
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:23:55  NOVEMBER 17, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -80,6 +80,65 @@ set_global_assignment -name VERILOG_FILE MEF_dispenser.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name VERILOG_FILE MEF_main.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE teste_mefcontador.vwf
+set_global_assignment -name VERILOG_FILE estoque.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_location_assignment PIN_C14 -to Displayr_disp[0]
+set_location_assignment PIN_E15 -to Displayr_disp[1]
+set_location_assignment PIN_C15 -to Displayr_disp[2]
+set_location_assignment PIN_C16 -to Displayr_disp[3]
+set_location_assignment PIN_E16 -to Displayr_disp[4]
+set_location_assignment PIN_D17 -to Displayr_disp[5]
+set_location_assignment PIN_C17 -to Displayr_disp[6]
+set_location_assignment PIN_C18 -to Displayr_disp[7]
+set_location_assignment PIN_D18 -to Displayr_disp[8]
+set_location_assignment PIN_E18 -to Displayr_disp[9]
+set_location_assignment PIN_B16 -to Displayr_disp[10]
+set_location_assignment PIN_A17 -to Displayr_disp[11]
+set_location_assignment PIN_A18 -to Displayr_disp[12]
+set_location_assignment PIN_B17 -to Displayr_disp[13]
+set_location_assignment PIN_B20 -to Display_duzias[0]
+set_location_assignment PIN_A20 -to Display_duzias[1]
+set_location_assignment PIN_B19 -to Display_duzias[2]
+set_location_assignment PIN_A21 -to Display_duzias[3]
+set_location_assignment PIN_B21 -to Display_duzias[4]
+set_location_assignment PIN_C22 -to Display_duzias[5]
+set_location_assignment PIN_B22 -to Display_duzias[6]
+set_location_assignment PIN_F21 -to Display_duzias[7]
+set_location_assignment PIN_E22 -to Display_duzias[8]
+set_location_assignment PIN_E21 -to Display_duzias[9]
+set_location_assignment PIN_C19 -to Display_duzias[10]
+set_location_assignment PIN_C20 -to Display_duzias[11]
+set_location_assignment PIN_D19 -to Display_duzias[12]
+set_location_assignment PIN_E17 -to Display_duzias[13]
+set_location_assignment PIN_F18 -to Displayr_estq[0]
+set_location_assignment PIN_E20 -to Displayr_estq[1]
+set_location_assignment PIN_E19 -to Displayr_estq[2]
+set_location_assignment PIN_J18 -to Displayr_estq[3]
+set_location_assignment PIN_H19 -to Displayr_estq[4]
+set_location_assignment PIN_F19 -to Displayr_estq[5]
+set_location_assignment PIN_F20 -to Displayr_estq[6]
+set_location_assignment PIN_J20 -to Displayr_estq[7]
+set_location_assignment PIN_K20 -to Displayr_estq[8]
+set_location_assignment PIN_L18 -to Displayr_estq[9]
+set_location_assignment PIN_N18 -to Displayr_estq[10]
+set_location_assignment PIN_M20 -to Displayr_estq[11]
+set_location_assignment PIN_N19 -to Displayr_estq[12]
+set_location_assignment PIN_N20 -to Displayr_estq[13]
+set_location_assignment PIN_A8 -to Motor
+set_location_assignment PIN_A9 -to Ev
+set_location_assignment PIN_A10 -to Ve
+set_location_assignment PIN_B10 -to Disp
+set_location_assignment PIN_D13 -to Descarte
+set_location_assignment PIN_C13 -to Alarme
+set_location_assignment PIN_C10 -to garrafa
+set_location_assignment PIN_D12 -to sensor_cq
+set_location_assignment PIN_C11 -to sensor_de_nivel
+set_location_assignment PIN_F15 -to switch_add_rolha
+set_location_assignment PIN_C12 -to switch_descarte
+set_location_assignment PIN_B14 -to start
+set_location_assignment PIN_P11 -to clk_system
+set_location_assignment PIN_E14 -to estaemcq
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

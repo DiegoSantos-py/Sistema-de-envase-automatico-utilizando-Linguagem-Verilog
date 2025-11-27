@@ -8,13 +8,15 @@ module MEF_main(
 		input cont_done,
 		input clk,
 		input reset,
+		input alarme,
 		output motor, 
 		output EV,
 		output pos_ve, // garrafa em posição de vedação
 		output count, // sinal para ativar mef do contador
 		output resetar,
 		output Desc_signal,
-		output controle_qualidade
+		output controle_qualidade,
+		output pos_cq
 		);
 		
 		reg[2:0]state, nextstate;
@@ -37,28 +39,30 @@ module MEF_main(
 				SR:
 					nextstate = Mo;
 				Mo:
-					if (start == 0)
+					if (start == 1)
 						nextstate = SR;
+					else if (alarme == 1)
+						nextstate = Mo;
 					else if (garrafa == 1)
 						nextstate = En;
 					else
 						nextstate = Mo;
 				En:
-					if (start == 0)
+					if (start == 1)
 						nextstate = SR;
 					else if (sensor_de_nivel == 1) 
 						nextstate = Vd;
 					else
 						nextstate = En;
 				Vd:
-					if (start == 0)
+					if (start == 1)
 						nextstate = SR;
 					else if (ve_done == 1)
 						nextstate = Cq;
 					else
 						nextstate = Vd;
 				Cq:
-					if (start == 0)
+					if (start == 1)
 						nextstate = SR;
 					else if (sensor_cq == 1)
 						nextstate = Co;
@@ -67,7 +71,7 @@ module MEF_main(
 					else
 						nextstate = Cq;
 				Co:
-					if (start == 0)
+					if (start == 1)
 						nextstate = SR;
 					else if (cont_done == 1)
 						nextstate = Mo;
@@ -87,5 +91,6 @@ module MEF_main(
 		assign controle_qualidade = (state == Cq);
 		assign count = (state == Co);
 		assign Desc_signal = (state == De);
+		assign pos_cq = (state == Cq);
 
 endmodule

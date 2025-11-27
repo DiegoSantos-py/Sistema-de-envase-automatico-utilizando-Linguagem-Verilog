@@ -1,6 +1,6 @@
 module MEF_vedacao(
 	input garrafa, 
-	input rolha, 
+	input [7:0]rolha, 
 	input pos, 
 	input clk, 
 	input reset, 
@@ -8,6 +8,9 @@ module MEF_vedacao(
 	output done, 
 	output alarme);
 	
+	
+	wire rolhas;
+	or (rolhas, rolha[0], rolha[1], rolha[2], rolha[3], rolha[4], rolha[5], rolha[6], rolha[7]);
 	reg [1:0]state, nextstate;
 	
 	parameter V0 = 2'b00;

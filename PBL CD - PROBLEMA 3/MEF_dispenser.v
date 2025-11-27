@@ -30,9 +30,9 @@ module MEF_dispenser(
 						nextstate = E0;
 
 			  DISP:
-					if (rolha5 == 0)
-						 nextstate = E0;            // Após dispensar volta p/ base
-					else if (rolha5 == 1)
+					if (rolha5 == 1)
+						 nextstate = DISP;            // Após dispensar volta p/ base
+					else if (rolha5 == 0)
 						 nextstate = E0;          // Continua dispensando
 
 			  ADD1:
@@ -78,14 +78,14 @@ module saidas_dispenser (
     wire nb1, nb0;
 	 
 	 // NOT do bit b0
-	 not (nb0, b0);
+	 not (nb0, state[0]);
 
     // NOT do bit b1
-    not (nb1, b1);
+    not (nb1, state[1]);
 
     // DISP = (~b1 & b0)
-    and (disp, nb1, b0);
+    and (disp, nb1, state[0]);
 
-    and (add_rolha, b1, nb0);
+    and (add_rolha, state[1], nb0);
 
 endmodule

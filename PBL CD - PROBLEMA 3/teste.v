@@ -1,4 +1,6 @@
-module teste1(clk, reset, switch_add_rolha, qntsrolhas, gar, pos, disp, add_rolha, ve, done, alarme, rolha5, rolha_disponivel, estoque, pode_repor, whatever_is_available, tem_15, dispenser);
+module teste1(clk, reset, switch_add_rolha, qntsrolhas, gar, pos, disp, add_rolha, ve, done, alarme, rolha5, rolha_disponivel, estoque,
+ pode_repor, whatever_is_available, tem_15, dispenser);
+ 
 	input clk, reset;
 	input switch_add_rolha; // entrada da mef do dispenser
 	input [7:0]qntsrolhas; // indica quantas rolhas vao estar no estoque
@@ -103,7 +105,7 @@ module teste2(start, garrafa, sensor_de_nivel, sensor_cq, ve_done,  resetar, clk
 	
 	
 	wire reset_atrasado;
-	d_flipflop dff0 (.q(reset_atrasado), .d(reset_cont12), .reset(reset), .clk(clk));
+	d_flipflop dff0 (.q(reset_atrasado), .d(reset_cont12), .reset(resetar), .clk(clk));
 	and (reset_cont12,wire_cont12[3], ncont2, wire_cont12[1], ncont0);
 	
 	MEF_main(
@@ -121,7 +123,7 @@ module teste2(start, garrafa, sensor_de_nivel, sensor_cq, ve_done,  resetar, clk
 		.pos_ve(garrafa_ve), 
 		.count(start_cont), 
 		.resetar(reset),
-		.Desc_signal(Descarte)
+		.Desc_signal(descarte)
 		);
 		
 		

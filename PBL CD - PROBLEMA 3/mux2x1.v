@@ -49,8 +49,9 @@ module muxdisp(A, B, en, out);
 	
 endmodule
 
-module mux_8(A, B, out);
+module mux_8(A, B, en,out);
 	input [7:0] A, B;
+	input en;
 	output [7:0]out;
 	
 	wire [7:0]outw1, outw2;
