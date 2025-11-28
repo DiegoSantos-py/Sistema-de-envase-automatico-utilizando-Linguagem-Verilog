@@ -48,15 +48,16 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 		);
 		
 		
-		// Lógica de saída do sinal do motor
-		wire not_alarme, w_and1, w_and2, only_and2;
-		not (not_alarme, Alarme);
-		and (w_and1, not_alarme, motor_signal);
-		and (w_and2, not_alarme, cq_signal);
-		level_to_pulse (w_and2, clk, only_and2);
-		or  (Motor, w_and1, only_and2);
-		
-		d_flipflop b0(.q(estaemcq), .d(wire_estaemcq), .reset(reset), .clk(clk));
+	// Lógica de saída do sinal do motor
+	wire not_alarme, w_and1, w_and2, only_and2;
+	not (not_alarme, Alarme);
+	and (w_and1, not_alarme, motor_signal);
+	and (w_and2, not_alarme, cq_signal);
+	level_to_pulse (w_and2, clk, only_and2);
+	or  (Motor, w_and1, only_and2);
+	
+	d_flipflop b0(.q(estaemcq), .d(wire_estaemcq), .reset(reset), .clk(clk));
+	
 	//=================================================================================
 	//============================== MEF-Vedacao ======================================
 	//=================================================================================
@@ -66,7 +67,7 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 	rolhas_disponiveis[7]);
 	wire ve_done, rolha_disponivel;
 	MEF_vedacao(
-		.garrafa(garrafa), 
+		.garrafa(garrafa_ve), 
 		.rolha(rolhas), 
 		.pos(garrafa_ve), 
 		.clk(clk), 

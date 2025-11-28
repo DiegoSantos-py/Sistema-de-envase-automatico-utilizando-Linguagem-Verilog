@@ -30,8 +30,10 @@ module MEF_dispenser(
 						nextstate = E0;
 
 			  DISP:
-					if (rolha5 == 1)
-						 nextstate = DISP;            // Após dispensar volta p/ base
+					if (switch_add_rolha == 1)
+						nextstate = ADD1;
+					else if (rolha5 == 1)
+						 nextstate = DISP;            
 					else if (rolha5 == 0)
 						 nextstate = E0;          // Continua dispensando
 

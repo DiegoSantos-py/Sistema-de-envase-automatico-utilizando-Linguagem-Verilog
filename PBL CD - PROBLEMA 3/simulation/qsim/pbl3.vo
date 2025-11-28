@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
-// DATE "11/27/2025 14:43:27"
+// DATE "11/27/2025 21:46:23"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -44,10 +44,10 @@ output 	disp;
 output 	add_rolha;
 
 // Design Ports Information
-// disp	=>  Location: PIN_B19,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// add_rolha	=>  Location: PIN_C19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// disp	=>  Location: PIN_B17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// add_rolha	=>  Location: PIN_C18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rolha5	=>  Location: PIN_B19,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // switch_add_rolha	=>  Location: PIN_F15,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// rolha5	=>  Location: PIN_C18,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // reset	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
@@ -77,12 +77,12 @@ wire \Selector2~0_combout ;
 wire \reset~input_o ;
 wire \reset~inputclkctrl_outclk ;
 wire \state.ADD1~q ;
-wire \Selector0~0_combout ;
+wire \Selector3~0_combout ;
 wire \state.ADD2~q ;
-wire \Selector6~0_combout ;
-wire \Selector6~1_combout ;
+wire \Selector0~0_combout ;
+wire \Selector0~1_combout ;
 wire \state.E0~q ;
-wire \state.DISP~0_combout ;
+wire \Selector1~0_combout ;
 wire \state.DISP~q ;
 
 
@@ -91,7 +91,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y48_N20
+// Location: LCCOMB_X44_Y52_N4
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -108,7 +108,7 @@ defparam \~QUARTUS_CREATED_GND~I .lut_mask = 16'h0000;
 defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOOBUF_X69_Y54_N16
+// Location: IOOBUF_X69_Y54_N30
 fiftyfivenm_io_obuf \disp~output (
 	.i(\state.DISP~q ),
 	.oe(vcc),
@@ -121,7 +121,7 @@ defparam \disp~output .bus_hold = "false";
 defparam \disp~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X69_Y54_N9
+// Location: IOOBUF_X69_Y54_N23
 fiftyfivenm_io_obuf \add_rolha~output (
 	.i(\state.ADD1~q ),
 	.oe(vcc),
@@ -159,7 +159,7 @@ defparam \clk~inputclkctrl .clock_type = "global clock";
 defparam \clk~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: IOIBUF_X69_Y54_N22
+// Location: IOIBUF_X69_Y54_N15
 fiftyfivenm_io_ibuf \rolha5~input (
 	.i(rolha5),
 	.ibar(gnd),
@@ -183,20 +183,20 @@ defparam \switch_add_rolha~input .listen_to_nsleep_signal = "false";
 defparam \switch_add_rolha~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X69_Y53_N30
+// Location: LCCOMB_X69_Y53_N22
 fiftyfivenm_lcell_comb \Selector2~0 (
 // Equation(s):
-// \Selector2~0_combout  = (\switch_add_rolha~input_o  & ((\state.ADD2~q ) # (!\state.E0~q )))
+// \Selector2~0_combout  = (\switch_add_rolha~input_o  & ((\state.ADD2~q ) # ((\state.DISP~q ) # (!\state.E0~q ))))
 
-	.dataa(gnd),
-	.datab(\switch_add_rolha~input_o ),
-	.datac(\state.ADD2~q ),
-	.datad(\state.E0~q ),
+	.dataa(\state.ADD2~q ),
+	.datab(\state.E0~q ),
+	.datac(\switch_add_rolha~input_o ),
+	.datad(\state.DISP~q ),
 	.cin(gnd),
 	.combout(\Selector2~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Selector2~0 .lut_mask = 16'hC0CC;
+defparam \Selector2~0 .lut_mask = 16'hF0B0;
 defparam \Selector2~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -225,7 +225,7 @@ defparam \reset~inputclkctrl .clock_type = "global clock";
 defparam \reset~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: FF_X69_Y53_N31
+// Location: FF_X69_Y53_N23
 dffeas \state.ADD1 (
 	.clk(\clk~inputclkctrl_outclk ),
 	.d(\Selector2~0_combout ),
@@ -244,27 +244,27 @@ defparam \state.ADD1 .is_wysiwyg = "true";
 defparam \state.ADD1 .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X69_Y53_N6
-fiftyfivenm_lcell_comb \Selector0~0 (
+// Location: LCCOMB_X69_Y53_N30
+fiftyfivenm_lcell_comb \Selector3~0 (
 // Equation(s):
-// \Selector0~0_combout  = (\switch_add_rolha~input_o  & \state.ADD1~q )
+// \Selector3~0_combout  = (\switch_add_rolha~input_o  & \state.ADD1~q )
 
 	.dataa(gnd),
 	.datab(\switch_add_rolha~input_o ),
-	.datac(\state.ADD1~q ),
-	.datad(gnd),
+	.datac(gnd),
+	.datad(\state.ADD1~q ),
 	.cin(gnd),
-	.combout(\Selector0~0_combout ),
+	.combout(\Selector3~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Selector0~0 .lut_mask = 16'hC0C0;
-defparam \Selector0~0 .sum_lutc_input = "datac";
+defparam \Selector3~0 .lut_mask = 16'hCC00;
+defparam \Selector3~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X69_Y53_N7
+// Location: FF_X69_Y53_N31
 dffeas \state.ADD2 (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\Selector0~0_combout ),
+	.d(\Selector3~0_combout ),
 	.asdata(vcc),
 	.clrn(!\reset~inputclkctrl_outclk ),
 	.aload(gnd),
@@ -280,44 +280,44 @@ defparam \state.ADD2 .is_wysiwyg = "true";
 defparam \state.ADD2 .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X69_Y53_N16
-fiftyfivenm_lcell_comb \Selector6~0 (
+// Location: LCCOMB_X69_Y53_N20
+fiftyfivenm_lcell_comb \Selector0~0 (
 // Equation(s):
-// \Selector6~0_combout  = (\state.ADD2~q ) # ((\state.ADD1~q ) # ((!\rolha5~input_o  & !\state.E0~q )))
+// \Selector0~0_combout  = (\state.ADD1~q ) # ((!\rolha5~input_o  & ((\state.DISP~q ) # (!\state.E0~q ))))
 
-	.dataa(\state.ADD2~q ),
-	.datab(\rolha5~input_o ),
+	.dataa(\rolha5~input_o ),
+	.datab(\state.DISP~q ),
 	.datac(\state.ADD1~q ),
 	.datad(\state.E0~q ),
 	.cin(gnd),
-	.combout(\Selector6~0_combout ),
+	.combout(\Selector0~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Selector6~0 .lut_mask = 16'hFAFB;
-defparam \Selector6~0 .sum_lutc_input = "datac";
+defparam \Selector0~0 .lut_mask = 16'hF4F5;
+defparam \Selector0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X69_Y53_N28
-fiftyfivenm_lcell_comb \Selector6~1 (
+// Location: LCCOMB_X69_Y53_N16
+fiftyfivenm_lcell_comb \Selector0~1 (
 // Equation(s):
-// \Selector6~1_combout  = (\rolha5~input_o  & (!\state.DISP~q  & ((\switch_add_rolha~input_o ) # (!\Selector6~0_combout )))) # (!\rolha5~input_o  & ((\switch_add_rolha~input_o ) # ((!\Selector6~0_combout ))))
+// \Selector0~1_combout  = (\switch_add_rolha~input_o ) # ((!\state.ADD2~q  & !\Selector0~0_combout ))
 
-	.dataa(\rolha5~input_o ),
+	.dataa(gnd),
 	.datab(\switch_add_rolha~input_o ),
-	.datac(\state.DISP~q ),
-	.datad(\Selector6~0_combout ),
+	.datac(\state.ADD2~q ),
+	.datad(\Selector0~0_combout ),
 	.cin(gnd),
-	.combout(\Selector6~1_combout ),
+	.combout(\Selector0~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Selector6~1 .lut_mask = 16'h4C5F;
-defparam \Selector6~1 .sum_lutc_input = "datac";
+defparam \Selector0~1 .lut_mask = 16'hCCCF;
+defparam \Selector0~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X69_Y53_N29
+// Location: FF_X69_Y53_N17
 dffeas \state.E0 (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\Selector6~1_combout ),
+	.d(\Selector0~1_combout ),
 	.asdata(vcc),
 	.clrn(!\reset~inputclkctrl_outclk ),
 	.aload(gnd),
@@ -333,27 +333,27 @@ defparam \state.E0 .is_wysiwyg = "true";
 defparam \state.E0 .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X69_Y53_N4
-fiftyfivenm_lcell_comb \state.DISP~0 (
+// Location: LCCOMB_X69_Y53_N8
+fiftyfivenm_lcell_comb \Selector1~0 (
 // Equation(s):
-// \state.DISP~0_combout  = (\rolha5~input_o  & (!\switch_add_rolha~input_o  & ((!\state.E0~q )))) # (!\rolha5~input_o  & (((\state.DISP~q ))))
+// \Selector1~0_combout  = (\rolha5~input_o  & (!\switch_add_rolha~input_o  & ((\state.DISP~q ) # (!\state.E0~q ))))
 
 	.dataa(\rolha5~input_o ),
 	.datab(\switch_add_rolha~input_o ),
 	.datac(\state.DISP~q ),
 	.datad(\state.E0~q ),
 	.cin(gnd),
-	.combout(\state.DISP~0_combout ),
+	.combout(\Selector1~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \state.DISP~0 .lut_mask = 16'h5072;
-defparam \state.DISP~0 .sum_lutc_input = "datac";
+defparam \Selector1~0 .lut_mask = 16'h2022;
+defparam \Selector1~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X69_Y53_N5
+// Location: FF_X69_Y53_N9
 dffeas \state.DISP (
 	.clk(\clk~inputclkctrl_outclk ),
-	.d(\state.DISP~0_combout ),
+	.d(\Selector1~0_combout ),
 	.asdata(vcc),
 	.clrn(!\reset~inputclkctrl_outclk ),
 	.aload(gnd),

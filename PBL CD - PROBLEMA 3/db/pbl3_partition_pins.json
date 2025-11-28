@@ -4,11 +4,211 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "disp",
+					"name" : "Ev",
 					"strict" : false
 				},
 				{
-					"name" : "add_rolha",
+					"name" : "Ve",
+					"strict" : false
+				},
+				{
+					"name" : "Motor",
+					"strict" : false
+				},
+				{
+					"name" : "Alarme",
+					"strict" : false
+				},
+				{
+					"name" : "Disp",
+					"strict" : false
+				},
+				{
+					"name" : "Descarte",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_disp[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Displayr_estq[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Display_duzias[13]",
+					"strict" : false
+				},
+				{
+					"name" : "estaemcq",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "garrafa",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_de_nivel",
 					"strict" : false
 				},
 				{
@@ -16,15 +216,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "rolha5",
+					"name" : "switch_descarte",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "sensor_cq",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "clk_system",
 					"strict" : false
 				}
 			]

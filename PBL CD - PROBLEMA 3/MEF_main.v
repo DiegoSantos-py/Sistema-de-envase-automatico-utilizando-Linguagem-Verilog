@@ -39,7 +39,7 @@ module MEF_main(
 				SR:
 					nextstate = Mo;
 				Mo:
-					if (start == 1)
+					if (start == 0)
 						nextstate = SR;
 					else if (alarme == 1)
 						nextstate = Mo;
@@ -48,21 +48,21 @@ module MEF_main(
 					else
 						nextstate = Mo;
 				En:
-					if (start == 1)
+					if (start == 0)
 						nextstate = SR;
 					else if (sensor_de_nivel == 1) 
 						nextstate = Vd;
 					else
 						nextstate = En;
 				Vd:
-					if (start == 1)
+					if (start == 0)
 						nextstate = SR;
 					else if (ve_done == 1)
 						nextstate = Cq;
 					else
 						nextstate = Vd;
 				Cq:
-					if (start == 1)
+					if (start == 0)
 						nextstate = SR;
 					else if (sensor_cq == 1)
 						nextstate = Co;
@@ -71,7 +71,7 @@ module MEF_main(
 					else
 						nextstate = Cq;
 				Co:
-					if (start == 1)
+					if (start == 0)
 						nextstate = SR;
 					else if (cont_done == 1)
 						nextstate = Mo;

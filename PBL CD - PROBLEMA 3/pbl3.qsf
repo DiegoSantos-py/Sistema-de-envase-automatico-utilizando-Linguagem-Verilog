@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY MEF_dispenser
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:23:55  NOVEMBER 17, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -136,9 +136,9 @@ set_location_assignment PIN_D12 -to sensor_cq
 set_location_assignment PIN_C11 -to sensor_de_nivel
 set_location_assignment PIN_F15 -to switch_add_rolha
 set_location_assignment PIN_C12 -to switch_descarte
-set_location_assignment PIN_B14 -to start
 set_location_assignment PIN_P11 -to clk_system
 set_location_assignment PIN_E14 -to estaemcq
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

@@ -1,7 +1,30 @@
 
-State Machine - |MEF_dispenser|state
+State Machine - |main|MEF_contador_duzias:comb_16|state
+Name state.CONT12 state.WAIT state.CONT1 state.C1 
+state.C1 0 0 0 0 
+state.CONT1 0 0 1 1 
+state.WAIT 0 1 0 1 
+state.CONT12 1 0 0 1 
+
+State Machine - |main|MEF_dispenser:comb_14|state
 Name state.ADD2 state.ADD1 state.DISP state.E0 
 state.E0 0 0 0 0 
 state.DISP 0 0 1 1 
 state.ADD1 0 1 0 1 
 state.ADD2 1 0 0 1 
+
+State Machine - |main|MEF_vedacao:comb_11|state
+Name state.V0 state.AL state.V1 
+state.V0 0 0 0 
+state.V1 1 0 1 
+state.AL 1 1 0 
+
+State Machine - |main|MEF_main:comb_4|state
+Name state.De state.Co state.Cq state.Vd state.En state.Mo state.SR 
+state.SR 0 0 0 0 0 0 0 
+state.Mo 0 0 0 0 0 1 1 
+state.En 0 0 0 0 1 0 1 
+state.Vd 0 0 0 1 0 0 1 
+state.Cq 0 0 1 0 0 0 1 
+state.Co 0 1 0 0 0 0 1 
+state.De 1 0 0 0 0 0 1 
