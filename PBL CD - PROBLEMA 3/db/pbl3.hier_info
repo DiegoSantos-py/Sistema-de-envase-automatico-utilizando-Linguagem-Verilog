@@ -6,12 +6,12 @@ sensor_cq => sensor_cq.IN1
 switch_descarte => switch_descarte.IN1
 switch_add_rolha => switch_add_rolha.IN1
 clk_system => clk_system.IN1
-Ev << MEF_main:comb_4.EV
-Ve << MEF_vedacao:comb_11.ve
+Ev << MEF_principal:comb_4.EV
+Ve << MEF_vedacao:comb_13.ve
 Motor << comb.DB_MAX_OUTPUT_PORT_TYPE
-Alarme << Alarme.DB_MAX_OUTPUT_PORT_TYPE
-Disp << MEF_dispenser:comb_14.disp
-Descarte << MEF_main:comb_4.Desc_signal
+Alarme << comb.DB_MAX_OUTPUT_PORT_TYPE
+Disp << MEF_dispenser:comb_16.disp
+Descarte << MEF_principal:comb_4.Desc_signal
 Displayr_disp[0] << display_decimal:display_rolhas_disponiveis.port1
 Displayr_disp[1] << display_decimal:display_rolhas_disponiveis.port1
 Displayr_disp[2] << display_decimal:display_rolhas_disponiveis.port1
@@ -326,7 +326,11 @@ reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_main:comb_4
+|main|MEF_principal:comb_4
+start => Mux1.IN7
+start => nextstate.OUTPUTSELECT
+start => Mux0.IN7
+start => Mux2.IN7
 start => nextstate.OUTPUTSELECT
 start => nextstate.OUTPUTSELECT
 start => nextstate.OUTPUTSELECT
@@ -334,52 +338,80 @@ start => nextstate.OUTPUTSELECT
 start => nextstate.OUTPUTSELECT
 start => nextstate.OUTPUTSELECT
 start => nextstate.OUTPUTSELECT
-start => nextstate.OUTPUTSELECT
-start => nextstate.OUTPUTSELECT
-start => nextstate.OUTPUTSELECT
-start => nextstate.OUTPUTSELECT
-start => Selector0.IN1
 garrafa => nextstate.DATAA
 garrafa => nextstate.DATAA
-sensor_de_nivel => nextstate.DATAA
-sensor_de_nivel => nextstate.DATAA
-sensor_cq => nextstate.OUTPUTSELECT
+sensor_de_nivel => nextstate.DATAB
 sensor_cq => nextstate.OUTPUTSELECT
 sensor_cq => nextstate.DATAA
 descarte => nextstate.DATAA
-descarte => nextstate.DATAA
 ve_done => nextstate.DATAA
 ve_done => nextstate.DATAA
-cont_done => nextstate.DATAA
-cont_done => nextstate.DATAA
-clk => state~1.DATAIN
-reset => state~3.DATAIN
-alarme => nextstate.OUTPUTSELECT
-alarme => nextstate.OUTPUTSELECT
-motor <= motor.DB_MAX_OUTPUT_PORT_TYPE
-EV <= EV.DB_MAX_OUTPUT_PORT_TYPE
-pos_ve <= pos_ve.DB_MAX_OUTPUT_PORT_TYPE
-count <= count.DB_MAX_OUTPUT_PORT_TYPE
-resetar <= resetar.DB_MAX_OUTPUT_PORT_TYPE
-Desc_signal <= Desc_signal.DB_MAX_OUTPUT_PORT_TYPE
-controle_qualidade <= controle_qualidade.DB_MAX_OUTPUT_PORT_TYPE
-pos_cq <= pos_cq.DB_MAX_OUTPUT_PORT_TYPE
+cont_done => nextstate.DATAB
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+reset => state[2].ACLR
+motor <= saida_mef_principal:comb_50.motor
+EV <= saida_mef_principal:comb_50.EV
+pos_ve <= saida_mef_principal:comb_50.pos_ve
+count <= saida_mef_principal:comb_50.count
+resetar <= saida_mef_principal:comb_50.resetar
+Desc_signal <= saida_mef_principal:comb_50.Desc_signal
+controle_qualidade <= saida_mef_principal:comb_50.controle_qualidade
+pos_cq <= saida_mef_principal:comb_50.pos_cq
 
 
-|main|level_to_pulse:comb_8
+|main|MEF_principal:comb_4|saida_mef_principal:comb_50
+state[0] => WideAnd1.IN0
+state[0] => WideAnd3.IN0
+state[0] => WideAnd6.IN0
+state[0] => WideAnd0.IN0
+state[0] => WideAnd2.IN0
+state[0] => WideAnd4.IN0
+state[0] => WideAnd5.IN0
+state[0] => WideAnd7.IN0
+state[1] => WideAnd2.IN1
+state[1] => WideAnd3.IN1
+state[1] => WideAnd7.IN1
+state[1] => WideAnd0.IN1
+state[1] => WideAnd1.IN1
+state[1] => WideAnd4.IN1
+state[1] => WideAnd5.IN1
+state[1] => WideAnd6.IN1
+state[2] => WideAnd4.IN2
+state[2] => WideAnd5.IN2
+state[2] => WideAnd6.IN2
+state[2] => WideAnd7.IN2
+state[2] => WideAnd0.IN2
+state[2] => WideAnd1.IN2
+state[2] => WideAnd2.IN2
+state[2] => WideAnd3.IN2
+motor <= WideAnd1.DB_MAX_OUTPUT_PORT_TYPE
+EV <= WideAnd2.DB_MAX_OUTPUT_PORT_TYPE
+pos_ve <= WideAnd3.DB_MAX_OUTPUT_PORT_TYPE
+count <= WideAnd6.DB_MAX_OUTPUT_PORT_TYPE
+resetar <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+Desc_signal <= WideAnd7.DB_MAX_OUTPUT_PORT_TYPE
+controle_qualidade <= WideAnd5.DB_MAX_OUTPUT_PORT_TYPE
+pos_cq <= WideAnd4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|level_to_pulse:comb_9
 L => L.IN1
 clk => clk.IN2
 P <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|level_to_pulse:comb_8|d_flipflop:D1
+|main|level_to_pulse:comb_9|d_flipflop:D1
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|level_to_pulse:comb_8|d_flipflop:D0
+|main|level_to_pulse:comb_9|d_flipflop:D0
 d => flipflop_inst.DATAIN
 clk => flipflop_inst.CLK
 reset => flipflop_inst.ACLR
@@ -393,30 +425,43 @@ reset => flipflop_inst.ACLR
 q <= flipflop_inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_vedacao:comb_11
+|main|MEF_vedacao:comb_13
 garrafa => always1.IN0
 garrafa => always1.IN0
 garrafa => always1.IN0
 rolha => always1.IN1
 rolha => always1.IN1
 rolha => always1.IN1
-rolha => Selector0.IN2
+rolha => Mux0.IN1
 rolha => nextstate.OUTPUTSELECT
-rolha => nextstate.OUTPUTSELECT
-rolha => Selector2.IN0
+rolha => Mux0.IN2
 pos => always1.IN1
 pos => always1.IN1
 pos => always1.IN1
 pos => always1.IN1
 pos => always1.IN1
-clk => state~1.DATAIN
-reset => state~3.DATAIN
-ve <= ve.DB_MAX_OUTPUT_PORT_TYPE
-done <= done.DB_MAX_OUTPUT_PORT_TYPE
-alarme <= alarme.DB_MAX_OUTPUT_PORT_TYPE
+clk => state[0].CLK
+clk => state[1].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+ve <= saida_vedacao:comb_52.ve
+done <= saida_vedacao:comb_52.done
+alarme <= saida_vedacao:comb_52.alarme
 
 
-|main|estoque:comb_12
+|main|MEF_vedacao:comb_13|saida_vedacao:comb_52
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[1] => comb.IN1
+state[1] => comb.IN1
+state[1] => comb.IN1
+alarme <= comb.DB_MAX_OUTPUT_PORT_TYPE
+ve <= comb.DB_MAX_OUTPUT_PORT_TYPE
+done <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|estoque:comb_14
 clk => CONTAGEM_ROLHAS_LINHA[0]~reg0.CLK
 clk => CONTAGEM_ROLHAS_LINHA[1]~reg0.CLK
 clk => CONTAGEM_ROLHAS_LINHA[2]~reg0.CLK
@@ -444,12 +489,19 @@ reset => CONTAGEM_ROLHAS_LINHA[7]~reg0.ACLR
 reset => CONTAGEM_ROLHAS_ESTOQUE[0]~reg0.ACLR
 reset => CONTAGEM_ROLHAS_ESTOQUE[1]~reg0.ACLR
 reset => CONTAGEM_ROLHAS_ESTOQUE[2]~reg0.ACLR
-reset => CONTAGEM_ROLHAS_ESTOQUE[3]~reg0.PRESET
+reset => CONTAGEM_ROLHAS_ESTOQUE[3]~reg0.ACLR
 reset => CONTAGEM_ROLHAS_ESTOQUE[4]~reg0.ACLR
-reset => CONTAGEM_ROLHAS_ESTOQUE[5]~reg0.PRESET
+reset => CONTAGEM_ROLHAS_ESTOQUE[5]~reg0.ACLR
 reset => CONTAGEM_ROLHAS_ESTOQUE[6]~reg0.ACLR
 reset => CONTAGEM_ROLHAS_ESTOQUE[7]~reg0.ACLR
-done => always1.IN1
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
+done => CONTAGEM_ROLHAS_LINHA.OUTPUTSELECT
 add_rolha => always1.IN1
 CONTAGEM_ROLHAS_ESTOQUE[0] <= CONTAGEM_ROLHAS_ESTOQUE[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 CONTAGEM_ROLHAS_ESTOQUE[1] <= CONTAGEM_ROLHAS_ESTOQUE[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -479,7 +531,7 @@ VALOR_SAIDA_ESTOQUE[7] <= VALOR_SAIDA_ESTOQUE.DB_MAX_OUTPUT_PORT_TYPE
 ALERTA_ESTOQUE_BAIXO <= ALERTA_ESTOQUE_BAIXO.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|eh_igual5:comb_13
+|main|eh_igual5:comb_15
 in[0] => ~NO_FANOUT~
 in[1] => w1.IN0
 in[2] => w1.IN1
@@ -491,25 +543,33 @@ in[7] => ~NO_FANOUT~
 out <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_dispenser:comb_14
-switch_add_rolha => nextstate.OUTPUTSELECT
+|main|MEF_dispenser:comb_16
 switch_add_rolha => nextstate.OUTPUTSELECT
 switch_add_rolha => nextstate.DATAA
-switch_add_rolha => Selector2.IN3
-switch_add_rolha => nextstate.DATAA
+switch_add_rolha => Mux0.IN3
 switch_add_rolha => always1.IN0
 switch_add_rolha => always1.IN0
 rolha5 => always1.IN1
 rolha5 => nextstate.DATAA
-rolha5 => nextstate.DATAA
 rolha5 => always1.IN1
-clk => state~1.DATAIN
-reset => state~3.DATAIN
-disp <= disp.DB_MAX_OUTPUT_PORT_TYPE
-add_rolha <= add_rolha.DB_MAX_OUTPUT_PORT_TYPE
+clk => state[0].CLK
+clk => state[1].CLK
+reset => state[0].ACLR
+reset => state[1].ACLR
+disp <= saidas_dispenser:logic_out.disp
+add_rolha <= saidas_dispenser:logic_out.add_rolha
 
 
-|main|eh_igual12:comb_15
+|main|MEF_dispenser:comb_16|saidas_dispenser:logic_out
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[1] => comb.IN1
+state[1] => comb.IN1
+disp <= comb.DB_MAX_OUTPUT_PORT_TYPE
+add_rolha <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|eh_igual12:comb_17
 in[0] => WideAnd0.IN0
 in[1] => WideAnd0.IN1
 in[2] => WideAnd0.IN2
@@ -521,20 +581,34 @@ in[7] => WideAnd0.IN7
 out <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|MEF_contador_duzias:comb_16
+|main|MEF_contador_duzias:comb_18
 cq => always1.IN0
 cq => always1.IN0
 cq => always1.IN0
 cont12 => always1.IN1
 cont12 => always1.IN1
-cont12 => Selector1.IN3
+cont12 => Mux0.IN3
+cont12 => Mux1.IN3
 cont12 => always1.IN1
-cont12 => Selector0.IN1
-reset => state~3.DATAIN
-clk => state~1.DATAIN
-cont1 <= cont1.DB_MAX_OUTPUT_PORT_TYPE
-add_cont12 <= add_cont12.DB_MAX_OUTPUT_PORT_TYPE
-cont_done <= cont_done.DB_MAX_OUTPUT_PORT_TYPE
+reset => state[0].ACLR
+reset => state[1].ACLR
+clk => state[0].CLK
+clk => state[1].CLK
+cont1 <= saida_contador_duzias:comb_33.cont1
+add_cont12 <= saida_contador_duzias:comb_33.add_cont12
+cont_done <= saida_contador_duzias:comb_33.done
+
+
+|main|MEF_contador_duzias:comb_18|saida_contador_duzias:comb_33
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[0] => comb.IN0
+state[1] => comb.IN1
+state[1] => comb.IN1
+state[1] => comb.IN1
+cont1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+add_cont12 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+done <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|contador2:contador_unidades

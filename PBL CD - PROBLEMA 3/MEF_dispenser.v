@@ -58,14 +58,13 @@ module MEF_dispenser(
 
 		 endcase
 		 
-	 assign disp = (state == DISP);
-	 assign add_rolha = (state == ADD1);
+
 	
-//	saidas_dispenser logic_out (
-//    .state(state),
-//    .disp(disp),
-//    .add_rolha(add_rolha)
-//);
+ 	saidas_dispenser logic_out (
+      .state(state),
+      .disp(disp),
+      .add_rolha(add_rolha)
+  );
 	
 	
 endmodule

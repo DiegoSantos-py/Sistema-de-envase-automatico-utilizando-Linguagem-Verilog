@@ -76,7 +76,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 7         :                
+start                        : A7        : input  : 2.5 V             :         : 7         : Y              
 Motor                        : A8        : output : 2.5 V             :         : 7         : Y              
 Ev                           : A9        : output : 2.5 V             :         : 7         : Y              
 Ve                           : A10       : output : 2.5 V             :         : 7         : Y              
@@ -302,7 +302,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J12       :        :                   :         : 7         :                
-start                        : J13       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 6         :                
 GND                          : J16       : gnd    :                   :         :           :                

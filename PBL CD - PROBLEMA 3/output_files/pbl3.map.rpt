@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pbl3
-Fri Nov 28 00:03:42 2025
+Sun Nov 30 17:43:25 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,53 +13,49 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |main|MEF_contador_duzias:comb_16|state
-  9. State Machine - |main|MEF_dispenser:comb_14|state
- 10. State Machine - |main|MEF_vedacao:comb_11|state
- 11. State Machine - |main|MEF_main:comb_4|state
- 12. Registers Removed During Synthesis
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Parameter Settings for User Entity Instance: MEF_main:comb_4
- 16. Parameter Settings for User Entity Instance: MEF_vedacao:comb_11
- 17. Parameter Settings for User Entity Instance: estoque:comb_12
- 18. Parameter Settings for User Entity Instance: MEF_dispenser:comb_14
- 19. Parameter Settings for User Entity Instance: MEF_contador_duzias:comb_16
- 20. Port Connectivity Checks: "display_decimal:display_duzias"
- 21. Port Connectivity Checks: "display_decimal:display_rolhas_disponiveis"
- 22. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_11"
- 23. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_10"
- 24. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_9"
- 25. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_8"
- 26. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_7"
- 27. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_6"
- 28. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_5"
- 29. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_4"
- 30. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_3"
- 31. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_2"
- 32. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_1"
- 33. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db001|sum4bit:comb_4"
- 34. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db001"
- 35. Port Connectivity Checks: "display_decimal:display_estoque"
- 36. Port Connectivity Checks: "contador2:contador_duzias"
- 37. Port Connectivity Checks: "contador2:contador_unidades"
- 38. Port Connectivity Checks: "estoque:comb_12"
- 39. Port Connectivity Checks: "MEF_vedacao:comb_11"
- 40. Port Connectivity Checks: "level_to_pulse:comb_8|d_flipflop:D0"
- 41. Port Connectivity Checks: "level_to_pulse:comb_8|d_flipflop:D1"
- 42. Port Connectivity Checks: "MEF_main:comb_4"
- 43. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:divfinal"
- 44. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div15"
- 45. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div14"
- 46. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div13"
- 47. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div12"
- 48. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div11"
- 49. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div10"
- 50. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div9"
- 51. Post-Synthesis Netlist Statistics for Top Partition
- 52. Elapsed Time Per Partition
- 53. Analysis & Synthesis Messages
- 54. Analysis & Synthesis Suppressed Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: MEF_principal:comb_4
+ 12. Parameter Settings for User Entity Instance: MEF_vedacao:comb_13
+ 13. Parameter Settings for User Entity Instance: estoque:comb_14
+ 14. Parameter Settings for User Entity Instance: MEF_dispenser:comb_16
+ 15. Parameter Settings for User Entity Instance: MEF_contador_duzias:comb_18
+ 16. Port Connectivity Checks: "display_decimal:display_duzias"
+ 17. Port Connectivity Checks: "display_decimal:display_rolhas_disponiveis"
+ 18. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_11"
+ 19. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_10"
+ 20. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_9"
+ 21. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_8"
+ 22. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_7"
+ 23. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_6"
+ 24. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_5"
+ 25. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_4"
+ 26. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_3"
+ 27. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_2"
+ 28. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db002_1"
+ 29. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db001|sum4bit:comb_4"
+ 30. Port Connectivity Checks: "display_decimal:display_estoque|double_dabble:db001"
+ 31. Port Connectivity Checks: "display_decimal:display_estoque"
+ 32. Port Connectivity Checks: "contador2:contador_duzias"
+ 33. Port Connectivity Checks: "contador2:contador_unidades"
+ 34. Port Connectivity Checks: "estoque:comb_14"
+ 35. Port Connectivity Checks: "MEF_vedacao:comb_13"
+ 36. Port Connectivity Checks: "level_to_pulse:comb_9|d_flipflop:D0"
+ 37. Port Connectivity Checks: "level_to_pulse:comb_9|d_flipflop:D1"
+ 38. Port Connectivity Checks: "MEF_principal:comb_4"
+ 39. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:divfinal"
+ 40. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div15"
+ 41. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div14"
+ 42. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div13"
+ 43. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div12"
+ 44. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div11"
+ 45. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div10"
+ 46. Port Connectivity Checks: "divisor_frequencia:comb_3|d_flipflop:div9"
+ 47. Post-Synthesis Netlist Statistics for Top Partition
+ 48. Elapsed Time Per Partition
+ 49. Analysis & Synthesis Messages
+ 50. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -86,15 +82,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 28 00:03:42 2025       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 30 17:43:23 2025       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; pbl3                                        ;
 ; Top-level Entity Name              ; main                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 227                                         ;
-;     Total combinational functions  ; 225                                         ;
-;     Dedicated logic registers      ; 82                                          ;
-; Total registers                    ; 82                                          ;
+; Total logic elements               ; 252                                         ;
+;     Total combinational functions  ; 251                                         ;
+;     Dedicated logic registers      ; 75                                          ;
+; Total registers                    ; 75                                          ;
 ; Total pins                         ; 56                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -209,29 +205,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; main.v                           ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v                ;         ;
-; MEF_contador_duzias.v            ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v ;         ;
-; MEF_vedacao.v                    ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v         ;         ;
-; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v          ;         ;
-; eh_igual5.v                      ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_igual5.v           ;         ;
-; eh_igual12.v                     ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_igual12.v          ;         ;
-; double_dabble.v                  ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v       ;         ;
-; decoder_decimal.v                ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/decoder_decimal.v     ;         ;
-; display_decimal.v                ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v     ;         ;
-; mux2x1.v                         ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v              ;         ;
-; sum4bit.v                        ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v             ;         ;
-; divisor_frequencia.v             ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v  ;         ;
-; contador.v                       ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v            ;         ;
-; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/level_to_pulse.v      ;         ;
-; MEF_dispenser.v                  ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_dispenser.v       ;         ;
-; MEF_main.v                       ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_main.v            ;         ;
-; estoque.v                        ; yes             ; User Verilog HDL File  ; D:/RepPBLCD3/PBL CD - PROBLEMA 3/estoque.v             ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                          ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
+; main.v                           ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/main.v                ;         ;
+; MEF_contador_duzias.v            ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/MEF_contador_duzias.v ;         ;
+; MEF_vedacao.v                    ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/MEF_vedacao.v         ;         ;
+; d_flipflop.v                     ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/d_flipflop.v          ;         ;
+; eh_igual5.v                      ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/eh_igual5.v           ;         ;
+; eh_igual12.v                     ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/eh_igual12.v          ;         ;
+; double_dabble.v                  ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v       ;         ;
+; decoder_decimal.v                ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/decoder_decimal.v     ;         ;
+; display_decimal.v                ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/display_decimal.v     ;         ;
+; mux2x1.v                         ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/mux2x1.v              ;         ;
+; divisor_frequencia.v             ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/divisor_frequencia.v  ;         ;
+; contador.v                       ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/contador.v            ;         ;
+; level_to_pulse.v                 ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/level_to_pulse.v      ;         ;
+; MEF_dispenser.v                  ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/MEF_dispenser.v       ;         ;
+; MEF_main.v                       ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/MEF_main.v            ;         ;
+; estoque.v                        ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/estoque.v             ;         ;
+; sum4bit.v                        ; yes             ; User Verilog HDL File  ; E:/pbl real/PBL CD - PROBLEMA 3/sum4bit.v             ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -239,254 +235,193 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------------------------------+
 ; Resource                                    ; Usage                                                       ;
 +---------------------------------------------+-------------------------------------------------------------+
-; Estimated Total logic elements              ; 227                                                         ;
+; Estimated Total logic elements              ; 252                                                         ;
 ;                                             ;                                                             ;
-; Total combinational functions               ; 225                                                         ;
+; Total combinational functions               ; 251                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                             ;
-;     -- 4 input functions                    ; 112                                                         ;
-;     -- 3 input functions                    ; 49                                                          ;
-;     -- <=2 input functions                  ; 64                                                          ;
+;     -- 4 input functions                    ; 118                                                         ;
+;     -- 3 input functions                    ; 60                                                          ;
+;     -- <=2 input functions                  ; 73                                                          ;
 ;                                             ;                                                             ;
 ; Logic elements by mode                      ;                                                             ;
-;     -- normal mode                          ; 198                                                         ;
-;     -- arithmetic mode                      ; 27                                                          ;
+;     -- normal mode                          ; 217                                                         ;
+;     -- arithmetic mode                      ; 34                                                          ;
 ;                                             ;                                                             ;
-; Total registers                             ; 82                                                          ;
-;     -- Dedicated logic registers            ; 82                                                          ;
+; Total registers                             ; 75                                                          ;
+;     -- Dedicated logic registers            ; 75                                                          ;
 ;     -- I/O registers                        ; 0                                                           ;
 ;                                             ;                                                             ;
 ; I/O pins                                    ; 56                                                          ;
 ;                                             ;                                                             ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                           ;
 ;                                             ;                                                             ;
-; Maximum fan-out node                        ; divisor_frequencia:comb_3|d_flipflop:divfinal|flipflop_inst ;
-; Maximum fan-out                             ; 36                                                          ;
-; Total fan-out                               ; 1038                                                        ;
-; Average fan-out                             ; 2.48                                                        ;
+; Maximum fan-out node                        ; MEF_principal:comb_4|saida_mef_principal:comb_50|WideAnd0~3 ;
+; Maximum fan-out                             ; 30                                                          ;
+; Total fan-out                               ; 1098                                                        ;
+; Average fan-out                             ; 2.51                                                        ;
 +---------------------------------------------+-------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
-+-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                   ; Entity Name         ; Library Name ;
-+-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+---------------------+--------------+
-; |main                                           ; 225 (6)             ; 82 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 56   ; 0            ; 0          ; |main                                                                                 ; main                ; work         ;
-;    |MEF_contador_duzias:comb_16|                ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_contador_duzias:comb_16                                                     ; MEF_contador_duzias ; work         ;
-;    |MEF_dispenser:comb_14|                      ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_dispenser:comb_14                                                           ; MEF_dispenser       ; work         ;
-;    |MEF_main:comb_4|                            ; 12 (12)             ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_main:comb_4                                                                 ; MEF_main            ; work         ;
-;    |MEF_vedacao:comb_11|                        ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_vedacao:comb_11                                                             ; MEF_vedacao         ; work         ;
-;    |contador2:contador_duzias|                  ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|contador2:contador_duzias                                                       ; contador2           ; work         ;
-;    |contador2:contador_unidades|                ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|contador2:contador_unidades                                                     ; contador2           ; work         ;
-;    |d_flipflop:b0|                              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|d_flipflop:b0                                                                   ; d_flipflop          ; work         ;
-;    |display_decimal:display_duzias|             ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias                                                  ; display_decimal     ; work         ;
-;       |decoder_decimal:comb_3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|decoder_decimal:comb_3                           ; decoder_decimal     ; work         ;
-;       |decoder_decimal:comb_4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|decoder_decimal:comb_4                           ; decoder_decimal     ; work         ;
-;       |double_dabble:db0010|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010                             ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_5               ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_6               ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_7               ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_8               ; mux2x1              ; work         ;
-;       |double_dabble:db0011|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011                             ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_5               ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_6               ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_7               ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_8               ; mux2x1              ; work         ;
-;       |double_dabble:db0012|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012                             ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_5               ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_6               ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_7               ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_8               ; mux2x1              ; work         ;
-;       |double_dabble:db002_11|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11                           ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11|mux2x1:comb_5             ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11|mux2x1:comb_6             ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11|mux2x1:comb_7             ; mux2x1              ; work         ;
-;       |double_dabble:db008|                     ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db008                              ; double_dabble       ; work         ;
-;          |eh_maior5:comb_3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db008|eh_maior5:comb_3             ; eh_maior5           ; work         ;
-;       |double_dabble:db009|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009                              ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_5                ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_6                ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_7                ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_8                ; mux2x1              ; work         ;
-;    |display_decimal:display_estoque|            ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque                                                 ; display_decimal     ; work         ;
-;       |decoder_decimal:comb_3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|decoder_decimal:comb_3                          ; decoder_decimal     ; work         ;
-;       |decoder_decimal:comb_4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|decoder_decimal:comb_4                          ; decoder_decimal     ; work         ;
-;       |double_dabble:db0010|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010                            ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_5              ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_6              ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_7              ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_8              ; mux2x1              ; work         ;
-;       |double_dabble:db0011|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011                            ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_5              ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_6              ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_7              ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_8              ; mux2x1              ; work         ;
-;       |double_dabble:db0012|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012                            ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_5              ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_6              ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_7              ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_8              ; mux2x1              ; work         ;
-;       |double_dabble:db002_11|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11                          ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11|mux2x1:comb_5            ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11|mux2x1:comb_6            ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11|mux2x1:comb_7            ; mux2x1              ; work         ;
-;       |double_dabble:db008|                     ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db008                             ; double_dabble       ; work         ;
-;          |eh_maior5:comb_3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db008|eh_maior5:comb_3            ; eh_maior5           ; work         ;
-;       |double_dabble:db009|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009                             ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_5               ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_6               ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_7               ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_8               ; mux2x1              ; work         ;
-;    |display_decimal:display_rolhas_disponiveis| ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis                                      ; display_decimal     ; work         ;
-;       |decoder_decimal:comb_3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|decoder_decimal:comb_3               ; decoder_decimal     ; work         ;
-;       |decoder_decimal:comb_4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|decoder_decimal:comb_4               ; decoder_decimal     ; work         ;
-;       |double_dabble:db0010|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010                 ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_5   ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_6   ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_7   ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_8   ; mux2x1              ; work         ;
-;       |double_dabble:db0011|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011                 ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_5   ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_6   ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_7   ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_8   ; mux2x1              ; work         ;
-;       |double_dabble:db0012|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012                 ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_5   ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_6   ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_7   ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_8   ; mux2x1              ; work         ;
-;       |double_dabble:db002_11|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11               ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11|mux2x1:comb_5 ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11|mux2x1:comb_6 ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11|mux2x1:comb_7 ; mux2x1              ; work         ;
-;       |double_dabble:db008|                     ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db008                  ; double_dabble       ; work         ;
-;          |eh_maior5:comb_3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db008|eh_maior5:comb_3 ; eh_maior5           ; work         ;
-;       |double_dabble:db009|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009                  ; double_dabble       ; work         ;
-;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_5    ; mux2x1              ; work         ;
-;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_6    ; mux2x1              ; work         ;
-;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_7    ; mux2x1              ; work         ;
-;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_8    ; mux2x1              ; work         ;
-;    |divisor_frequencia:comb_3|                  ; 39 (0)              ; 31 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3                                                       ; divisor_frequencia  ; work         ;
-;       |d_flipflop:div10|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div10                                      ; d_flipflop          ; work         ;
-;       |d_flipflop:div11|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div11                                      ; d_flipflop          ; work         ;
-;       |d_flipflop:div12|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div12                                      ; d_flipflop          ; work         ;
-;       |d_flipflop:div13|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div13                                      ; d_flipflop          ; work         ;
-;       |d_flipflop:div14|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div14                                      ; d_flipflop          ; work         ;
-;       |d_flipflop:div9|                         ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div9                                       ; d_flipflop          ; work         ;
-;       |d_flipflop:divfinal|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:divfinal                                   ; d_flipflop          ; work         ;
-;       |dividir:div1|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div2|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div3|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div4|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div5|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div6|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div7|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;       |dividir:div8|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8                                          ; dividir             ; work         ;
-;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8|d_flipflop:b0                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8|d_flipflop:b1                            ; d_flipflop          ; work         ;
-;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8|d_flipflop:b2                            ; d_flipflop          ; work         ;
-;    |eh_igual12:comb_15|                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|eh_igual12:comb_15                                                              ; eh_igual12          ; work         ;
-;    |eh_igual5:comb_13|                          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|eh_igual5:comb_13                                                               ; eh_igual5           ; work         ;
-;    |estoque:comb_12|                            ; 35 (35)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|estoque:comb_12                                                                 ; estoque             ; work         ;
-;    |level_to_pulse:comb_8|                      ; 1 (1)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|level_to_pulse:comb_8                                                           ; level_to_pulse      ; work         ;
-;       |d_flipflop:D0|                           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|level_to_pulse:comb_8|d_flipflop:D0                                             ; d_flipflop          ; work         ;
-;       |d_flipflop:D1|                           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|level_to_pulse:comb_8|d_flipflop:D1                                             ; d_flipflop          ; work         ;
-+-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                   ; Entity Name           ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+-----------------------+--------------+
+; |main                                           ; 251 (8)             ; 75 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 56   ; 0            ; 0          ; |main                                                                                 ; main                  ; work         ;
+;    |MEF_contador_duzias:comb_18|                ; 7 (5)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_contador_duzias:comb_18                                                     ; MEF_contador_duzias   ; work         ;
+;       |saida_contador_duzias:comb_33|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_contador_duzias:comb_18|saida_contador_duzias:comb_33                       ; saida_contador_duzias ; work         ;
+;    |MEF_dispenser:comb_16|                      ; 3 (2)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_dispenser:comb_16                                                           ; MEF_dispenser         ; work         ;
+;       |saidas_dispenser:logic_out|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_dispenser:comb_16|saidas_dispenser:logic_out                                ; saidas_dispenser      ; work         ;
+;    |MEF_principal:comb_4|                       ; 15 (10)             ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_principal:comb_4                                                            ; MEF_principal         ; work         ;
+;       |saida_mef_principal:comb_50|             ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_principal:comb_4|saida_mef_principal:comb_50                                ; saida_mef_principal   ; work         ;
+;    |MEF_vedacao:comb_13|                        ; 4 (3)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_vedacao:comb_13                                                             ; MEF_vedacao           ; work         ;
+;       |saida_vedacao:comb_52|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|MEF_vedacao:comb_13|saida_vedacao:comb_52                                       ; saida_vedacao         ; work         ;
+;    |contador2:contador_duzias|                  ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|contador2:contador_duzias                                                       ; contador2             ; work         ;
+;    |contador2:contador_unidades|                ; 8 (8)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|contador2:contador_unidades                                                     ; contador2             ; work         ;
+;    |d_flipflop:b0|                              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|d_flipflop:b0                                                                   ; d_flipflop            ; work         ;
+;    |display_decimal:display_duzias|             ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias                                                  ; display_decimal       ; work         ;
+;       |decoder_decimal:comb_3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|decoder_decimal:comb_3                           ; decoder_decimal       ; work         ;
+;       |decoder_decimal:comb_4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|decoder_decimal:comb_4                           ; decoder_decimal       ; work         ;
+;       |double_dabble:db0010|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010                             ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_5               ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_6               ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_7               ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0010|mux2x1:comb_8               ; mux2x1                ; work         ;
+;       |double_dabble:db0011|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011                             ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_5               ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_6               ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_7               ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0011|mux2x1:comb_8               ; mux2x1                ; work         ;
+;       |double_dabble:db0012|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012                             ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_5               ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_6               ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_7               ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db0012|mux2x1:comb_8               ; mux2x1                ; work         ;
+;       |double_dabble:db002_11|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11                           ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11|mux2x1:comb_5             ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11|mux2x1:comb_6             ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db002_11|mux2x1:comb_7             ; mux2x1                ; work         ;
+;       |double_dabble:db008|                     ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db008                              ; double_dabble         ; work         ;
+;          |eh_maior5:comb_3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db008|eh_maior5:comb_3             ; eh_maior5             ; work         ;
+;       |double_dabble:db009|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009                              ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_5                ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_6                ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_7                ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_duzias|double_dabble:db009|mux2x1:comb_8                ; mux2x1                ; work         ;
+;    |display_decimal:display_estoque|            ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque                                                 ; display_decimal       ; work         ;
+;       |decoder_decimal:comb_3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|decoder_decimal:comb_3                          ; decoder_decimal       ; work         ;
+;       |decoder_decimal:comb_4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|decoder_decimal:comb_4                          ; decoder_decimal       ; work         ;
+;       |double_dabble:db0010|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010                            ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_5              ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_6              ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_7              ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0010|mux2x1:comb_8              ; mux2x1                ; work         ;
+;       |double_dabble:db0011|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011                            ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_5              ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_6              ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_7              ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0011|mux2x1:comb_8              ; mux2x1                ; work         ;
+;       |double_dabble:db0012|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012                            ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_5              ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_6              ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_7              ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db0012|mux2x1:comb_8              ; mux2x1                ; work         ;
+;       |double_dabble:db002_11|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11                          ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11|mux2x1:comb_5            ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11|mux2x1:comb_6            ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db002_11|mux2x1:comb_7            ; mux2x1                ; work         ;
+;       |double_dabble:db008|                     ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db008                             ; double_dabble         ; work         ;
+;          |eh_maior5:comb_3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db008|eh_maior5:comb_3            ; eh_maior5             ; work         ;
+;       |double_dabble:db009|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009                             ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_5               ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_6               ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_7               ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_estoque|double_dabble:db009|mux2x1:comb_8               ; mux2x1                ; work         ;
+;    |display_decimal:display_rolhas_disponiveis| ; 34 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis                                      ; display_decimal       ; work         ;
+;       |decoder_decimal:comb_3|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|decoder_decimal:comb_3               ; decoder_decimal       ; work         ;
+;       |decoder_decimal:comb_4|                  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|decoder_decimal:comb_4               ; decoder_decimal       ; work         ;
+;       |double_dabble:db0010|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010                 ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_5   ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_6   ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_7   ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0010|mux2x1:comb_8   ; mux2x1                ; work         ;
+;       |double_dabble:db0011|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011                 ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_5   ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_6   ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_7   ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0011|mux2x1:comb_8   ; mux2x1                ; work         ;
+;       |double_dabble:db0012|                    ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012                 ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_5   ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_6   ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_7   ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db0012|mux2x1:comb_8   ; mux2x1                ; work         ;
+;       |double_dabble:db002_11|                  ; 3 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11               ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11|mux2x1:comb_5 ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11|mux2x1:comb_6 ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db002_11|mux2x1:comb_7 ; mux2x1                ; work         ;
+;       |double_dabble:db008|                     ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db008                  ; double_dabble         ; work         ;
+;          |eh_maior5:comb_3|                     ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db008|eh_maior5:comb_3 ; eh_maior5             ; work         ;
+;       |double_dabble:db009|                     ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009                  ; double_dabble         ; work         ;
+;          |mux2x1:comb_5|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_5    ; mux2x1                ; work         ;
+;          |mux2x1:comb_6|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_6    ; mux2x1                ; work         ;
+;          |mux2x1:comb_7|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_7    ; mux2x1                ; work         ;
+;          |mux2x1:comb_8|                        ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|display_decimal:display_rolhas_disponiveis|double_dabble:db009|mux2x1:comb_8    ; mux2x1                ; work         ;
+;    |divisor_frequencia:comb_3|                  ; 39 (0)              ; 31 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3                                                       ; divisor_frequencia    ; work         ;
+;       |d_flipflop:div10|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div10                                      ; d_flipflop            ; work         ;
+;       |d_flipflop:div11|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div11                                      ; d_flipflop            ; work         ;
+;       |d_flipflop:div12|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div12                                      ; d_flipflop            ; work         ;
+;       |d_flipflop:div13|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div13                                      ; d_flipflop            ; work         ;
+;       |d_flipflop:div14|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div14                                      ; d_flipflop            ; work         ;
+;       |d_flipflop:div9|                         ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:div9                                       ; d_flipflop            ; work         ;
+;       |d_flipflop:divfinal|                     ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|d_flipflop:divfinal                                   ; d_flipflop            ; work         ;
+;       |dividir:div1|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div1|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div2|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div2|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div3|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div3|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div4|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div4|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div5|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div5|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div6|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div6|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div7|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div7|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;       |dividir:div8|                            ; 4 (1)               ; 3 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8                                          ; dividir               ; work         ;
+;          |d_flipflop:b0|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8|d_flipflop:b0                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b1|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8|d_flipflop:b1                            ; d_flipflop            ; work         ;
+;          |d_flipflop:b2|                        ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|divisor_frequencia:comb_3|dividir:div8|d_flipflop:b2                            ; d_flipflop            ; work         ;
+;    |estoque:comb_14|                            ; 56 (56)             ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|estoque:comb_14                                                                 ; estoque               ; work         ;
+;    |level_to_pulse:comb_9|                      ; 1 (1)               ; 2 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|level_to_pulse:comb_9                                                           ; level_to_pulse        ; work         ;
+;       |d_flipflop:D0|                           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|level_to_pulse:comb_9|d_flipflop:D0                                             ; d_flipflop            ; work         ;
+;       |d_flipflop:D1|                           ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |main|level_to_pulse:comb_9|d_flipflop:D1                                             ; d_flipflop            ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------+
-; State Machine - |main|MEF_contador_duzias:comb_16|state           ;
-+--------------+--------------+------------+-------------+----------+
-; Name         ; state.CONT12 ; state.WAIT ; state.CONT1 ; state.C1 ;
-+--------------+--------------+------------+-------------+----------+
-; state.C1     ; 0            ; 0          ; 0           ; 0        ;
-; state.CONT1  ; 0            ; 0          ; 1           ; 1        ;
-; state.WAIT   ; 0            ; 1          ; 0           ; 1        ;
-; state.CONT12 ; 1            ; 0          ; 0           ; 1        ;
-+--------------+--------------+------------+-------------+----------+
-
-
-Encoding Type:  One-Hot
-+--------------------------------------------------------------+
-; State Machine - |main|MEF_dispenser:comb_14|state            ;
-+------------+------------+------------+------------+----------+
-; Name       ; state.ADD2 ; state.ADD1 ; state.DISP ; state.E0 ;
-+------------+------------+------------+------------+----------+
-; state.E0   ; 0          ; 0          ; 0          ; 0        ;
-; state.DISP ; 0          ; 0          ; 1          ; 1        ;
-; state.ADD1 ; 0          ; 1          ; 0          ; 1        ;
-; state.ADD2 ; 1          ; 0          ; 0          ; 1        ;
-+------------+------------+------------+------------+----------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------+
-; State Machine - |main|MEF_vedacao:comb_11|state ;
-+----------+----------+----------+----------------+
-; Name     ; state.V0 ; state.AL ; state.V1       ;
-+----------+----------+----------+----------------+
-; state.V0 ; 0        ; 0        ; 0              ;
-; state.V1 ; 1        ; 0        ; 1              ;
-; state.AL ; 1        ; 1        ; 0              ;
-+----------+----------+----------+----------------+
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------+
-; State Machine - |main|MEF_main:comb_4|state                                           ;
-+----------+----------+----------+----------+----------+----------+----------+----------+
-; Name     ; state.De ; state.Co ; state.Cq ; state.Vd ; state.En ; state.Mo ; state.SR ;
-+----------+----------+----------+----------+----------+----------+----------+----------+
-; state.SR ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ; 0        ;
-; state.Mo ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ; 1        ;
-; state.En ; 0        ; 0        ; 0        ; 0        ; 1        ; 0        ; 1        ;
-; state.Vd ; 0        ; 0        ; 0        ; 1        ; 0        ; 0        ; 1        ;
-; state.Cq ; 0        ; 0        ; 1        ; 0        ; 0        ; 0        ; 1        ;
-; state.Co ; 0        ; 1        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-; state.De ; 1        ; 0        ; 0        ; 0        ; 0        ; 0        ; 1        ;
-+----------+----------+----------+----------+----------+----------+----------+----------+
-
-
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; d_flipflop:dff0|flipflop_inst          ; Stuck at GND due to stuck port data_in ;
-; MEF_contador_duzias:comb_16|state~4    ; Lost fanout                            ;
-; MEF_contador_duzias:comb_16|state~5    ; Lost fanout                            ;
-; MEF_dispenser:comb_14|state~4          ; Lost fanout                            ;
-; MEF_dispenser:comb_14|state~5          ; Lost fanout                            ;
-; MEF_main:comb_4|state~4                ; Lost fanout                            ;
-; MEF_main:comb_4|state~5                ; Lost fanout                            ;
-; MEF_main:comb_4|state~6                ; Lost fanout                            ;
-; MEF_vedacao:comb_11|state.AL           ; Lost fanout                            ;
-; MEF_vedacao:comb_11|state.V0           ; Lost fanout                            ;
-; Total Number of Removed Registers = 10 ;                                        ;
-+----------------------------------------+----------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; d_flipflop:dff0|flipflop_inst         ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -494,45 +429,43 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 82    ;
+; Total registers                              ; 75    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 65    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 62    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------+
-; Inverted Register Statistics                         ;
-+--------------------------------------------+---------+
-; Inverted Register                          ; Fan out ;
-+--------------------------------------------+---------+
-; estoque:comb_12|CONTAGEM_ROLHAS_ESTOQUE[5] ; 8       ;
-; estoque:comb_12|CONTAGEM_ROLHAS_ESTOQUE[3] ; 8       ;
-; Total number of inverted registers = 2     ;         ;
-+--------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |main|estoque:comb_14|CONTAGEM_ROLHAS_LINHA[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MEF_main:comb_4 ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; SR             ; 000   ; Unsigned Binary                     ;
-; Mo             ; 001   ; Unsigned Binary                     ;
-; En             ; 010   ; Unsigned Binary                     ;
-; Vd             ; 011   ; Unsigned Binary                     ;
-; Cq             ; 100   ; Unsigned Binary                     ;
-; Co             ; 101   ; Unsigned Binary                     ;
-; De             ; 110   ; Unsigned Binary                     ;
-+----------------+-------+-------------------------------------+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MEF_principal:comb_4 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; SR             ; 000   ; Unsigned Binary                          ;
+; Mo             ; 001   ; Unsigned Binary                          ;
+; En             ; 010   ; Unsigned Binary                          ;
+; Vd             ; 011   ; Unsigned Binary                          ;
+; Cq             ; 100   ; Unsigned Binary                          ;
+; Co             ; 101   ; Unsigned Binary                          ;
+; De             ; 110   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MEF_vedacao:comb_11 ;
+; Parameter Settings for User Entity Instance: MEF_vedacao:comb_13 ;
 +----------------+-------+-----------------------------------------+
 ; Parameter Name ; Value ; Type                                    ;
 +----------------+-------+-----------------------------------------+
@@ -544,7 +477,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: estoque:comb_12 ;
+; Parameter Settings for User Entity Instance: estoque:comb_14 ;
 +-------------------+----------+-------------------------------+
 ; Parameter Name    ; Value    ; Type                          ;
 +-------------------+----------+-------------------------------+
@@ -554,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MEF_dispenser:comb_14 ;
+; Parameter Settings for User Entity Instance: MEF_dispenser:comb_16 ;
 +----------------+-------+-------------------------------------------+
 ; Parameter Name ; Value ; Type                                      ;
 +----------------+-------+-------------------------------------------+
@@ -567,7 +500,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: MEF_contador_duzias:comb_16 ;
+; Parameter Settings for User Entity Instance: MEF_contador_duzias:comb_18 ;
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
@@ -750,7 +683,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "estoque:comb_12"                                                                                   ;
+; Port Connectivity Checks: "estoque:comb_14"                                                                                   ;
 +---------------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port                ; Type   ; Severity ; Details                                                                             ;
 +---------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -760,7 +693,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "MEF_vedacao:comb_11"                                                                  ;
+; Port Connectivity Checks: "MEF_vedacao:comb_13"                                                                  ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -769,7 +702,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------+
-; Port Connectivity Checks: "level_to_pulse:comb_8|d_flipflop:D0" ;
+; Port Connectivity Checks: "level_to_pulse:comb_9|d_flipflop:D0" ;
 +-------+-------+----------+--------------------------------------+
 ; Port  ; Type  ; Severity ; Details                              ;
 +-------+-------+----------+--------------------------------------+
@@ -778,7 +711,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------+
-; Port Connectivity Checks: "level_to_pulse:comb_8|d_flipflop:D1" ;
+; Port Connectivity Checks: "level_to_pulse:comb_9|d_flipflop:D1" ;
 +-------+-------+----------+--------------------------------------+
 ; Port  ; Type  ; Severity ; Details                              ;
 +-------+-------+----------+--------------------------------------+
@@ -786,13 +719,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+--------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "MEF_main:comb_4" ;
-+-------+-------+----------+------------------+
-; Port  ; Type  ; Severity ; Details          ;
-+-------+-------+----------+------------------+
-; reset ; Input ; Info     ; Stuck at GND     ;
-+-------+-------+----------+------------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "MEF_principal:comb_4" ;
++-------+-------+----------+-----------------------+
+; Port  ; Type  ; Severity ; Details               ;
++-------+-------+----------+-----------------------+
+; reset ; Input ; Info     ; Stuck at GND          ;
++-------+-------+----------+-----------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -873,22 +806,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 56                          ;
-; cycloneiii_ff         ; 82                          ;
-;     CLR               ; 49                          ;
-;     ENA CLR           ; 16                          ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 225                         ;
-;     arith             ; 27                          ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 17                          ;
-;     normal            ; 198                         ;
-;         1 data inputs ; 35                          ;
-;         2 data inputs ; 19                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 112                         ;
+; cycloneiii_ff         ; 75                          ;
+;     CLR               ; 48                          ;
+;     CLR SLD           ; 6                           ;
+;     ENA CLR           ; 8                           ;
+;     plain             ; 13                          ;
+; cycloneiii_lcell_comb ; 252                         ;
+;     arith             ; 34                          ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 14                          ;
+;     normal            ; 218                         ;
+;         1 data inputs ; 38                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 118                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.17                        ;
+; Max LUT depth         ; 6.60                        ;
+; Average LUT depth     ; 3.47                        ;
 +-----------------------+-----------------------------+
 
 
@@ -897,7 +831,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -907,145 +841,125 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Nov 28 00:03:21 2025
+    Info: Processing started: Sun Nov 30 17:42:49 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pbl3 -c pbl3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
-    Info (12023): Found entity 1: main File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 1
+    Info (12023): Found entity 1: main File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file mef_contador_duzias.v
-    Info (12023): Found entity 1: MEF_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 1
-    Info (12023): Found entity 2: saida_contador_duzias File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 64
+    Info (12023): Found entity 1: MEF_contador_duzias File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 1
+    Info (12023): Found entity 2: saida_contador_duzias File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 62
 Info (12021): Found 2 design units, including 2 entities, in source file mef_vedacao.v
-    Info (12023): Found entity 1: MEF_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 1
-    Info (12023): Found entity 2: saida_vedacao File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 63
-Info (12021): Found 3 design units, including 3 entities, in source file teste.v
-    Info (12023): Found entity 1: teste1 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 1
-    Info (12023): Found entity 2: teste2 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 77
-    Info (12023): Found entity 3: teste File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 143
+    Info (12023): Found entity 1: MEF_vedacao File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 1
+    Info (12023): Found entity 2: saida_vedacao File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 60
 Info (12021): Found 1 design units, including 1 entities, in source file d_flipflop.v
-    Info (12023): Found entity 1: d_flipflop File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/d_flipflop.v Line: 1
+    Info (12023): Found entity 1: d_flipflop File: E:/pbl real/PBL CD - PROBLEMA 3/d_flipflop.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file eh_igual5.v
-    Info (12023): Found entity 1: eh_igual5 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_igual5.v Line: 1
+    Info (12023): Found entity 1: eh_igual5 File: E:/pbl real/PBL CD - PROBLEMA 3/eh_igual5.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file eh_igual12.v
-    Info (12023): Found entity 1: eh_igual12 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_igual12.v Line: 1
+    Info (12023): Found entity 1: eh_igual12 File: E:/pbl real/PBL CD - PROBLEMA 3/eh_igual12.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file double_dabble.v
-    Info (12023): Found entity 1: eh_maior5 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 1
-    Info (12023): Found entity 2: double_dabble File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 12
+    Info (12023): Found entity 1: eh_maior5 File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 1
+    Info (12023): Found entity 2: double_dabble File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 12
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_decimal.v
-    Info (12023): Found entity 1: decoder_decimal File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/decoder_decimal.v Line: 1
+    Info (12023): Found entity 1: decoder_decimal File: E:/pbl real/PBL CD - PROBLEMA 3/decoder_decimal.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file display_decimal.v
-    Info (12023): Found entity 1: display_decimal File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 1
+    Info (12023): Found entity 1: display_decimal File: E:/pbl real/PBL CD - PROBLEMA 3/display_decimal.v Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file mux2x1.v
-    Info (12023): Found entity 1: mux2x1 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 1
-    Info (12023): Found entity 2: muxdisp File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 14
-    Info (12023): Found entity 3: mux_8 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/mux2x1.v Line: 52
-Info (12021): Found 2 design units, including 2 entities, in source file sum4bit.v
-    Info (12023): Found entity 1: sum4bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v Line: 1
-    Info (12023): Found entity 2: sum File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v Line: 15
+    Info (12023): Found entity 1: mux2x1 File: E:/pbl real/PBL CD - PROBLEMA 3/mux2x1.v Line: 1
+    Info (12023): Found entity 2: muxdisp File: E:/pbl real/PBL CD - PROBLEMA 3/mux2x1.v Line: 14
+    Info (12023): Found entity 3: mux_8 File: E:/pbl real/PBL CD - PROBLEMA 3/mux2x1.v Line: 52
 Info (12021): Found 2 design units, including 2 entities, in source file divisor_frequencia.v
-    Info (12023): Found entity 1: dividir File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 1
-    Info (12023): Found entity 2: divisor_frequencia File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 24
+    Info (12023): Found entity 1: dividir File: E:/pbl real/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 1
+    Info (12023): Found entity 2: divisor_frequencia File: E:/pbl real/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register_8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/register.v Line: 1
-Info (12021): Found 2 design units, including 2 entities, in source file sub8bit.v
-    Info (12023): Found entity 1: sub8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sub8bit.v Line: 1
-    Info (12023): Found entity 2: sub File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sub8bit.v Line: 35
-Info (12021): Found 1 design units, including 1 entities, in source file sum8bit.v
-    Info (12023): Found entity 1: sum8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum8bit.v Line: 1
+    Info (12023): Found entity 1: register_8bit File: E:/pbl real/PBL CD - PROBLEMA 3/register.v Line: 1
 Info (12021): Found 3 design units, including 3 entities, in source file contador.v
-    Info (12023): Found entity 1: contador File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 1
-    Info (12023): Found entity 2: contador_disp File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 17
-    Info (12023): Found entity 3: contador2 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/contador.v Line: 36
+    Info (12023): Found entity 1: contador File: E:/pbl real/PBL CD - PROBLEMA 3/contador.v Line: 1
+    Info (12023): Found entity 2: contador_disp File: E:/pbl real/PBL CD - PROBLEMA 3/contador.v Line: 17
+    Info (12023): Found entity 3: contador2 File: E:/pbl real/PBL CD - PROBLEMA 3/contador.v Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file comparador_8bit.v
-    Info (12023): Found entity 1: comparador_8bit File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/comparador_8bit.v Line: 1
+    Info (12023): Found entity 1: comparador_8bit File: E:/pbl real/PBL CD - PROBLEMA 3/comparador_8bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file eh_maior15.v
-    Info (12023): Found entity 1: ehmaior_15 File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/eh_maior15.v Line: 1
+    Info (12023): Found entity 1: ehmaior_15 File: E:/pbl real/PBL CD - PROBLEMA 3/eh_maior15.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file level_to_pulse.v
-    Info (12023): Found entity 1: level_to_pulse File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/level_to_pulse.v Line: 1
+    Info (12023): Found entity 1: level_to_pulse File: E:/pbl real/PBL CD - PROBLEMA 3/level_to_pulse.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file mef_dispenser.v
-    Info (12023): Found entity 1: MEF_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 1
-    Info (12023): Found entity 2: saidas_dispenser File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 74
-Info (12021): Found 1 design units, including 1 entities, in source file mef_main.v
-    Info (12023): Found entity 1: MEF_main File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_main.v Line: 1
+    Info (12023): Found entity 1: MEF_dispenser File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 1
+    Info (12023): Found entity 2: saidas_dispenser File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 73
+Info (12021): Found 2 design units, including 2 entities, in source file mef_main.v
+    Info (12023): Found entity 1: MEF_principal File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_main.v Line: 1
+    Info (12023): Found entity 2: saida_mef_principal File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_main.v Line: 98
 Info (12021): Found 1 design units, including 1 entities, in source file estoque.v
-    Info (12023): Found entity 1: estoque File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/estoque.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at main.v(20): created implicit net for "clk" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at main.v(59): created implicit net for "reset" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 59
-Warning (10236): Verilog HDL Implicit Net warning at teste.v(116): created implicit net for "descarte" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 116
-Warning (10236): Verilog HDL Implicit Net warning at teste.v(125): created implicit net for "reset" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 125
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(21): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 21
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(48): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 48
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(56): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 56
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(78): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 78
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(93): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 93
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(101): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 101
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(110): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 110
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(118): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 118
-Critical Warning (10846): Verilog HDL Instantiation warning at main.v(130): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 130
-Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(19): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 19
-Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(21): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 21
-Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(23): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 23
-Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(24): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 24
-Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(25): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 25
-Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(26): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 26
-Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(34): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 34
-Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(35): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 35
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(22): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 22
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(23): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 23
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(26): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 26
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(27): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 27
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(43): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 43
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(60): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 60
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(70): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 70
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(85): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 85
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(97): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 97
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(99): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 99
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(100): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 100
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(127): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 127
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(138): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 138
-Critical Warning (10846): Verilog HDL Instantiation warning at teste.v(151): instance has no name File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/teste.v Line: 151
+    Info (12023): Found entity 1: estoque File: E:/pbl real/PBL CD - PROBLEMA 3/estoque.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file sum4bit.v
+    Info (12023): Found entity 1: sum4bit File: E:/pbl real/PBL CD - PROBLEMA 3/sum4bit.v Line: 1
+    Info (12023): Found entity 2: sum File: E:/pbl real/PBL CD - PROBLEMA 3/sum4bit.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(21): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF_main.v(92): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_main.v Line: 92
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(47): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 47
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(56): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 56
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF_vedacao.v(55): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 55
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(79): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 79
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(94): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 94
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(102): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 102
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(111): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 111
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(119): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 119
+Critical Warning (10846): Verilog HDL Instantiation warning at MEF_contador_duzias.v(57): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 57
+Critical Warning (10846): Verilog HDL Instantiation warning at main.v(131): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 131
+Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(19): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 19
+Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(21): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(23): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(24): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(25): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at double_dabble.v(26): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(34): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/display_decimal.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at display_decimal.v(35): instance has no name File: E:/pbl real/PBL CD - PROBLEMA 3/display_decimal.v Line: 35
 Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "divisor_frequencia" for hierarchy "divisor_frequencia:comb_3" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 21
-Info (12128): Elaborating entity "dividir" for hierarchy "divisor_frequencia:comb_3|dividir:div1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 46
-Info (12128): Elaborating entity "d_flipflop" for hierarchy "divisor_frequencia:comb_3|dividir:div1|d_flipflop:b0" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 13
-Info (12128): Elaborating entity "MEF_main" for hierarchy "MEF_main:comb_4" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 48
-Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:comb_8" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 56
-Info (12128): Elaborating entity "MEF_vedacao" for hierarchy "MEF_vedacao:comb_11" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 78
-Info (12128): Elaborating entity "estoque" for hierarchy "estoque:comb_12" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 93
-Info (12128): Elaborating entity "eh_igual5" for hierarchy "eh_igual5:comb_13" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 101
-Info (12128): Elaborating entity "MEF_dispenser" for hierarchy "MEF_dispenser:comb_14" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 110
-Warning (10240): Verilog HDL Always Construct warning at MEF_dispenser.v(22): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 22
-Info (12128): Elaborating entity "eh_igual12" for hierarchy "eh_igual12:comb_15" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 118
-Info (12128): Elaborating entity "MEF_contador_duzias" for hierarchy "MEF_contador_duzias:comb_16" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 130
-Info (12128): Elaborating entity "contador2" for hierarchy "contador2:contador_unidades" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 132
-Info (12128): Elaborating entity "display_decimal" for hierarchy "display_decimal:display_estoque" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/main.v Line: 155
-Info (12128): Elaborating entity "double_dabble" for hierarchy "display_decimal:display_estoque|double_dabble:db001" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 7
-Info (12128): Elaborating entity "eh_maior5" for hierarchy "display_decimal:display_estoque|double_dabble:db001|eh_maior5:comb_3" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 19
-Info (12128): Elaborating entity "sum4bit" for hierarchy "display_decimal:display_estoque|double_dabble:db001|sum4bit:comb_4" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 21
-Info (12128): Elaborating entity "sum" for hierarchy "display_decimal:display_estoque|double_dabble:db001|sum4bit:comb_4|sum:somador1" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/sum4bit.v Line: 8
-Info (12128): Elaborating entity "mux2x1" for hierarchy "display_decimal:display_estoque|double_dabble:db001|mux2x1:comb_5" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/double_dabble.v Line: 23
-Info (12128): Elaborating entity "decoder_decimal" for hierarchy "display_decimal:display_estoque|decoder_decimal:comb_3" File: D:/RepPBLCD3/PBL CD - PROBLEMA 3/display_decimal.v Line: 34
+Info (12128): Elaborating entity "divisor_frequencia" for hierarchy "divisor_frequencia:comb_3" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 21
+Info (12128): Elaborating entity "dividir" for hierarchy "divisor_frequencia:comb_3|dividir:div1" File: E:/pbl real/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 46
+Info (12128): Elaborating entity "d_flipflop" for hierarchy "divisor_frequencia:comb_3|dividir:div1|d_flipflop:b0" File: E:/pbl real/PBL CD - PROBLEMA 3/divisor_frequencia.v Line: 13
+Info (12128): Elaborating entity "MEF_principal" for hierarchy "MEF_principal:comb_4" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 47
+Info (12128): Elaborating entity "saida_mef_principal" for hierarchy "MEF_principal:comb_4|saida_mef_principal:comb_50" File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_main.v Line: 92
+Info (12128): Elaborating entity "level_to_pulse" for hierarchy "level_to_pulse:comb_9" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 56
+Info (12128): Elaborating entity "MEF_vedacao" for hierarchy "MEF_vedacao:comb_13" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 79
+Info (12128): Elaborating entity "saida_vedacao" for hierarchy "MEF_vedacao:comb_13|saida_vedacao:comb_52" File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_vedacao.v Line: 55
+Info (12128): Elaborating entity "estoque" for hierarchy "estoque:comb_14" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 94
+Info (12128): Elaborating entity "eh_igual5" for hierarchy "eh_igual5:comb_15" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 102
+Info (12128): Elaborating entity "MEF_dispenser" for hierarchy "MEF_dispenser:comb_16" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 111
+Warning (10240): Verilog HDL Always Construct warning at MEF_dispenser.v(22): inferring latch(es) for variable "nextstate", which holds its previous value in one or more paths through the always construct File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 22
+Info (12128): Elaborating entity "saidas_dispenser" for hierarchy "MEF_dispenser:comb_16|saidas_dispenser:logic_out" File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_dispenser.v Line: 67
+Info (12128): Elaborating entity "eh_igual12" for hierarchy "eh_igual12:comb_17" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 119
+Info (12128): Elaborating entity "MEF_contador_duzias" for hierarchy "MEF_contador_duzias:comb_18" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 131
+Info (12128): Elaborating entity "saida_contador_duzias" for hierarchy "MEF_contador_duzias:comb_18|saida_contador_duzias:comb_33" File: E:/pbl real/PBL CD - PROBLEMA 3/MEF_contador_duzias.v Line: 57
+Info (12128): Elaborating entity "contador2" for hierarchy "contador2:contador_unidades" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 133
+Info (12128): Elaborating entity "display_decimal" for hierarchy "display_decimal:display_estoque" File: E:/pbl real/PBL CD - PROBLEMA 3/main.v Line: 156
+Info (12128): Elaborating entity "double_dabble" for hierarchy "display_decimal:display_estoque|double_dabble:db001" File: E:/pbl real/PBL CD - PROBLEMA 3/display_decimal.v Line: 7
+Info (12128): Elaborating entity "eh_maior5" for hierarchy "display_decimal:display_estoque|double_dabble:db001|eh_maior5:comb_3" File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 19
+Info (12128): Elaborating entity "sum4bit" for hierarchy "display_decimal:display_estoque|double_dabble:db001|sum4bit:comb_4" File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 21
+Info (12128): Elaborating entity "sum" for hierarchy "display_decimal:display_estoque|double_dabble:db001|sum4bit:comb_4|sum:somador1" File: E:/pbl real/PBL CD - PROBLEMA 3/sum4bit.v Line: 8
+Info (12128): Elaborating entity "mux2x1" for hierarchy "display_decimal:display_estoque|double_dabble:db001|mux2x1:comb_5" File: E:/pbl real/PBL CD - PROBLEMA 3/double_dabble.v Line: 23
+Info (12128): Elaborating entity "decoder_decimal" for hierarchy "display_decimal:display_estoque|decoder_decimal:comb_3" File: E:/pbl real/PBL CD - PROBLEMA 3/display_decimal.v Line: 34
 Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/RepPBLCD3/PBL CD - PROBLEMA 3/output_files/pbl3.map.smsg
+Info (144001): Generated suppressed messages file E:/pbl real/PBL CD - PROBLEMA 3/output_files/pbl3.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 283 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 309 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 49 output pins
-    Info (21061): Implemented 227 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4785 megabytes
-    Info: Processing ended: Fri Nov 28 00:03:42 2025
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:42
+    Info (21061): Implemented 253 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Sun Nov 30 17:43:26 2025
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:44
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/RepPBLCD3/PBL CD - PROBLEMA 3/output_files/pbl3.map.smsg.
+The suppressed messages can be found in E:/pbl real/PBL CD - PROBLEMA 3/output_files/pbl3.map.smsg.
 
 

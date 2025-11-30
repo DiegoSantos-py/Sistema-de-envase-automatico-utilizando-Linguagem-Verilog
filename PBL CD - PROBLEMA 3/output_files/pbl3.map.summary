@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Nov 28 00:03:42 2025
+Analysis & Synthesis Status : Successful - Sun Nov 30 17:43:23 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : pbl3
 Top-level Entity Name : main
 Family : MAX 10
-Total logic elements : 227
-    Total combinational functions : 225
-    Dedicated logic registers : 82
-Total registers : 82
+Total logic elements : 252
+    Total combinational functions : 251
+    Dedicated logic registers : 75
+Total registers : 75
 Total pins : 56
 Total virtual pins : 0
 Total memory bits : 0

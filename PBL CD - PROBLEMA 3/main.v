@@ -14,7 +14,7 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 	output Disp, estaemcq; // Saídas da MEF_dispenser
 	output [13:0]Displayr_disp, Displayr_estq, Display_duzias; // saídas do display
 	
-	//wire clk_system; // Clock com período de 1 segundo
+	wire clk, reset; // Clock com período de 1 segundo
 	divisor_frequencia(
    .clk(clk_system),
    .clk_out(clk)
@@ -26,7 +26,7 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 	
 	wire motor_signal, cq_signal, wire_estaemcq;
 	wire resetar, garrafa_ve, start_cont; // resetar, acionar vedação e acionar contador
-	MEF_main(
+	MEF_principal(
 		.start(start), 
 		.garrafa(garrafa), 
 		.sensor_de_nivel(sensor_de_nivel),
@@ -34,9 +34,8 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 		.descarte(switch_descarte),
 		.ve_done(ve_done),
 		.cont_done(cont_done),
-		.alarme(Alarme),
 		.clk(clk),
-		.reset(1'b0), // tlvz so negar o start ja solucione o reset
+		.reset(1'b0), 
 		.motor(motor_signal), 
 		.EV(Ev),
 		.pos_ve(garrafa_ve),
@@ -47,10 +46,11 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 		.Desc_signal(Descarte)
 		);
 		
-		
+	and(Alarme, fio_alarme, notrolhas);
+	
 	// Lógica de saída do sinal do motor
-	wire not_alarme, w_and1, w_and2, only_and2;
-	not (not_alarme, Alarme);
+	wire not_alarme, w_and1, w_and2, only_and2, fio_alarme, notrolhas;
+	not (not_alarme, fio_alarme);
 	and (w_and1, not_alarme, motor_signal);
 	and (w_and2, not_alarme, cq_signal);
 	level_to_pulse (w_and2, clk, only_and2);
@@ -62,6 +62,7 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 	//============================== MEF-Vedacao ======================================
 	//=================================================================================
 	
+	not(notrolhas, rolhas);
 	wire rolhas;
 	or (rolhas, rolhas_disponiveis[0], rolhas_disponiveis[1], rolhas_disponiveis[2], rolhas_disponiveis[3], rolhas_disponiveis[4], rolhas_disponiveis[5], rolhas_disponiveis[6], 
 	rolhas_disponiveis[7]);
@@ -89,7 +90,7 @@ module main(start, garrafa, sensor_de_nivel, sensor_cq, switch_descarte,
 	.CONTAGEM_ROLHAS_LINHA(rolhas_disponiveis),   
 	.ACIONAR_DISPENSER(teste2),          
 	.VALOR_SAIDA_ESTOQUE(teste), 
-	.ALERTA_ESTOQUE_BAIXO(Alarme)          
+	.ALERTA_ESTOQUE_BAIXO(fio_alarme)          
 );
 
 		

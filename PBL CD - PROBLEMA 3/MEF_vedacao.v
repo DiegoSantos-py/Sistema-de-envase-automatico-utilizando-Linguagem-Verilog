@@ -48,15 +48,12 @@ module MEF_vedacao(
 				nextstate = V0;
 		endcase
 	
-	//saida_vedacao(
-	//.state(state), 
-	//.alarme(alarme), 
-	//.ve(ve), 
-	//.done(done));
+	saida_vedacao(
+	.state(state), 
+	.alarme(alarme), 
+	.ve(ve), 
+	.done(done));
 	
-	assign ve = (state == V1);
-	assign done = (state == V1);
-	assign alarme = (state == AL);
 	
 endmodule
 
@@ -70,8 +67,8 @@ module saida_vedacao(state, alarme, ve, done);
 	 not (ne0,state[0]);
 	 not (ne1,state[1]);
 	 
-	 and (ve, ne1, state[0]); //01
-	 and (done, ne1, state[0]);
-	 and (alarme, state[1], ne0);
+	 and (ve, ne1, state[0]);    //01
+	 and (done, ne1, state[0]);  //01
+	 and (alarme, state[1], ne0);//10
 	 
 endmodule

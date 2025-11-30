@@ -1,4 +1,4 @@
-module MEF_main(
+module MEF_principal(
 		input start, 
 		input garrafa, 
 		input sensor_de_nivel,
@@ -8,7 +8,6 @@ module MEF_main(
 		input cont_done,
 		input clk,
 		input reset,
-		input alarme,
 		output motor, 
 		output EV,
 		output pos_ve, // garrafa em posição de vedação
@@ -41,8 +40,6 @@ module MEF_main(
 				Mo:
 					if (start == 0)
 						nextstate = SR;
-					else if (alarme == 1)
-						nextstate = Mo;
 					else if (garrafa == 1)
 						nextstate = En;
 					else
@@ -83,14 +80,48 @@ module MEF_main(
                 nextstate = SR;
 			endcase
 		
-		// Motor deve ficar ligado quando tiver garrafa e mef está em Mo
-		assign resetar = (state == SR);
-		assign motor = (state == Mo);
-		assign EV = (state == En);
-		assign pos_ve = (state == Vd);
-		assign controle_qualidade = (state == Cq);
-		assign count = (state == Co);
-		assign Desc_signal = (state == De);
-		assign pos_cq = (state == Cq);
+		saida_mef_principal(
+		.state(state),
+		.motor(motor), 
+		.EV(EV),
+		.pos_ve(pos_ve), 
+		.count(count),
+		.resetar(resetar),
+		.Desc_signal(Desc_signal),
+		.controle_qualidade(controle_qualidade),
+		.pos_cq(pos_cq));
+		
 
+endmodule
+
+
+module saida_mef_principal(
+		input [2:0]state,
+		output motor, 
+		output EV,
+		output pos_ve, 
+		output count,
+		output resetar,
+		output Desc_signal,
+		output controle_qualidade,
+		output pos_cq);
+
+	
+	 wire [2:0]nstate;
+		
+	 not (nstate[0],state[0]);
+	 not (nstate[1],state[1]);
+	 not (nstate[2],state[2]);
+
+	 
+	 and (resetar, nstate[2], nstate[1], nstate[0]);                  //000
+	 and (motor, nstate[2], nstate[1], state[0]);                     //001
+	 and (EV, nstate[2], state[1], nstate[0]);                        //010
+	 and (pos_ve, nstate[2], state[1], state[0]);                     //011
+	 and (pos_cq, state[2], nstate[1], nstate[0]);                    //100
+	 and (controle_qualidade, state[2], nstate[1], nstate[0]);        //100
+	 and (count, state[2], nstate[1], state[0]);                      //101
+	 and (Desc_signal, state[2], state[1], nstate[0]);                //110  
+
+	 
 endmodule

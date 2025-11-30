@@ -49,15 +49,13 @@ module MEF_contador_duzias(
         endcase
 
 
-    //saida_contador_duzias(
-	 //.state(state),
-	 //.cont1(cont1),
-	 //.add_cont12(add_cont12)
-	 //);
+    saida_contador_duzias(
+	 .state(state),
+	 .cont1(cont1),
+	 .add_cont12(add_cont12),
+	 .done(cont_done)
+	 );
 	 
-	 assign cont1 = (state == CONT1);
-	 assign add_cont12 = (state == CONT12);
-	 assign cont_done = (state == WAIT);
 
 endmodule
 
@@ -73,9 +71,10 @@ module saida_contador_duzias(
 		
 	 not (ne0,state[0]);
 	 not (ne1,state[1]);
-    and (cont1, ne1, state[0]);
-	 and (done, state[1], ne0);
-    and (add_cont12, state[1], state[0]);
+	 
+    and (cont1, ne1, state[0]); //01
+	 and (done, state[1], ne0);  //10
+    and (add_cont12, state[1], state[0]); //11
 
 endmodule
 	 

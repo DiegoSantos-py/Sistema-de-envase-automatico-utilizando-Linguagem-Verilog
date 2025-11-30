@@ -19,34 +19,56 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/27/2025 15:04:02"
+// Generated on "11/30/2025 17:35:00"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          MEF_dispenser
+// Verilog Test Bench (with test vectors) for design :                          MEF_main
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module MEF_dispenser_vlg_vec_tst();
+module MEF_main_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
+reg cont_done;
+reg descarte;
+reg garrafa;
 reg reset;
-reg rolha5;
-reg switch_add_rolha;
+reg sensor_cq;
+reg sensor_de_nivel;
+reg start;
+reg ve_done;
 // wires                                               
-wire add_rolha;
-wire disp;
+wire Desc_signal;
+wire EV;
+wire controle_qualidade;
+wire count;
+wire motor;
+wire pos_cq;
+wire pos_ve;
+wire resetar;
 
 // assign statements (if any)                          
-MEF_dispenser i1 (
+MEF_main i1 (
 // port map - connection between master ports and signals/registers   
-	.add_rolha(add_rolha),
+	.Desc_signal(Desc_signal),
+	.EV(EV),
 	.clk(clk),
-	.disp(disp),
+	.cont_done(cont_done),
+	.controle_qualidade(controle_qualidade),
+	.count(count),
+	.descarte(descarte),
+	.garrafa(garrafa),
+	.motor(motor),
+	.pos_cq(pos_cq),
+	.pos_ve(pos_ve),
 	.reset(reset),
-	.rolha5(rolha5),
-	.switch_add_rolha(switch_add_rolha)
+	.resetar(resetar),
+	.sensor_cq(sensor_cq),
+	.sensor_de_nivel(sensor_de_nivel),
+	.start(start),
+	.ve_done(ve_done)
 );
 initial 
 begin 
@@ -61,28 +83,56 @@ begin
 	#10000;
 end 
 
+// cont_done
+initial
+begin
+	cont_done = 1'b1;
+end 
+
+// descarte
+initial
+begin
+	descarte = 1'b0;
+	descarte = #680000 1'b1;
+	descarte = #20000 1'b0;
+end 
+
+// garrafa
+initial
+begin
+	garrafa = 1'b1;
+end 
+
 // reset
 initial
 begin
 	reset = 1'b0;
 end 
 
-// rolha5
+// sensor_cq
 initial
 begin
-	rolha5 = 1'b0;
-	rolha5 = #50000 1'b1;
-	rolha5 = #200000 1'b0;
+	sensor_cq = 1'b0;
+	sensor_cq = #220000 1'b1;
+	sensor_cq = #20000 1'b0;
 end 
 
-// switch_add_rolha
+// sensor_de_nivel
 initial
 begin
-	switch_add_rolha = 1'b0;
-	switch_add_rolha = #50000 1'b1;
-	switch_add_rolha = #350000 1'b0;
-	switch_add_rolha = #200000 1'b1;
-	switch_add_rolha = #200000 1'b0;
+	sensor_de_nivel = 1'b1;
+end 
+
+// start
+initial
+begin
+	start = 1'b1;
+end 
+
+// ve_done
+initial
+begin
+	ve_done = 1'b1;
 end 
 endmodule
 

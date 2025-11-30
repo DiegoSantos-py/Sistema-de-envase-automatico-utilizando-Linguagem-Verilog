@@ -48,41 +48,24 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name VERILOG_FILE main.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VERILOG_FILE MEF_contador_duzias.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VERILOG_FILE MEF_vedacao.v
-set_global_assignment -name VERILOG_FILE teste.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VERILOG_FILE d_flipflop.v
 set_global_assignment -name VERILOG_FILE eh_igual5.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE ehigual5.vwf
 set_global_assignment -name VERILOG_FILE eh_igual12.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE ehigual12.vwf
 set_global_assignment -name VERILOG_FILE double_dabble.v
 set_global_assignment -name VERILOG_FILE decoder_decimal.v
 set_global_assignment -name VERILOG_FILE display_decimal.v
 set_global_assignment -name VERILOG_FILE mux2x1.v
-set_global_assignment -name VERILOG_FILE sum4bit.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE display.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE vedacao.vwf
 set_global_assignment -name VERILOG_FILE divisor_frequencia.v
 set_global_assignment -name VERILOG_FILE register.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE teste_dispenservedacao.vwf
-set_global_assignment -name VERILOG_FILE sub8bit.v
-set_global_assignment -name VERILOG_FILE sum8bit.v
 set_global_assignment -name VERILOG_FILE contador.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE testecontador.vwf
 set_global_assignment -name VERILOG_FILE comparador_8bit.v
 set_global_assignment -name VERILOG_FILE eh_maior15.v
 set_global_assignment -name VERILOG_FILE level_to_pulse.v
 set_global_assignment -name VERILOG_FILE MEF_dispenser.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name VERILOG_FILE MEF_main.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE teste_mefcontador.vwf
 set_global_assignment -name VERILOG_FILE estoque.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
 set_location_assignment PIN_C14 -to Displayr_disp[0]
 set_location_assignment PIN_E15 -to Displayr_disp[1]
 set_location_assignment PIN_C15 -to Displayr_disp[2]
@@ -138,7 +121,8 @@ set_location_assignment PIN_F15 -to switch_add_rolha
 set_location_assignment PIN_C12 -to switch_descarte
 set_location_assignment PIN_P11 -to clk_system
 set_location_assignment PIN_E14 -to estaemcq
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_location_assignment PIN_A7 -to start
+set_global_assignment -name VERILOG_FILE sum4bit.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

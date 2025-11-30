@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="D:/RepPBLCD3/PBL CD - PROBLEMA 3/Waveform.vwf" --testbench_file="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="D:/RepPBLCD3/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="E:/pbl real/PBL CD - PROBLEMA 3/Waveform.vwf" --testbench_file="E:/pbl real/PBL CD - PROBLEMA 3/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off pbl3 -c pbl3 --vector_source="E:/pbl real/PBL CD - PROBLEMA 3/Waveform.vwf" --testbench_file="E:/pbl real/PBL CD - PROBLEMA 3/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="E:/pbl real/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="E:/pbl real/PBL CD - PROBLEMA 3/simulation/qsim/" pbl3 -c pbl3</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work pbl3.vo
 vlog -work work Waveform.vwf.vt
-vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEF_dispenser_vlg_vec_tst
+vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEF_main_vlg_vec_tst
 vcd file -direction pbl3.msim.vcd
-vcd add -internal MEF_dispenser_vlg_vec_tst/*
-vcd add -internal MEF_dispenser_vlg_vec_tst/i1/*
+vcd add -internal MEF_main_vlg_vec_tst/*
+vcd add -internal MEF_main_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -25,10 +25,10 @@ quit -f
 vlib work
 vlog -work work pbl3.vo
 vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEF_dispenser_vlg_vec_tst
+vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.MEF_main_vlg_vec_tst
 vcd file -direction pbl3.msim.vcd
-vcd add -internal MEF_dispenser_vlg_vec_tst/*
-vcd add -internal MEF_dispenser_vlg_vec_tst/i1/*
+vcd add -internal MEF_main_vlg_vec_tst/*
+vcd add -internal MEF_main_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -76,7 +76,17 @@ HEADER
 	GRID_DUTY_CYCLE = 50;
 }
 
-SIGNAL("add_rolha")
+SIGNAL("Desc_signal")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("EV")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -96,7 +106,77 @@ SIGNAL("clk")
 	PARENT = "";
 }
 
-SIGNAL("disp")
+SIGNAL("cont_done")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("controle_qualidade")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("count")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("descarte")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("garrafa")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("motor")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pos_cq")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pos_ve")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -116,7 +196,17 @@ SIGNAL("reset")
 	PARENT = "";
 }
 
-SIGNAL("rolha5")
+SIGNAL("resetar")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("sensor_cq")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -126,7 +216,7 @@ SIGNAL("rolha5")
 	PARENT = "";
 }
 
-SIGNAL("switch_add_rolha")
+SIGNAL("sensor_de_nivel")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -136,7 +226,36 @@ SIGNAL("switch_add_rolha")
 	PARENT = "";
 }
 
-TRANSITION_LIST("add_rolha")
+SIGNAL("start")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ve_done")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("Desc_signal")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("EV")
 {
 	NODE
 	{
@@ -159,7 +278,72 @@ TRANSITION_LIST("clk")
 	}
 }
 
-TRANSITION_LIST("disp")
+TRANSITION_LIST("cont_done")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("controle_qualidade")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("count")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("descarte")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 680.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 300.0;
+	}
+}
+
+TRANSITION_LIST("garrafa")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("motor")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("pos_cq")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("pos_ve")
 {
 	NODE
 	{
@@ -177,33 +361,56 @@ TRANSITION_LIST("reset")
 	}
 }
 
-TRANSITION_LIST("rolha5")
+TRANSITION_LIST("resetar")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 750.0;
+		LEVEL X FOR 1000.0;
 	}
 }
 
-TRANSITION_LIST("switch_add_rolha")
+TRANSITION_LIST("sensor_cq")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 350.0;
-		LEVEL 0 FOR 200.0;
-		LEVEL 1 FOR 200.0;
-		LEVEL 0 FOR 200.0;
+		LEVEL 0 FOR 220.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 760.0;
+	}
+}
+
+TRANSITION_LIST("sensor_de_nivel")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("start")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ve_done")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "add_rolha";
+	CHANNEL = "Desc_signal";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -212,7 +419,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "clk";
+	CHANNEL = "EV";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -221,7 +428,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "disp";
+	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -230,7 +437,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "reset";
+	CHANNEL = "cont_done";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -239,7 +446,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "rolha5";
+	CHANNEL = "controle_qualidade";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
@@ -248,10 +455,109 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "switch_add_rolha";
+	CHANNEL = "count";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "descarte";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "garrafa";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "motor";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pos_cq";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pos_ve";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "resetar";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_cq";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sensor_de_nivel";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "start";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ve_done";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
 	TREE_LEVEL = 0;
 }
 

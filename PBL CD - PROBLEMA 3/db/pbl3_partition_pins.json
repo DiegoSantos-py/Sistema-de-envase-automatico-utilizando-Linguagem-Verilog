@@ -204,6 +204,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "switch_descarte",
+					"strict" : false
+				},
+				{
+					"name" : "sensor_cq",
+					"strict" : false
+				},
+				{
 					"name" : "garrafa",
 					"strict" : false
 				},
@@ -213,14 +221,6 @@
 				},
 				{
 					"name" : "switch_add_rolha",
-					"strict" : false
-				},
-				{
-					"name" : "switch_descarte",
-					"strict" : false
-				},
-				{
-					"name" : "sensor_cq",
 					"strict" : false
 				},
 				{
